@@ -5,6 +5,7 @@ import {
 } from "@material-tailwind/react";
 import { Outlet, Link } from "react-router-dom";
 import { FaFacebook, FaInstagram, FaYoutube, FaEnvelope } from 'react-icons/fa'
+import { RiEBikeFill } from 'react-icons/ri'
 import { MenuOutline, CloseOutline } from '@styled-icons/evaicons-outline'
 import LogoNegre from '../assets/logos/logo_negre.webp'
  
@@ -20,6 +21,13 @@ export default function Layout() {
  
   const navList = (
     <ul className="w-screen h-full lg:px-20 flex flex-col lg:flex-row items-center justify-between gap-y-4 font-Roboto">
+        <Link 
+        className='text-lg lg:text-md font-bold block py-5 text-dark hover:text-secondary' 
+        to='/takespai'
+        onClick={() => setOpenNav(false)}
+        >Takespai!
+          <RiEBikeFill />
+        </Link>
         <Link 
         className='text-lg lg:text-md font-bold block py-5 text-dark hover:text-secondary' 
         to='/'

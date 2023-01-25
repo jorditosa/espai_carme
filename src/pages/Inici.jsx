@@ -1,5 +1,6 @@
 import Portada from '../assets/portada.jpg'
 import LogoBlanc from '../assets/logos/logo_blanc.webp'
+import About from './About'
 
 function Inici() {
   return (
@@ -11,7 +12,9 @@ function Inici() {
               <span className='block font-base text-lg lg:text-xl pt-1'>des del 2000, a Vilanova i la Geltrú</span>
             </div>
           </div>
-        </header>       
+        </header>    
+
+        <About />   
       </div>
   )
 }
