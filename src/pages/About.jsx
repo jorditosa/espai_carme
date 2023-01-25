@@ -4,10 +4,10 @@ import forn from '../assets/forn_llenya.jpg'
 // styled comp
 const SectionAbout = styled.section`
     background-image: url(${forn});
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
     background-position: bottom;
-    height: 75vw;
+    height: 100vw;
     color: #fff;
     font-family: 'Roboto Slab', serif;
 `
@@ -15,7 +15,7 @@ const SectionAbout = styled.section`
 function About() {
   return (
     <SectionAbout>
-        <div className='w-full lg:max-w-[750px] ml-10 h-full flex flex-col items-center lg:items-start justify-center gap-y-10'>
+        <div className='w-full lg:max-w-[750px] ml-10 h-screen flex flex-col items-center lg:items-start justify-center gap-y-10'>
             <h2 className='font-bold text-5xl lg:text-6xl'>L'autèntica cuina al forn de llenya</h2>
             <p className='text-lg'>
             Gaudeix dels nostres plats i productes frescos en una experiència gastronòmica que no et deixarà indiferent.

@@ -8,6 +8,14 @@ import { FaFacebook, FaInstagram, FaYoutube, FaEnvelope } from 'react-icons/fa'
 import { RiEBikeFill } from 'react-icons/ri'
 import { MenuOutline, CloseOutline } from '@styled-icons/evaicons-outline'
 import LogoNegre from '../assets/logos/logo_negre.webp'
+import styled from 'styled-components'
+
+
+
+// styled comp
+const BikeTake = styled.div`
+display: inline;
+`
  
 export default function Layout() {
   const [openNav, setOpenNav] = useState(false);
@@ -22,11 +30,11 @@ export default function Layout() {
   const navList = (
     <ul className="w-screen h-full lg:px-20 flex flex-col lg:flex-row items-center justify-between gap-y-4 font-Roboto">
         <Link 
-        className='text-lg lg:text-md font-bold block py-5 text-dark hover:text-secondary' 
+        className='flex justify-center items-center gap-2 text-lg lg:text-md font-bold  py-5 text-dark hover:text-secondary' 
         to='/takespai'
         onClick={() => setOpenNav(false)}
         >Takespai!
-          <RiEBikeFill />
+        <RiEBikeFill size={30} />
         </Link>
         <Link 
         className='text-lg lg:text-md font-bold block py-5 text-dark hover:text-secondary' 
