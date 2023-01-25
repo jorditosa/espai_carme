@@ -4,7 +4,7 @@ import {
   IconButton,
 } from "@material-tailwind/react";
 import { Outlet, Link } from "react-router-dom";
-import { FaFacebook, FaInstagram, FaYoutube, FaEnvelope } from 'react-icons/fa'
+import { BsInstagram, BsFacebook, BsTwitter, BsFillTelephoneFill } from 'react-icons/bs'
 import { RiEBikeFill } from 'react-icons/ri'
 import { MenuOutline, CloseOutline } from '@styled-icons/evaicons-outline'
 import LogoNegre from '../assets/logos/logo_negre.webp'
@@ -28,51 +28,54 @@ export default function Layout() {
   }, []);
  
   const navList = (
-    <ul className="w-screen h-full lg:px-20 flex flex-col lg:flex-row items-center justify-between gap-y-4 font-Roboto">
+    <ul className="w-screen h-full lg:px-20 flex flex-col lg:flex-row items-center justify-between gap-y-4 font-Roboto uppercase">
         <Link 
-        className='flex justify-center items-center gap-2 text-lg lg:text-md font-bold  py-5 text-dark hover:text-secondary' 
+        className='text-lg lg:text-md font-bold block py-4 text-secondary hover:text-secondary/75' 
+        to='/'
+        onClick={() => setOpenNav(false)}
+        >Espai de la carme
+        </Link>
+        <div className='w-1/2 lg:w-1/6 flex justify-around py-3'>
+          <a target='_blank' href='tel:+34938933308'>
+            <BsFillTelephoneFill size={25} className='cursor-pointer text-secondary hover:text-secondary/75' />
+          </a>
+          <a target='_blank' href='https://www.instagram.com/espaicarme/?hl=es'>
+            <BsInstagram size={25} className='cursor-pointer text-secondary hover:text-secondary/75' />
+          </a>
+          <a target='_blank' href='https://es-es.facebook.com/espai.carme/'>
+            <BsFacebook size={25} className='cursor-pointer text-secondary hover:text-secondary/75' />
+          </a>
+          <a target='_blank' href='mailto:reserves@espaidelacarme.com'>
+            <BsTwitter size={25} className='cursor-pointer text-secondary hover:text-secondary/75' />
+          </a>
+        </div>
+        <Link 
+        className='flex justify-center items-center gap-2 text-lg lg:text-md font-bold py-3 text-secondary hover:text-secondary/75' 
         to='/takespai'
         onClick={() => setOpenNav(false)}
         >Takespai!
-        <RiEBikeFill size={30} />
+        <RiEBikeFill size={40} />
         </Link>
         <Link 
-        className='text-lg lg:text-md font-bold block py-5 text-dark hover:text-secondary' 
-        to='/'
-        onClick={() => setOpenNav(false)}
-        >Inici
-        </Link>
-        <Link 
-        className='text-lg lg:text-md font-bold block py-5 text-dark hover:text-secondary' 
+        className='text-lg lg:text-md font-bold block py-3 text-secondary hover:text-secondary/75' 
         to='/carta'
         onClick={() => setOpenNav(false)}
         >Carta
         </Link>
         <Link 
-        className='text-lg lg:text-md font-bold block py-5 text-dark hover:text-secondary' 
+        className='text-lg lg:text-md font-bold block py-3 text-secondary hover:text-secondary/75' 
         to='/celler'
         onClick={() => setOpenNav(false)}
         >Celler
         </Link>
      
-        <div className='w-1/2 lg:w-1/6 flex justify-around py-3'>
-          <a target='_blank' href='https://www.instagram.com/espaicarme/?hl=es'>
-            <FaInstagram size={25} className='cursor-pointer text-dark hover:text-secondary' />
-          </a>
-          <a target='_blank' href='https://es-es.facebook.com/espai.carme/'>
-            <FaFacebook size={25} className='cursor-pointer text-dark hover:text-secondary' />
-          </a>
-          <a target='_blank' href='mailto:reserves@espaidelacarme.com'>
-            <FaEnvelope size={25} className='cursor-pointer text-dark hover:text-secondary' />
-          </a>
-        </div>
     </ul>
   );
  
   return (
     <>
-      <nav className="w-screen fixed bg-light z-10 py-1 lg:py-0 shadow-lg shadow-dark">
-        <div className="w-full flex items-center justify-between px-5">
+      <nav className="w-screen fixed bg-light z-10 shadow-lg shadow-dark">
+        <div className="w-full flex items-center justify-between">
           <div className="hidden lg:block">{navList}</div>
           <Link 
           to='/'

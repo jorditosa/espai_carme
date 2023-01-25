@@ -1,6 +1,12 @@
+import Footer from '../components/Footer'
+
 function Carta() {
   return (
-    <div>Carta</div>
+    <main className="bg-gradient-to-b from-white to-secondary/50">
+
+
+    <Footer />
+    </main>  
   )
 }
 

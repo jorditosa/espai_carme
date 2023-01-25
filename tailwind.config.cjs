@@ -17,5 +17,7 @@ module.exports = {
       'Roboto': ['Roboto Slab', 'serif'],
     },
   },
-  plugins: [],
+  plugins: [
+    require('flowbite/plugin')
+]
 }

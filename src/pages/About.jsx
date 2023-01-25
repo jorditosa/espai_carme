@@ -1,31 +1,38 @@
 import styled from 'styled-components'
-import forn from '../assets/forn_llenya.jpg'
+import SubHeading from '../components/SubHeading'
+import Forn from '../assets/forn_llenya.jpg'
+import Formatge from '../assets/formatge_gran.jpg'
 
 // styled comp
-const SectionAbout = styled.section`
-    background-image: url(${forn});
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: bottom;
-    height: 100vw;
-    color: #fff;
-    font-family: 'Roboto Slab', serif;
-`
 
 function About() {
   return (
-    <SectionAbout>
-        <div className='w-full lg:max-w-[750px] ml-10 h-screen flex flex-col items-center lg:items-start justify-center gap-y-10'>
-            <h2 className='font-bold text-5xl lg:text-6xl'>L'autèntica cuina al forn de llenya</h2>
-            <p className='text-lg'>
-            Gaudeix dels nostres plats i productes frescos en una experiència gastronòmica que no et deixarà indiferent.
+    <section className=''>
+        <div className='w-full lg:max-w-screen-xl mx-auto h-full py-24 text-secondary flex flex-col md:flex-row items-center'>
+            <div className='py-3md:w-1/2 '>
+              <SubHeading>L'autèntica cuina al forn de llenya</SubHeading>
+              <p className='px-10 text-lg'>
+              Gaudeix dels nostres plats i productes frescos en una experiència gastronòmica que no et deixarà indiferent.
+              </p>
+              <p className='px-10 text-lg'>
+              Les nostres pizzes i plats amb fusió d'ingredients de la cuina catalana de tota la vida amb la cuina italiana.
 
-            Les nostres pizzes i plats amb fusió d'ingredients de la cuina catalana de tota la vida amb la cuina italiana.
-
-            Deixa't sorpendre per al varietat del nostre menú, en un ambient acollidor ben aprop teu, amb producte local i de referència, a Vilanova i la Geltrú.
-            </p>
+              Deixa't sorprendre per al varietat del nostre menú, en un ambient acollidor ben a prop teu, amb producte local i de referència, a Vilanova i la Geltrú.
+              </p>
+            </div>
+            <img src={Forn} alt="imatge forn llenya" className='md:w-1/2 block shadow-xl order-2 md:order-none'/>
         </div>
-    </SectionAbout>
+        <div className='w-full lg:max-w-screen-xl mx-auto h-full py-24 text-secondary flex flex-col md:flex-row items-center'>
+            <img src={Formatge} alt="imatge forn llenya" className='md:w-1/2 block shadow-xl order-2 md:order-none'/>
+            <div className='py-3md:w-1/2 '>
+              <SubHeading>El plaer del millor formatge</SubHeading>
+              <p className='px-10 text-lg'>
+              Tant al risotto, a la pizza, a la pasta, treballem amb els millors proveïdors de formatge, per dur-te una experiència més enriquidora.
+              </p>
+
+            </div>
+        </div>
+    </section>
   )
 }
 
