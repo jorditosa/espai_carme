@@ -9,8 +9,8 @@ import ViNegre from '../assets/vi_cuso.jpg'
 
 function About() {
   return (
-    <section className=''>
-        <div className='w-full lg:max-w-screen-xl mx-auto h-full py-24 text-secondary flex flex-col md:flex-row items-center'>
+    <section className='w-full lg:max-w-screen-xl mx-auto'>
+        <div className='h-full py-24 text-secondary flex flex-col md:flex-row items-center'>
             <div className='py-3md:w-1/2 '>
               <SubHeading>L'autèntica cuina al forn de llenya</SubHeading>
               <p className='px-10 text-lg'>

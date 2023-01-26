@@ -2,6 +2,7 @@ import Portada from '../assets/portada.jpg'
 import LogoBlanc from '../assets/logos/logo_blanc.webp'
 import About from './About'
 import Footer from '../components/Footer'
+import IniciCartes from './IniciCartes'
 
 function Inici() {
   return (
@@ -16,6 +17,8 @@ function Inici() {
         </header>    
 
         <About />   
+
+        <IniciCartes />
 
         <Footer />
     </div>
