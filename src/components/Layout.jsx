@@ -81,7 +81,7 @@ export default function Layout() {
           to='/'
           onClick={() => setOpenNav(!openNav)}
           >
-            <img className='w-[75px] rounded-sm' src={LogoNegre} alt="Logo Espai" />
+            <img className='w-[70px] rounded-sm p-2' src={LogoNegre} alt="Logo Espai" />
           </Link>
           <button
             variant="text"
@@ -89,13 +89,13 @@ export default function Layout() {
             onClick={() => setOpenNav(!openNav)}
           >
             {openNav ? (
-              <CloseOutline size={60} />
+              <CloseOutline size={50} />
             ) : (
-              <MenuOutline size={60} />
+              <MenuOutline size={50} />
             )}
           </button>
         </div>
-        <MobileNav open={openNav}>
+        <MobileNav open={openNav} className='p-2'>
           {navList}
         </MobileNav>
       </nav>
