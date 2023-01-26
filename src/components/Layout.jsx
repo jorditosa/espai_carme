@@ -35,6 +35,13 @@ export default function Layout() {
         onClick={() => setOpenNav(false)}
         >Espai de la carme
         </Link>
+        <Link 
+        className='flex justify-center items-center gap-2 text-lg lg:text-md font-bold py-3 text-secondary hover:text-secondary/75' 
+        to='/takespai'
+        onClick={() => setOpenNav(false)}
+        >Takespai!
+        <RiEBikeFill size={40} />
+        </Link>
         <div className='w-1/2 lg:w-1/6 flex justify-around py-3'>
           <a target='_blank' href='tel:+34938933308'>
             <BsFillTelephoneFill size={25} className='cursor-pointer text-secondary hover:text-secondary/75' />
@@ -49,13 +56,6 @@ export default function Layout() {
             <BsTwitter size={25} className='cursor-pointer text-secondary hover:text-secondary/75' />
           </a>
         </div>
-        <Link 
-        className='flex justify-center items-center gap-2 text-lg lg:text-md font-bold py-3 text-secondary hover:text-secondary/75' 
-        to='/takespai'
-        onClick={() => setOpenNav(false)}
-        >Takespai!
-        <RiEBikeFill size={40} />
-        </Link>
         <Link 
         className='text-lg lg:text-md font-bold block py-3 text-secondary hover:text-secondary/75' 
         to='/carta'
@@ -74,7 +74,7 @@ export default function Layout() {
  
   return (
     <>
-      <nav className="w-screen fixed bg-light z-10 shadow-lg shadow-dark">
+      <nav className="w-screen fixed bg-light z-10 shadow-lg shadow-dark/75">
         <div className="w-full flex items-center justify-between">
           <div className="hidden lg:block">{navList}</div>
           <Link 
@@ -95,7 +95,7 @@ export default function Layout() {
             )}
           </button>
         </div>
-        <MobileNav open={openNav} className='p-2'>
+        <MobileNav open={openNav}>
           {navList}
         </MobileNav>
       </nav>

@@ -7,16 +7,17 @@ import {
     Typography,
   } from "@material-tailwind/react";
   import ImgCarta from '../assets/imatge_carta.jpg'
+  import ImgMenu from '../assets/formatge_gran.jpg'
   import { Link } from 'react-router-dom'
 
 function IniciCartes() {
   return (
-    <section className="text-secondary w-full lg:max-w-screen-xl mx-auto">
+    <section id="cartes" className="text-dark w-full lg:max-w-screen-xl mx-auto">
         <SubHeading>
             Vine a descobrir la nostre gastronomia
         </SubHeading>
-        <div className="grid grid-cols-1 md:grid-cols-3 content-center">
-        <Card className="w-96 mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-3 content-center gap-y-6">
+        <Card className="w-96 mx-auto shadow-2xl py-4 rounded-lg bg-primary/25">
             <CardHeader color="blue" className="relative h-56">
                 <img
                 src={ImgCarta}
@@ -25,8 +26,8 @@ function IniciCartes() {
                 />
             </CardHeader>
             <CardBody className="text-center">
-                <Link to="/carta" className="block text-secondary bg-light/75 hover:text-secondary/75 hover:bg-light/50 rounded-full py-2 px-4 font-bold text-md lg:text-2xl my-4">
-                La nostre Carta
+                <Link to="/carta" className="block text-dark bg-light hover:text-secondary hover:bg-light/75 rounded-full py-2 px-4 font-bold text-lg lg:text-2xl my-4 transition-all duration-200">
+                El nostre Menu
                 </Link>
                 <Typography className='text-start'>
                 The place is close to Barceloneta Beach and bus stop just 2 min by walk and near to "Naviglio" where you can enjoy the main night life in Barcelona.
@@ -37,17 +38,38 @@ function IniciCartes() {
             </CardFooter>
         </Card>
         
-        <Card className="w-96 mx-auto">
+        <Card className="w-96 mx-auto shadow-2xl py-4 rounded-lg bg-primary/25">
             <CardHeader color="blue" className="relative h-56">
                 <img
-                src={ImgCarta}
+                src={ImgMenu}
                 alt="Plat canalons"
                 className="h-full w-full rounded-t-lg shadow-lg"
                 />
             </CardHeader>
             <CardBody className="text-center">
-                <Link to="/carta" className="block text-secondary bg-light/75 hover:text-secondary/75 hover:bg-light/50 rounded-full py-2 px-4 font-bold text-md lg:text-2xl my-4">
+                <Link to="/carta" className="block text-dark bg-light hover:text-secondary hover:bg-light/75 rounded-full py-2 px-4 font-bold text-lg lg:text-2xl my-4 transition-all duration-200">
                 La nostre Carta
+                </Link>
+                <Typography className='text-start'>
+                The place is close to Barceloneta Beach and bus stop just 2 min by walk and near to "Naviglio" where you can enjoy the main night life in Barcelona.
+                </Typography>
+            </CardBody>
+            <CardFooter divider className="flex items-center justify-between py-3">
+                
+            </CardFooter>
+        </Card>
+
+        <Card className="w-96 mx-auto shadow-2xl py-4 rounded-lg bg-primary/25">
+            <CardHeader color="blue" className="relative h-56">
+                <img
+                src={ImgMenu}
+                alt="Plat canalons"
+                className="h-full w-full rounded-t-lg shadow-lg"
+                />
+            </CardHeader>
+            <CardBody className="text-center">
+                <Link to="/carta" className="block text-dark bg-light hover:text-secondary hover:bg-light/75 rounded-full py-2 px-4 font-bold text-lg lg:text-2xl my-4 transition-all duration-200 ">
+                El nostre Menu Laborable
                 </Link>
                 <Typography className='text-start'>
                 The place is close to Barceloneta Beach and bus stop just 2 min by walk and near to "Naviglio" where you can enjoy the main night life in Barcelona.
