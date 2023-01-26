@@ -74,7 +74,7 @@ export default function Layout() {
  
   return (
     <>
-      <nav className="w-screen fixed bg-light z-10 shadow-lg shadow-dark">
+      <nav className="w-screen fixed bg-light z-10 shadow-lg shadow-dark p-2">
         <div className="w-full flex items-center justify-between">
           <div className="hidden lg:block">{navList}</div>
           <Link 
