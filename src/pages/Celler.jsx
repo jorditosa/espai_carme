@@ -27,7 +27,7 @@ function Celler() {
 
   return (
     <section className='text-light bg-dark'>
-      <div className='h-[500px] md:h-screen py-5'>
+      <div className='h-[500px] md:h-full py-5'>
         <img src={CopesVi} alt="Copes de vi" className='block mx-auto w-screen'/>
         <SubHeading>
           El Celler Cusó
@@ -35,7 +35,7 @@ function Celler() {
         <hr className='border-b-8' />
       </div>
 
-      <div className='w-full lg:max-w-screen-lg mx-auto py-8 lg:py-40 flex flex-col md:flex-row items-center'>
+      <div className='w-full lg:max-w-screen-lg mx-auto py-8 lg:py-24 flex flex-col md:flex-row items-center'>
           <img src={ArnauVi} alt="imatge forn llenya" className='block md:w-1/4 order-2 md:order-none  rounded-lg shadow-lg shadow-light'
              />
           <div className='p-0 w-full'>

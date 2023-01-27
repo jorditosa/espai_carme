@@ -18,7 +18,7 @@ function IniciCartes() {
             Vine a descobrir la nostre gastronomia
         </SubHeading>
         <div className="grid grid-cols-1 lg:grid-cols-3 content-center gap-y-6">
-        <Card className="w-96 mx-auto shadow-2xl rounded-lg bg-primary/25">
+        <Card className="w-full lg:w-96 mx-auto shadow-2xl rounded-lg bg-primary/25">
             <CardHeader color="blue" className="relative h-56">
                 <img
                 src={ImgCarta}
@@ -39,7 +39,7 @@ function IniciCartes() {
             </CardFooter>
         </Card>
         
-        <Card className="w-96 mx-auto shadow-2xl rounded-lg bg-primary/25">
+        <Card className="w-full lg:w-96 mx-auto shadow-2xl rounded-lg bg-primary/25">
             <CardHeader color="blue" className="relative h-56">
                 <img
                 src={ImgMenu}
@@ -60,7 +60,7 @@ function IniciCartes() {
             </CardFooter>
         </Card>
 
-        <Card className="w-96 mx-auto shadow-2xl rounded-lg bg-primary/25">
+        <Card className="w-full lg:w-96 mx-auto shadow-2xl rounded-lg bg-primary/25">
             <CardHeader color="blue" className="relative h-56">
                 <img
                 src={ImgMenuLab}
