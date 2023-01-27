@@ -1,31 +1,34 @@
-import CopesVi from '../assets/copes_vi.jpg'
-import ArnauVi from '../assets/vi_cuso.jpg'
+import CopesVi from '../assets/copes_vi.webp'
+import ArnauVi from '../assets/vi_cuso.webp'
 import SubHeading from '../components/SubHeading'
+import Footer from '../components/Footer'
+
 
 function Celler() {
   return (
-    <section className='bg-dark h-full text-light'>
-      <img src={CopesVi} alt="Copes de vi" />
+    <section className='bg-dark text-light'>
+      <div className='h-screen'>
+        <img src={CopesVi} alt="Copes de vi" className='block'/>
 
-      <SubHeading>
-        El Celler Cusó
-      </SubHeading>
+        <SubHeading>
+          El Celler Cusó
+        </SubHeading>
+      </div>
 
       <div className='w-full lg:max-w-screen-xl mx-auto'>
-         <div className='w-full lg:max-w-screen-xl mx-auto py-8 lg:py-12 text-secondary flex flex-col md:flex-row items-center'>
+         <div className='w-full lg:max-w-screen-lg mx-auto h-auto py-8 lg:py-12 flex flex-col md:flex-row items-center'>
             <div className='py-8 lg:py-3 md:w-1/2'>
-              <SubHeading>L'autèntica cuina al forn de llenya</SubHeading>
+              <SubHeading>Essències locals</SubHeading>
               <p className='px-10 text-lg'>
-              Gaudeix dels nostres plats i productes frescos en una experiència gastronòmica que no et deixarà indiferent.
-              </p>
-              <p className='px-10 text-lg'>
-              Les nostres pizzes i plats amb fusió d'ingredients de la cuina catalana de tota la vida amb la cuina italiana.
-
-              Deixa't sorprendre per al varietat del nostre menú, en un ambient acollidor ben a prop teu, amb producte local i de referència, a Vilanova i la Geltrú.
+              Els vins més bons són capaços d'expressar un paisatge i transmetre la fascinació de la seva personalitat única. Hem volgut crear l'acompanyant perfecte per a tots els nostres pats, creant una versió en negre com en blanc.
               </p>
             </div>
-            <img src={ArnauVi} alt="imatge Arnau Vi" className='md:w-1/2 block shadow-xl order-2 md:order-none'/>
+            <img src={ArnauVi} alt="imatge Arnau Vi" className='block md:w-1/2 w-full shadow-xl order-2 md:order-none'/>
         </div>
+    </div>
+
+    <div className='bg-light'>
+      <Footer />
     </div>
 
     </section>

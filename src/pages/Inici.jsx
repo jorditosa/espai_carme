@@ -1,4 +1,4 @@
-import Portada from '../assets/portada.jpg'
+import Portada from '../assets/portada.webp'
 import LogoBlanc from '../assets/logos/logo_blanc.webp'
 import About from './About'
 import Footer from '../components/Footer'

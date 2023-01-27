@@ -1,9 +1,9 @@
 import styled from 'styled-components'
 import SubHeading from '../components/SubHeading'
-import Forn from '../assets/forn_llenya.jpg'
-import Formatge from '../assets/formatge_gran.jpg'
-import Local from '../assets/local.jpg'
-import ViNegre from '../assets/vi_cuso.jpg'
+import Forn from '../assets/forn_llenya.webp'
+import Formatge from '../assets/formatge_gran.webp'
+import Local from '../assets/local.webp'
+import ViNegre from '../assets/vi_cuso.webp'
 
 // styled comp
 

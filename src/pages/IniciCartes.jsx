@@ -6,9 +6,9 @@ import {
     CardFooter,
     Typography,
   } from "@material-tailwind/react";
-  import ImgCarta from '../assets/imatge_carta.jpg'
-  import ImgMenu from '../assets/formatge_gran.jpg'
-  import ImgMenuLab from '../assets/imatge_menulab.jpg'
+  import ImgCarta from '../assets/imatge_carta.webp'
+  import ImgMenu from '../assets/formatge_gran.webp'
+  import ImgMenuLab from '../assets/imatge_menulab.webp'
   import { Link } from 'react-router-dom'
 
 function IniciCartes() {
