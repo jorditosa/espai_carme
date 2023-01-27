@@ -26,7 +26,7 @@ const router = createBrowserRouter([
         },
         {
           path: '/carta',
-          element: <Carta />
+          element: <Carta />,
         },
         {
           path: '/menuespai',

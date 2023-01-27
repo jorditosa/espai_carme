@@ -1,8 +1,18 @@
+import { useEffect } from 'react';
 import Footer from '../components/Footer'
 import SubHeading from '../components/SubHeading'
 import { GiFlour, GiBigEgg , GiPeanut, GiCrabClaw, GiMilkCarton } from 'react-icons/gi'
 
 function Carta() {
+
+  useEffect(() => {
+    // "document.documentElement.scrollTo" is the magic for React Router Dom v6
+    document.documentElement.scrollTo({
+      top: 0,
+      left: 0,
+    });
+  }, ['/carta']);
+
   return (
     <main className="pt-28 font-Roboto bg-gradient-to-b from-white to-secondary/50 px-5 w-full">
       <SubHeading >

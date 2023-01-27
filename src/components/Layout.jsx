@@ -46,7 +46,7 @@ export default function Layout() {
         
         <Link 
         className='flex justify-center items-center gap-2 text-lg lg:text-md font-bold py-3 text-secondary hover:text-secondary/75' 
-        to='/takespai'
+        to='/takespai/#'
         onClick={() => setOpenNav(false)}
         >Takespai!
         <RiEBikeFill size={40} />
