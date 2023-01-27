@@ -1,43 +1,48 @@
 import LogoNegre from '../assets/logos/logo_negre.webp'
 import { BsInstagram, BsFacebook, BsTwitter, BsFillTelephoneFill } from 'react-icons/bs'
 
+
 function Footer() {
   return (
     
     <footer className="h-auto p-6 font-Roboto">
+
+        
+
         <hr className="my-6 border-gray-400 sm:mx-auto lg:my-8" />
         <div className="md:flex md:justify-between py-8">
             <div className="mb-6 md:mb-0">
-                <a href="#" className="flex items-center">
-                    <img src={LogoNegre} className="w-32" alt="Espai de la Carme Logo" />
+                <a href="index.html" className="flex items-center">
+                    <img src={LogoNegre} className="w-32 mx-auto" alt="Espai de la Carme Logo" />
                 </a>
             </div>
-            <div className="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
+            <div className="grid grid-cols-1 gap-8 sm:gap-6 sm:grid-cols-3 text-center">
                 <div>
-                    <h2 className="mb-6 text-sm font-semibold text-dark uppercase dark:text-white">Recursos</h2>
-                    <ul className="text-gray-600 dark:text-gray-400">
-                        <li className="mb-4">
-                            <a href="https://flowbite.com/" className="hover:underline">Flowbite</a>
-                        </li>
-                        <li>
-                            <a href="https://tailwindcss.com/" className="hover:underline">Tailwind CSS</a>
-                        </li>
+                    <h2 className="mb-6 text-sm font-semibold text-dark uppercase dark:text-white">Horari</h2>
+                    <ul className='text-gray-600 text-start'>
+                        <li>Dilluns <span className='text-sm ml-2 text-gray-500'>Tancat</span></li>
+                        <li>Dimarts <span className='text-sm ml-2 text-gray-500'>13-00-15:45, 20:00-22:45</span></li>
+                        <li>Dimecres <span className='text-sm ml-2 text-gray-500'>13-00-15:45, 20:00-22:45</span></li>
+                        <li>Dijous <span className='text-sm ml-2 text-gray-500'>13-00-15:45, 20:00-22:45</span></li>
+                        <li>Divendres <span className='text-sm ml-2 text-gray-500'>13-00-15:45, 20:00-22:45</span></li>
+                        <li>Dissabte <span className='text-sm ml-2 text-gray-500'>13-00-15:45, 20:00-22:45</span></li>
+                        <li>Diumenge <span className='text-sm ml-2 text-gray-500'>13-00-15:45, 20:00-22:45</span></li>
                     </ul>
                 </div>
                 <div>
-                    <h2 className="mb-6 text-sm font-semibold text-dark uppercase dark:text-white">Follow us</h2>
-                    <ul className="text-gray-600 dark:text-gray-400">
+                    <h2 className="mb-6 text-sm font-semibold text-dark uppercase dark:text-white">Segueix-nos</h2>
+                    <ul className="text-gray-600">
                         <li className="mb-4">
-                            <a href="https://github.com/themesberg/flowbite" className="hover:underline ">Github</a>
+                            <a href="https://www.instagram.com/espaicarme/?hl=es" className="hover:underline ">Instagram</a>
                         </li>
                         <li>
-                            <a href="https://discord.gg/4eeurUVvTy" className="hover:underline">Discord</a>
+                            <a href="https://twitter.com/espaicarme" className="hover:underline">Twitter</a>
                         </li>
                     </ul>
                 </div>
                 <div>
                     <h2 className="mb-6 text-sm font-semibold text-dark uppercase dark:text-white">Legal</h2>
-                    <ul className="text-gray-600 dark:text-gray-400">
+                    <ul className="text-gray-600">
                         <li className="mb-4">
                             <a href="#" className="hover:underline">Política privacitat</a>
                         </li>

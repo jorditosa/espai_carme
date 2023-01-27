@@ -2,6 +2,8 @@ import { useState, useEffect } from "react";
 import {
   MobileNav,
   IconButton,
+  Navbar,
+  Typography
 } from "@material-tailwind/react";
 import { Outlet, Link } from "react-router-dom";
 import { BsInstagram, BsFacebook, BsTwitter, BsFillTelephoneFill } from 'react-icons/bs'
@@ -9,7 +11,6 @@ import { RiEBikeFill } from 'react-icons/ri'
 import { MenuOutline, CloseOutline } from '@styled-icons/evaicons-outline'
 import LogoNegre from '../assets/logos/logo_negre.webp'
 import styled from 'styled-components'
-
 
 
 // styled comp
@@ -29,12 +30,20 @@ export default function Layout() {
  
   const navList = (
     <ul className="w-screen h-full lg:px-20 flex flex-col lg:flex-row items-center justify-between gap-y-4 font-Roboto uppercase">
+         <Typography
+        as="li"
+        variant="small"
+        color="blue-gray"
+        className="p-1 font-normal"
+      >
         <Link 
         className='text-lg lg:text-md font-bold block py-4 text-secondary hover:text-secondary/75' 
         to='/'
         onClick={() => setOpenNav(false)}
         >Espai de la carme
         </Link>
+      </Typography>
+        
         <Link 
         className='flex justify-center items-center gap-2 text-lg lg:text-md font-bold py-3 text-secondary hover:text-secondary/75' 
         to='/takespai'
@@ -52,7 +61,7 @@ export default function Layout() {
           <a target='_blank' href='https://es-es.facebook.com/espai.carme/'>
             <BsFacebook size={25} className='cursor-pointer text-secondary hover:text-secondary/75' />
           </a>
-          <a target='_blank' href='mailto:reserves@espaidelacarme.com'>
+          <a target='_blank' href='https://twitter.com/espaicarme'>
             <BsTwitter size={25} className='cursor-pointer text-secondary hover:text-secondary/75' />
           </a>
         </div>
