@@ -85,7 +85,7 @@ export default function Layout() {
     <>
       <nav className="w-screen fixed bg-light z-10 shadow-lg shadow-dark/75">
         <div className="w-full flex items-center justify-between px-5">
-          <div className="hidden lg:block">{navList}</div>
+          <div className="hidden opacity-0 lg:block lg:opacity-100">{navList}</div>
           <Link 
           to='/'
           onClick={() => setOpenNav(!openNav)}

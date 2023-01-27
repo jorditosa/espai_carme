@@ -9,8 +9,8 @@ function Contacte() {
             <SubHeading>
                 Si no ens has posat 5 ⭐ a les ressenyes, ens dius perquè?
             </SubHeading>
-            <span>Així ens ajudaràs a donar un millor servei a la propera vegada que tornis.</span>
-            <div className="w-2/3 md:w-1/3 py-2">
+            <p className="block w-2/3 md:w-1/3 text-xs">Així ens ajudaràs a donar un millor servei a la propera vegada que tornis.</p>
+            <div className="w-full md:w-1/3 px-10 md:px-0 py-2">
                 <Input 
                 variant="outlined" 
                 size="lg" 
@@ -19,7 +19,7 @@ function Contacte() {
                 label="El teu nom"
                 className="text-dark pl-4 my-3 border-3 rounded-lg border-dark shadow-dark shadow-md outline-dark" />
             </div>
-            <div className="w-2/3 md:w-1/3 py-2">
+            <div className="w-full md:w-1/3 px-10 md:px-0 py-2">
                 <Input 
                 variant="outlined" 
                 size="lg" 
@@ -28,7 +28,7 @@ function Contacte() {
                 label="El teu email"
                 className="text-dark pl-4 my-3 border-3 rounded-lg border-dark/50 shadow-dark shadow-md outline-dark" />
             </div>
-            <div className="w-2/3 md:w-1/3 py-2">
+            <div className="w-full md:w-1/3 px-10 md:px-0 py-2">
                 <Textarea 
                 variant="outlined" 
                 size="lg" 
