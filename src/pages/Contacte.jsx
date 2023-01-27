@@ -34,7 +34,7 @@ function Contacte() {
                 size="lg" 
                 name="missatge"
                 id="message"
-                label="La teva opinió"
+                label="El teu missatge"
                 color="dark"
                 className="text-dark pl-4 my-3 border-3 rounded-lg border-dark/50 shadow-dark shadow-md outline-dark" />
             </div>

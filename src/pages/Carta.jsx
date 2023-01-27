@@ -14,13 +14,14 @@ function Carta() {
   }, ['/carta']);
 
   return (
-    <main className="pt-28 font-Roboto bg-gradient-to-b from-white to-secondary/50 px-5 w-full">
+    <main className="pt-28 font-Roboto bg-gradient-to-b from-white to-secondary/50 w-full">
       <SubHeading >
         la Carta Espai
       </SubHeading>
-      <div className='pt-12 w-full md:max-w-[900px] mx-auto'>
+      <hr className='border-b-8 border-primary/50' />
+      <div className='pt-12 px-5 w-full md:max-w-[900px] mx-auto'>
 
-        <h3 className='text-2xl font-bold py-5 italic'>FOIE I TARTUFO!!!</h3>
+        <h3 className='text-xl font-bold py-5 italic'>FOIE I TARTUFO!!!</h3>
 
         <div className='flex justify-between items-center border-b-2 border-dark/10'>
           <div className='flex items-center'>
@@ -99,7 +100,7 @@ function Carta() {
           <span className='text-md md:text-xl ml-4'>10,00€</span>
         </div>
 
-        <h3 className='text-2xl font-bold py-5 italic'>ENTRANTS</h3>
+        <h3 className='text-xl font-bold py-5 italic'>ENTRANTS</h3>
 
         <div className='flex justify-between items-center border-b-2 border-dark/10'>
           <div className='flex items-center'>
@@ -147,7 +148,7 @@ function Carta() {
           <span className='text-md md:text-xl ml-4'>12,00€</span>
         </div>
 
-        <h3 className='text-2xl font-bold py-5 italic'>AMANIDES</h3>
+        <h3 className='text-xl font-bold py-5 italic'>AMANIDES</h3>
 
         <div className='flex justify-between items-center border-b-2 border-dark/10'>
           <div className='flex items-center'>
@@ -216,7 +217,7 @@ function Carta() {
           <span className='text-md md:text-xl ml-4'>9,50€</span>
         </div>
 
-        <h3 className='text-2xl font-bold py-5 italic'>PROVOLONES</h3>
+        <h3 className='text-xl font-bold py-5 italic'>PROVOLONES</h3>
         <span>(Tots els provolones porten base de crema de formatges i patata)</span>
 
         <div className='flex justify-between items-center border-b-2 border-dark/10'>
@@ -256,7 +257,7 @@ function Carta() {
           <span className='text-md md:text-xl ml-4'>9,00€</span>
         </div>    
 
-        <h3 className='text-2xl font-bold py-5 italic'>RISOTTOS</h3>
+        <h3 className='text-xl font-bold py-5 italic'>RISOTTOS</h3>
 
         <div className='flex justify-between items-center border-b-2 border-dark/10'>
           <div className='flex items-center'>

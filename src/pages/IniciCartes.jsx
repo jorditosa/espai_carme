@@ -13,11 +13,11 @@ import {
 
 function IniciCartes() {
   return (
-    <section id="cartes" className="text-secondary w-full lg:max-w-screen-xl mx-auto">
+    <section id="cartes" className="text-secondary w-full lg:max-w-screen-xl mx-auto my-4 lg:my-8">
         <SubHeading>
             Vine a descobrir la nostre gastronomia
         </SubHeading>
-        <div className="grid grid-cols-1 lg:grid-cols-3 content-center gap-y-6">
+        <div className="grid grid-cols-1 lg:grid-cols-3 content-center gap-y-6 mx-2">
         <Card className="w-full lg:w-96 mx-auto shadow-2xl rounded-lg bg-primary/25">
             <CardHeader color="blue" className="relative h-56">
                 <img
