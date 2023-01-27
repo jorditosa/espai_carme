@@ -24,7 +24,7 @@ export default function Layout() {
   useEffect(() => {
     window.addEventListener(
       "resize",
-      () => window.innerWidth >= 768 && setOpenNav(false)
+      () => window.innerWidth >= 1024 && setOpenNav(false)
     );
   }, []);
  
@@ -84,7 +84,7 @@ export default function Layout() {
   return (
     <>
       <nav className="w-screen fixed bg-light z-10 shadow-lg shadow-dark/75">
-        <div className="w-full flex items-center justify-between">
+        <div className="w-full flex items-center justify-between px-5">
           <div className="hidden lg:block">{navList}</div>
           <Link 
           to='/'

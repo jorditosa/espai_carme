@@ -17,7 +17,7 @@ function IniciCartes() {
         <SubHeading>
             Vine a descobrir la nostre gastronomia
         </SubHeading>
-        <div className="grid grid-cols-1 md:grid-cols-3 content-center gap-y-6">
+        <div className="grid grid-cols-1 lg:grid-cols-3 content-center gap-y-6">
         <Card className="w-96 mx-auto shadow-2xl rounded-lg bg-primary/25">
             <CardHeader color="blue" className="relative h-56">
                 <img

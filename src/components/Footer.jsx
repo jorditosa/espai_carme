@@ -16,22 +16,22 @@ function Footer() {
                     <img src={LogoNegre} className="w-32 mx-auto" alt="Espai de la Carme Logo" />
                 </a>
             </div>
-            <div className="grid grid-cols-1 gap-8 sm:gap-6 sm:grid-cols-3 text-center">
+            <div className="grid grid-cols-1 gap-8 sm:gap-6 md:grid-cols-2 lg:grid-cols-3 text-center">
                 <div>
-                    <h2 className="mb-6 text-sm font-semibold text-dark uppercase dark:text-white">Horari</h2>
-                    <ul className='text-gray-600 text-start'>
-                        <li>Dilluns <span className='text-sm ml-2 text-gray-500'>Tancat</span></li>
-                        <li>Dimarts <span className='text-sm ml-2 text-gray-500'>13-00-15:45, 20:00-22:45</span></li>
-                        <li>Dimecres <span className='text-sm ml-2 text-gray-500'>13-00-15:45, 20:00-22:45</span></li>
-                        <li>Dijous <span className='text-sm ml-2 text-gray-500'>13-00-15:45, 20:00-22:45</span></li>
-                        <li>Divendres <span className='text-sm ml-2 text-gray-500'>13-00-15:45, 20:00-22:45</span></li>
-                        <li>Dissabte <span className='text-sm ml-2 text-gray-500'>13-00-15:45, 20:00-22:45</span></li>
-                        <li>Diumenge <span className='text-sm ml-2 text-gray-500'>13-00-15:45, 20:00-22:45</span></li>
+                    <h2 className="mb-6 text-sm font-bold text-dark uppercase dark:text-white">Horari</h2>
+                    <ul className='text-gray-800 lg:text-start'>
+                        <li>Dilluns <span className='text-sm ml-2 text-gray-600'>Tancat</span></li>
+                        <li>Dimarts <span className='text-sm ml-2 text-gray-600'>13-00-15:45, 20:00-22:45</span></li>
+                        <li>Dimecres <span className='text-sm ml-2 text-gray-600'>13-00-15:45, 20:00-22:45</span></li>
+                        <li>Dijous <span className='text-sm ml-2 text-gray-600'>13-00-15:45, 20:00-22:45</span></li>
+                        <li>Divendres <span className='text-sm ml-2 text-gray-600'>13-00-15:45, 20:00-22:45</span></li>
+                        <li>Dissabte <span className='text-sm ml-2 text-gray-600'>13-00-15:45, 20:00-22:45</span></li>
+                        <li>Diumenge <span className='text-sm ml-2 text-gray-600'>13-00-15:45, 20:00-22:45</span></li>
                     </ul>
                 </div>
                 <div>
-                    <h2 className="mb-6 text-sm font-semibold text-dark uppercase dark:text-white">Segueix-nos</h2>
-                    <ul className="text-gray-600">
+                    <h2 className="mb-6 text-sm font-bold text-dark uppercase dark:text-white">Segueix-nos</h2>
+                    <ul className="text-gray-800">
                         <li className="mb-4">
                             <a href="https://www.instagram.com/espaicarme/?hl=es" className="hover:underline ">Instagram</a>
                         </li>
@@ -41,8 +41,8 @@ function Footer() {
                     </ul>
                 </div>
                 <div>
-                    <h2 className="mb-6 text-sm font-semibold text-dark uppercase dark:text-white">Legal</h2>
-                    <ul className="text-gray-600">
+                    <h2 className="mb-6 text-sm font-bold text-dark uppercase dark:text-white">Legal</h2>
+                    <ul className="text-gray-800">
                         <li className="mb-4">
                             <a href="#" className="hover:underline">Política privacitat</a>
                         </li>
