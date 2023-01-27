@@ -31,7 +31,7 @@ function IniciCartes() {
                 <span className="text-lg">El nostre</span> Menu
                 </Link>
                 <Typography className='text-start text-gray-600'>
-                The place is close to Barceloneta Beach and bus stop just 2 min by walk and near to "Naviglio" where you can enjoy the main night life in Barcelona.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae praesentium dolores ut aspernatur, explicabo perspiciatis accusantium doloribus, deleniti reiciendis autem, veritatis modi earum. Veniam, maxime culpa distinctio eveniet hic tempore?
                 </Typography>
             </CardBody>
             <CardFooter divider className="flex items-center justify-between py-3">
@@ -52,7 +52,7 @@ function IniciCartes() {
                 <span className="text-lg">La nostra</span> Carta
                 </Link>
                 <Typography className='text-start text-gray-600'>
-                The place is close to Barceloneta Beach and bus stop just 2 min by walk and near to "Naviglio" where you can enjoy the main night life in Barcelona.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae praesentium dolores ut aspernatur, explicabo perspiciatis accusantium doloribus, deleniti reiciendis autem, veritatis modi earum. Veniam, maxime culpa distinctio eveniet hic tempore?
                 </Typography>
             </CardBody>
             <CardFooter divider className="flex items-center justify-between py-3">
@@ -73,7 +73,7 @@ function IniciCartes() {
                  <span className="text-lg">El nostre</span> Menu Laborable
                 </Link>
                 <Typography className='text-start text-gray-600'>
-                The place is close to Barceloneta Beach and bus stop just 2 min by walk and near to "Naviglio" where you can enjoy the main night life in Barcelona.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae praesentium dolores ut aspernatur, explicabo perspiciatis accusantium doloribus, deleniti reiciendis autem, veritatis modi earum. Veniam, maxime culpa distinctio eveniet hic tempore?
                 </Typography>
             </CardBody>
             <CardFooter divider className="flex items-center justify-between py-3">

@@ -11,14 +11,14 @@
     justify-content: center;
     align-items: center;
     position: fixed;
-    background: rgba(0, 0, 0, 0.834);
+    background: #b08d6be5;
     z-index: 1;
 }
 
 .spinner {
-    width: 64px;
-    height: 64px;
-    border: 8px solid;
+    width: 80px;
+    height: 80px;
+    border: 10px solid;
     border-color: #f7c873 transparent #f7c873 transparent;
     border-radius: 50%;
     animation: spin-anim 1.2s linear infinite;

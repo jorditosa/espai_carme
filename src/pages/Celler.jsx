@@ -52,7 +52,7 @@ function Celler() {
             Descobreix la nostra bodega
         </SubHeading>
         <div className="grid grid-cols-1 lg:grid-cols-2 content-center gap-y-10">
-        <Card className="w-80 mx-auto shadow-lg shadow-light rounded-lg bg-gray-900">
+        <Card className="w-80 mx-auto shadow-lg shadow-light rounded-lg bg-green-200/25">
             <CardHeader color="blue" className="relative h-56">
                 <img
                 src={ViBlanc}
@@ -62,7 +62,7 @@ function Celler() {
             </CardHeader>
             <CardBody className="text-center">
                 <Typography className='text-start text-gray-100'>
-                Vi Blanc. The place is close to Barceloneta Beach and bus stop just 2 min by walk and near to "Naviglio" where you can enjoy the main night life in Barcelona.
+                Vi Blanc. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Distinctio dolore odit iure aspernatur sapiente molestiae aut voluptatibus. Nisi, unde suscipit?
                 </Typography>
             </CardBody>
             <CardFooter divider className="flex items-center justify-between py-3">
@@ -70,7 +70,7 @@ function Celler() {
             </CardFooter>
         </Card>
         
-        <Card className="w-80 mx-auto shadow-lg shadow-light rounded-lg bg-gray-900">
+        <Card className="w-80 mx-auto shadow-lg shadow-light rounded-lg bg-red-900/25">
             <CardHeader color="blue" className="relative h-56">
                 <img
                 src={ViNegre}
@@ -80,7 +80,7 @@ function Celler() {
             </CardHeader>
             <CardBody className="text-center">
                 <Typography className='text-start text-gray-100'>
-                Vi Negre. The place is close to Barceloneta Beach and bus stop just 2 min by walk and near to "Naviglio" where you can enjoy the main night life in Barcelona.
+                Vi Negre. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt delectus animi saepe libero minima odit. Praesentium ipsa consequuntur ipsum illo.
                 </Typography>
             </CardBody>
             <CardFooter divider className="flex items-center justify-between py-3">
