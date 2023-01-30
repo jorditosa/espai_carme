@@ -1,9 +1,16 @@
+import styled from "styled-components"
+
+// styled comp
+
+const Heading = styled.h2`
+  text-shadow: 0.1rem 0.1rem 0.1rem #f7c873;
+`
 
 function SubHeading({children}) {
   return (
-    <h2 className='py-3 px-10 font-bold text-2xl md:text-3xl lg:text-4xl font-Roboto leading-normal'>
+    <Heading className='py-3 font-bold text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-Roboto leading-normal drop-shadow-xl}'>
         {children}
-    </h2>
+    </Heading>
   )
 }
 

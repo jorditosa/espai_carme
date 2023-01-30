@@ -18,9 +18,6 @@ function Carta() {
 
   return (
     <main className="pt-28 font-Roboto bg-gradient-to-b from-white to-secondary/50 w-full">
-      <SubHeading >
-        la Carta Espai
-      </SubHeading>
 
       <hr className='border-b-8 border-primary/50' />
 

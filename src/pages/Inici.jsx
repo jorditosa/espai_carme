@@ -18,7 +18,7 @@ function Inici() {
   }, [])
 
   return (
-    <div className='bg-gradient-to-b from-white to-secondary/50'>
+    <div className='bg-gradient-to-b from-white to-light/50'>
       { loading ? (
         <div className="loader-container">
           <div className="spinner"></div>

@@ -28,16 +28,26 @@ function Footer() {
                         <li>Diumenge <span className='text-sm ml-2 text-gray-700'>13-00-15:45, 20:00-22:45</span></li>
                     </ul>
                 </div>
-                <div>
-                    <h2 className="mb-6 text-sm font-bold text-dark uppercase">Segueix-nos</h2>
-                    <ul className="text-gray-800">
-                        <li className="mb-4">
-                            <a href="https://www.instagram.com/espaicarme/?hl=es" className="hover:underline">Instagram</a>
-                        </li>
-                        <li>
-                            <a href="https://twitter.com/espaicarme" className="hover:underline">Twitter</a>
-                        </li>
-                    </ul>
+                <div className="mt-4 space-x-6 sm:mt-0">
+                    <h2 className="mb-6 text-sm font-bold text-dark uppercase dark:text-white">Segueix-nos</h2>
+                    <div className='flex justify-between'>
+                        <a href="#" className="text-gray-700 hover:text-secondary dark:hover:text-white">
+                            <BsFacebook size={25} />
+                            <span className="sr-only">Facebook page</span>
+                        </a>
+                        <a href="#" className="text-gray-700 hover:text-secondary dark:hover:text-white">
+                            <BsInstagram size={25} />
+                            <span className="sr-only">Instagram page</span>
+                        </a>
+                        <a href="#" className="text-gray-700 hover:text-secondary dark:hover:text-white">
+                            <BsTwitter size={25} />
+                            <span className="sr-only">Twitter page</span>
+                        </a>
+                        <a href="tel:+34938933308" className="text-gray-700 hover:text-secondary dark:hover:text-white">
+                            <BsFillTelephoneFill size={25} />
+                            <span className="sr-only">Telèfon</span>
+                        </a>
+                    </div>
                 </div>
                 <div>
                     <h2 className="mb-6 text-sm font-bold text-dark uppercase dark:text-white">Legal</h2>
@@ -56,24 +66,7 @@ function Footer() {
         <div className="text-center md:text-start sm:flex sm:items-center sm:justify-between">
             <span className="text-md hover:text-secondary:text-gray-400">© {new Date().getFullYear()} <a href="#" className="hover:underline">Espai de la Carme &copy;.</a> <span className='block md:inline'>Tots els drets reservats.</span>
             </span>
-            <div className="flex mt-4 space-x-6 justify-center sm:mt-0">
-                <a href="#" className="text-gray-700 hover:text-secondary dark:hover:text-white">
-                    <BsFacebook size={25} />
-                    <span className="sr-only">Facebook page</span>
-                </a>
-                <a href="#" className="text-gray-700 hover:text-secondary dark:hover:text-white">
-                    <BsInstagram size={25} />
-                    <span className="sr-only">Instagram page</span>
-                </a>
-                <a href="#" className="text-gray-700 hover:text-secondary dark:hover:text-white">
-                    <BsTwitter size={25} />
-                    <span className="sr-only">Twitter page</span>
-                </a>
-                <a href="tel:+34938933308" className="text-gray-700 hover:text-secondary dark:hover:text-white">
-                    <BsFillTelephoneFill size={25} />
-                    <span className="sr-only">Telèfon</span>
-                </a>
-            </div>
+          
         </div>
     </footer>
   )
