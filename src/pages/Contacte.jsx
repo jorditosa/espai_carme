@@ -17,7 +17,7 @@ function Contacte() {
                 name="nom"
                 id="name"
                 label="El teu nom"
-                className="text-dark pl-4 my-3 border-3 rounded-lg border-dark shadow-dark shadow-md outline-dark" />
+                className="text-dark pl-4 my-3 border-3 rounded-lg border-dark shadow-primary/75 shadow outline-dark" />
             </div>
             <div className="w-full md:w-1/3 px-10 md:px-0 py-2">
                 <Input 
@@ -26,7 +26,7 @@ function Contacte() {
                 name="email"
                 id="email"
                 label="El teu email"
-                className="text-dark pl-4 my-3 border-3 rounded-lg border-dark/50 shadow-dark shadow-md outline-dark" />
+                className="text-dark pl-4 my-3 border-3 rounded-lg border-dark/50 shadow-primary/75 shadow outline-dark" />
             </div>
             <div className="w-full md:w-1/3 px-10 md:px-0 py-2">
                 <Textarea 
@@ -36,7 +36,7 @@ function Contacte() {
                 id="message"
                 label="El teu missatge"
                 color="dark"
-                className="text-dark pl-4 my-3 border-3 rounded-lg border-dark/50 shadow-dark shadow-md outline-dark" />
+                className="text-dark pl-4 my-3 border-3 rounded-lg border-dark/50 shadow-primary/75 shadow outline-dark" />
             </div>
             <button type="submit" className="w-40 cursor-pointer block text-dark bg-light hover:text-light hover:bg-secondary rounded-full py-2 px-4 font-bold text-md lg:text-xl my-4 transition-all duration-200">Opina!</button>
             
