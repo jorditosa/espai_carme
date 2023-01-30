@@ -1,5 +1,6 @@
 import LogoNegre from '../assets/logos/logo_negre.webp'
 import { BsInstagram, BsFacebook, BsTwitter, BsFillTelephoneFill } from 'react-icons/bs'
+import Contacte from '../pages/Contacte'
 
 
 function Footer() {
@@ -9,15 +10,16 @@ function Footer() {
 
         <hr className="my-6 border-gray-400 sm:mx-auto lg:my-8" />
 
-        <div className="md:flex md:justify-between py-8">
-            <div className="mb-6 md:mb-0">
-                <a href="index.html" className="flex items-center">
-                    <img src={LogoNegre} className="w-32 mx-auto" alt="Espai de la Carme Logo" />
+        <div className=" md:justify-between py-8">
+            <div className="flex flex-col md:flex-row gap-24 mb-6 md:mb-0">
+                <a href="index.html" className="flex items-start">
+                    <img src={LogoNegre} className="w-40 mx-auto" alt="Espai de la Carme Logo" />
                 </a>
+                <Contacte />
             </div>
-            <div className="grid grid-cols-1 gap-8 sm:gap-6 md:grid-cols-2 lg:grid-cols-3 text-center">
+            <div className="grid grid-cols-1 gap-8 sm:gap-24 md:grid-cols-2 text-center">
                 <div>
-                    <h2 className="mb-6 text-sm font-bold text-dark uppercase dark:text-white">Horari</h2>
+                    <h2 className="mb-6 text-md font-bold text-dark uppercase dark:text-white">Horari</h2>
                     <ul className='text-gray-800 lg:text-start'>
                         <li>Dilluns <span className='text-sm ml-2 text-gray-700'>Tancat</span></li>
                         <li>Dimarts <span className='text-sm ml-2 text-gray-700'>13-00-15:45, 20:00-22:45</span></li>
@@ -29,7 +31,7 @@ function Footer() {
                     </ul>
                 </div>
                 <div className="mt-4 space-x-6 sm:mt-0">
-                    <h2 className="mb-6 text-sm font-bold text-dark uppercase dark:text-white">Segueix-nos</h2>
+                    <h2 className="mb-6 text-md font-bold text-dark uppercase dark:text-white">Segueix-nos</h2>
                     <div className='flex justify-between'>
                         <a href="#" className="text-gray-700 hover:text-secondary dark:hover:text-white">
                             <BsFacebook size={25} />
@@ -49,8 +51,14 @@ function Footer() {
                         </a>
                     </div>
                 </div>
-                <div>
-                    <h2 className="mb-6 text-sm font-bold text-dark uppercase dark:text-white">Legal</h2>
+            </div>
+        </div>
+        <hr className="my-6 border-gray-400 sm:mx-auto lg:my-8" />
+        <div className="text-center md:text-start sm:flex sm:items-start sm:justify-between">
+            <span className="text-md hover:text-secondary:text-gray-400">© {new Date().getFullYear()} <a href="#" className="hover:underline">Espai de la Carme &copy;.</a> <span className='block md:inline'>Tots els drets reservats.</span>
+            </span>
+            <div className='mx-10'>
+                <h2 className="mb-6 text-md font-bold text-dark uppercase dark:text-white">Legal</h2>
                     <ul className="text-gray-800">
                         <li className="mb-4">
                             <a href="#" className="hover:underline">Política privacitat</a>
@@ -60,12 +68,6 @@ function Footer() {
                         </li>
                     </ul>
                 </div>
-            </div>
-        </div>
-        <hr className="my-6 border-gray-400 sm:mx-auto lg:my-8" />
-        <div className="text-center md:text-start sm:flex sm:items-center sm:justify-between">
-            <span className="text-md hover:text-secondary:text-gray-400">© {new Date().getFullYear()} <a href="#" className="hover:underline">Espai de la Carme &copy;.</a> <span className='block md:inline'>Tots els drets reservats.</span>
-            </span>
           
         </div>
     </footer>

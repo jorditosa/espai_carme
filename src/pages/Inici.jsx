@@ -27,7 +27,7 @@ function Inici() {
         <>
           <header className="w-full h-screen bg-local flex flex-col items-start justify-start font-Roboto" style={{backgroundImage: `url(${Portada})`, backgroundRepeat: 'no-repeat', backgroundSize: 'cover', backgroundPosition: 'center'}}>
           <div className='w-full h-screen text-end font-bold text-light py-24 lg:py-50 bg-gradient-to-t from-light/5 to-dark/25'>
-            <div className='w-full lg:max-w-[1200px] px-10 pt-12'>
+            <div className='w-full lg:max-w-[900px] mx-auto px-10 pt-12'>
               <h1 className='text-5xl lg:text-8xl text-center md:text-right'>Restaurant <br/> Espai de la Carme</h1>
               <span className='block text-center md:text-right font-base text-lg lg:text-xl pt-1'>des del 2000, a Vilanova i la Geltrú </span>
             </div>
@@ -37,8 +37,6 @@ function Inici() {
         <About />   
 
         <IniciCartes />
-
-        <Contacte />
 
         <Footer />
         </>
