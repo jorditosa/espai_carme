@@ -95,7 +95,7 @@ export default function Layout() {
               <BsFillTelephoneFill size={30} className='cursor-pointer text-secondary hover:text-secondary/75' />
             </a>
             <span 
-            className="font-bold text-secondary hover:text-secondary/75 text-2xl cursor-pointer"
+            className="font-bold text-secondary hover:text-secondary/75 text-xl cursor-pointer"
             onClick={() => {
               if( language === 'Cat') {
                 setLanguage('Esp')

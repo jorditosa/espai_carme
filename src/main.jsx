@@ -3,6 +3,9 @@ import ReactDOM from 'react-dom/client'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 
 import Layout from './components/Layout'
+import Gestio from './db/Gestio'
+import Producte, { loader as productesLoader } from './db/Producte'
+import NouProducte from './db/NouProducte'
 import Inici from './pages/Inici'
 import Carta from './pages/Carta'
 import MenuEspai from './pages/MenuEspai'
@@ -41,8 +44,22 @@ const router = createBrowserRouter([
           element: <MenuLab />
         },
       ]
-    }
-
+    },
+    {
+      path: '/gestio',
+      element: <Gestio />,
+      children: [
+        {
+          path: '/gestio/producte',
+          element: <Producte />,
+          loader: productesLoader
+        },
+        {
+          path: '/gestio/nouproducte',
+          element: <NouProducte />,
+        },
+      ]
+    },
   ]);
 
 
