@@ -32,3 +32,17 @@
         transform: rotate(360deg);
     }
 }
+
+
+/* Expanding cards Carta i Menu */
+
+.panel {
+    cursor: pointer;
+    flex: 0.5;
+    position: relative;
+    transition: flex 0.6s ease-in;
+}
+
+.panel.active {
+    flex: 1;
+}

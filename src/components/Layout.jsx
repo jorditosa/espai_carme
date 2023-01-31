@@ -20,6 +20,9 @@ display: inline;
  
 export default function Layout() {
   const [openNav, setOpenNav] = useState(false);
+
+  // Idiomes
+  const [ language, setLanguage] = useState('Cat')
  
   useEffect(() => {
     window.addEventListener(
@@ -29,7 +32,7 @@ export default function Layout() {
   }, []);
  
   const navList = (
-    <ul className="w-screen h-full lg:px-20 flex flex-col lg:flex-row items-center justify-between gap-y-4 font-Roboto uppercase">
+    <ul className="w-full lg:px-24 flex flex-col items-center justify-between gap-y-3 font-Roboto uppercase">
          <Typography
         as="li"
         variant="small"
@@ -52,9 +55,6 @@ export default function Layout() {
         <RiEBikeFill size={40} />
         </Link>
         <div className='w-1/2 lg:w-1/6 flex justify-around py-3'>
-          <a target='_blank' href='tel:+34938933308'>
-            <BsFillTelephoneFill size={25} className='cursor-pointer text-secondary hover:text-secondary/75' />
-          </a>
           <a target='_blank' href='https://www.instagram.com/espaicarme/?hl=es'>
             <BsInstagram size={25} className='cursor-pointer text-secondary hover:text-secondary/75' />
           </a>
@@ -67,42 +67,59 @@ export default function Layout() {
         </div>
         <Link 
         className='text-lg lg:text-md font-bold block py-3 text-secondary hover:text-secondary/75' 
-        to='/carta'
+        to='/cartes/#'
         onClick={() => setOpenNav(false)}
-        >Carta
+        >Cartes
         </Link>
         <Link 
-        className='text-lg lg:text-md font-bold block py-3 text-secondary hover:text-secondary/75' 
+        className='text-lg lg:text-md font-bold block py-3 text-secondary hover:text-secondary/75'
         to='/celler'
         onClick={() => setOpenNav(false)}
         >Celler
         </Link>
-     
     </ul>
   );
  
   return (
     <>
-      <nav className="w-screen fixed bg-light z-10 shadow-lg shadow-dark/75">
-        <div className="w-full flex items-center justify-between px-5">
-          <div className="hidden opacity-0 lg:block lg:opacity-100">{navList}</div>
+      <nav className="w-full fixed bg-light z-10 shadow-lg shadow-primary/75">
+        <div className="w-full flex items-center justify-between px-12">
           <Link 
           to='/'
           onClick={() => setOpenNav(!openNav)}
           >
-            <img className='w-[70px] rounded-sm p-2' src={LogoNegre} alt="Logo Espai" />
+            <img className='w-[75px] rounded-sm p-1' src={LogoNegre} alt="Logo Espai" />
           </Link>
-          <button
-            variant="text"
-            className="text-secondary block"
-            onClick={() => setOpenNav(!openNav)}
-          >
-            {openNav ? (
-              <CloseOutline size={50} />
-            ) : (
-              <MenuOutline size={50} />
-            )}
-          </button>
+          <div className="flex items-center gap-x-8">
+            <a target='_blank' href='tel:+34938933308'>
+              <BsFillTelephoneFill size={30} className='cursor-pointer text-secondary hover:text-secondary/75' />
+            </a>
+            <span 
+            className="font-bold text-secondary hover:text-secondary/75 text-2xl cursor-pointer"
+            onClick={() => {
+              if( language === 'Cat') {
+                setLanguage('Esp')
+              } else if( language === 'Esp') {
+                setLanguage('Eng')
+              } else if( language === 'Eng') {
+                setLanguage('Cat')
+              } 
+            } }
+            >
+              {language}
+            </span>
+            <button
+              variant="text"
+              className="text-secondary block"
+              onClick={() => setOpenNav(!openNav)}
+            >
+              {openNav ? (
+                <CloseOutline size={50} />
+              ) : (
+                <MenuOutline size={50} />
+              )}
+            </button>
+          </div>
         </div>
         <MobileNav open={openNav}>
           {navList}

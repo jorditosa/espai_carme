@@ -17,7 +17,7 @@ function Carta() {
   console.log(db)
 
   return (
-    <main className="pt-28 font-Roboto bg-gradient-to-b from-white to-secondary/50 w-full">
+    <main className="pt-28 font-Roboto bg-gradient-to-b from-white to-light/50 w-full">
 
       <hr className='border-b-8 border-primary/50' />
 
@@ -370,8 +370,8 @@ function Carta() {
 
       <hr />
 
-      <div className='block'>
-          <h3>Llegenda al·lèrgens</h3>
+      <div className='w-full md:max-w-[900px] mx-auto mt-10 px-5'>
+          <h3 className='font-bold py-4 underline'>Llegenda d'al·lèrgens</h3>
           <div className='flex gap-x-4'>
             < GiFlour size={30} title='Gluten' />
             <span>Conté Gluten</span>
