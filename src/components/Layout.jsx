@@ -7,7 +7,7 @@ import {
 } from "@material-tailwind/react";
 import { Outlet, Link } from "react-router-dom";
 import { BsInstagram, BsFacebook, BsTwitter, BsFillTelephoneFill } from 'react-icons/bs'
-import { RiEBikeFill } from 'react-icons/ri'
+import { MdDeliveryDining } from 'react-icons/md'
 import { MenuOutline, CloseOutline } from '@styled-icons/evaicons-outline'
 import LogoNegre from '../assets/logos/logo_negre.webp'
 import styled from 'styled-components'
@@ -32,7 +32,7 @@ export default function Layout() {
   }, []);
  
   const navList = (
-    <ul className={`${ openNav ? 'bg-light' : 'hidden'} w-full lg:px-24 flex flex-col items-center justify-between gap-y-3 font-Roboto uppercase`}>
+    <ul className={`${ openNav ? 'bg-light shadow-primary' : 'hidden'} w-full lg:px-24 flex flex-col items-center justify-between gap-y-3 font-Roboto uppercase`}>
          <Typography
         as="li"
         variant="small"
@@ -40,39 +40,32 @@ export default function Layout() {
         className="p-1 font-normal"
       >
         <Link 
-        className='text-lg lg:text-md font-bold block py-4 text-secondary hover:text-secondary/75' 
+        className='text-lg lg:text-md font-bold block py-4 text-secondary hover:translate-y-1 hover:text-primary transition ease-in-out duration-300' 
         to='/'
         onClick={() => setOpenNav(false)}
         >Espai de la carme
         </Link>
       </Typography>
         
-        <Link 
-        className='flex justify-center items-center gap-2 text-lg lg:text-md font-bold py-3 text-secondary hover:text-secondary/75' 
-        to='/takespai/#'
-        onClick={() => setOpenNav(false)}
-        >Takespai!
-        <RiEBikeFill size={40} />
-        </Link>
         <div className='w-1/2 lg:w-1/6 flex justify-around py-3'>
           <a target='_blank' href='https://www.instagram.com/espaicarme/?hl=es'>
-            <BsInstagram size={25} className='cursor-pointer text-secondary hover:text-secondary/75' />
+            <BsInstagram size={25} className='cursor-pointer text-secondary hover:translate-y-1 hover:text-primary transition ease-in-out duration-300' />
           </a>
           <a target='_blank' href='https://es-es.facebook.com/espai.carme/'>
-            <BsFacebook size={25} className='cursor-pointer text-secondary hover:text-secondary/75' />
+            <BsFacebook size={25} className='cursor-pointer text-secondary hover:translate-y-1 hover:text-primary transition ease-in-out duration-300' />
           </a>
           <a target='_blank' href='https://twitter.com/espaicarme'>
-            <BsTwitter size={25} className='cursor-pointer text-secondary hover:text-secondary/75' />
+            <BsTwitter size={25} className='cursor-pointer text-secondary hover:translate-y-1 hover:text-primary transition ease-in-out duration-300' />
           </a>
         </div>
         <Link 
-        className='text-lg lg:text-md font-bold block py-3 text-secondary hover:text-secondary/75' 
+        className='text-lg lg:text-md font-bold block py-3 text-secondary hover:translate-y-1 hover:text-primary transition ease-in-out duration-300' 
         to='/cartes'
         onClick={() => setOpenNav(false)}
         >Cartes
         </Link>
         <Link 
-        className='text-lg lg:text-md font-bold block py-3 text-secondary hover:text-secondary/75'
+        className='text-lg lg:text-md font-bold block py-3 text-secondary hover:translate-y-1 hover:text-primary transition ease-in-out duration-300'
         to='/celler'
         onClick={() => setOpenNav(false)}
         >Celler
@@ -82,20 +75,21 @@ export default function Layout() {
  
   return (
     <>
-      <nav className="w-full fixed bg-light z-10 shadow-lg shadow-primary/75">
-        <div className="w-full flex items-center justify-between px-4 lg:px-12">
+      <nav className="w-full fixed bg-light z-10 shadow-lg shadow-primary/50">
+        <div className="w-full flex items-center justify-between px-4 lg:px-12 font-Roboto">
           <Link 
-          to='/'
-          onClick={() => setOpenNav(!openNav)}
-          >
-            <img className='w-[75px] rounded-sm p-1' src={LogoNegre} alt="Logo Espai" />
+          className='flex justify-center items-center gap-x-1 text-lg font-bold py-3 text-secondary hover:translate-y-1 hover:text-primary transition ease-in-out duration-300' 
+          to='/takespai/#'
+          onClick={() => setOpenNav(false)}
+          >Takespai!
+          <MdDeliveryDining size={40} />
           </Link>
           <div className="flex items-center gap-x-8">
             <a target='_blank' href='tel:+34938933308'>
-              <BsFillTelephoneFill size={30} className='cursor-pointer text-secondary hover:text-secondary/75' />
+              <BsFillTelephoneFill size={30} className='cursor-pointer text-secondary hover:translate-y-1 hover:text-primary transition ease-in-out duration-300' />
             </a>
             <span 
-            className="font-bold text-secondary hover:text-secondary/75 text-xl cursor-pointer"
+            className="font-bold text-secondary hover:translate-y-1 hover:text-primary transition ease-in-out duration-300 text-lg cursor-pointer"
             onClick={() => {
               if( language === 'Cat') {
                 setLanguage('Esp')
@@ -110,7 +104,7 @@ export default function Layout() {
             </span>
             <button
               variant="text"
-              className="text-secondary block"
+              className="text-secondary hover:text-primary transition ease-in-out duration-300 block"
               onClick={() => setOpenNav(!openNav)}
             >
               {openNav ? (

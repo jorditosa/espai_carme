@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import LogoNegre from '../assets/logos/logo_negre.webp'
 import { BsInstagram, BsFacebook, BsTwitter, BsFillTelephoneFill } from 'react-icons/bs'
 import Contacte from '../pages/Contacte'
@@ -12,9 +13,9 @@ function Footer() {
 
         <div className="py-2 md:py-4">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-20 mb-6 md:mb-0">
-                <a href="index.html" className="flex items-start">
+                <Link to="/" className="flex items-start">
                     <img src={LogoNegre} className="w-48 mx-auto" alt="Espai de la Carme Logo" />
-                </a>
+                </Link>
                 <Contacte />
                 <div className='text-center md:text-start'>
                     <h2 className="mb-6 text-md font-bold text text-dark uppercase dark:text-white">Horari</h2>

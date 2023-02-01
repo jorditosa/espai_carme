@@ -4,10 +4,7 @@ import Error from '../components/Error'
 
 export async function action({request}) {
   const formData = await request.formData();
-
   const datos = Object.fromEntries(formData);
-
-  console.log('submit')
 
   // Validacion
   const errores = [];

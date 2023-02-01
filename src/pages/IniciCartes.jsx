@@ -26,24 +26,24 @@ function IniciCartes() {
     }, [])
 
   return (
-    <section id="cartes" className="bg-gradient-to-b from-dark to-dark/5 py-4 text-center lg:text-start text-secondary">
+    <section id="cartes" className="text-center lg:text-start text-secondary">
 
         <div className="w-full h-screen flex flex-col md:flex-row">
             <div className="h-full panel text-light/75" style={{backgroundImage: `url(${ImgCarta})`, backgroundRepeat: 'no-repeat', backgroundSize: 'cover', backgroundPosition: 'center'}}>
                 <Link
                 to={'/carta'}>
-                    <div className="h-full w-full flex justify-center items-center bg-gradient-to-b from-dark/75 to-light/10">
+                    <div className="h-full w-full flex justify-center items-center bg-gradient-to-b from-dark/75 to-light/5">
                         <SubHeading>Carta</SubHeading>
                     </div>
                 </Link>
             </div>
             <div className="h-full panel text-light/75" style={{backgroundImage: `url(${ImgMenu})`, backgroundRepeat: 'no-repeat', backgroundSize: 'cover', backgroundPosition: 'center'}}>
-                <div className="h-full w-full flex justify-center items-center bg-gradient-to-b from-dark/75 to-light/10">
+                <div className="h-full w-full flex justify-center items-center bg-gradient-to-b from-dark/75 to-light/5">
                     <SubHeading>Menús</SubHeading>
                 </div>
             </div>
             <div className="h-full panel text-light/75" style={{backgroundImage: `url(${ImgCartaVi})`, backgroundRepeat: 'no-repeat', backgroundSize: 'cover', backgroundPosition: 'center'}}>
-                <div className="h-full w-full flex justify-center items-center bg-gradient-to-b from-dark/75 to-light/10">
+                <div className="h-full w-full flex justify-center items-center bg-gradient-to-b from-dark/75 to-light/5">
                     <SubHeading>Carta de Vins</SubHeading>
                 </div>
             </div>
