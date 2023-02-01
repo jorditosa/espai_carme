@@ -12,7 +12,7 @@ function Gestio() {
             <span className="block font-bold text-center text-light">Gestor productes</span>
 
             <nav className="mt-10">
-                <Link className={`${location.pathname === '/gestio/producte' ? 'text-primary' : 'text-light'} text-xl block mt-2 hover:text-primary`} to="/gestio/producte">Productes</Link>
+                <Link className={`${location.pathname === '/gestio/productes' ? 'text-primary' : 'text-light'} text-xl block mt-2 hover:text-primary`} to="/gestio/productes">Productes</Link>
                 <Link className='text-xl block mt-2 hover:text-primary text-light' to="/gestio/nouproducte">Nou Producte</Link>
             </nav>
         </aside>

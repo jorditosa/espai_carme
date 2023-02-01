@@ -1,13 +1,16 @@
 {
-    "carta": {
-        "category": {
-            "title": "Foie i Tartufo",
-            "sample": {
-                "id": "001",
-                "title": "Lasagna Octavi! pasta d’espinacs i bolognesa a la tartufata",
-                "price": "12,00",
-                "alergens": "gluten"
-            }
+    "productes": [
+        {
+            "id": 1,
+            "title": "Lasagna Octavi! pasta d’espinacs i bolognesa a la tartufata",
+            "price": "12,00",
+            "alergens": "gluten"
+        },
+        {
+            "id": 2,
+            "title": "Spaghetti carbonara tartufata",
+            "price": "11,00",
+            "alergens": "egg"
         }
-    }
+    ]
 }

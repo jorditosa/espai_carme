@@ -21,7 +21,7 @@ export function loader() {
     return productes;
 }
 
-function Producte() {
+function Productes() {
 
     // Con useLoaderData, lo que esté en la función loader será cargado aqui
     const productesList = useLoaderData();
@@ -58,4 +58,4 @@ function Producte() {
   )
 }
 
-export default Producte
+export default Productes

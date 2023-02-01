@@ -2,7 +2,8 @@ import { useEffect } from 'react';
 import Footer from '../components/Footer'
 import SubHeading from '../components/SubHeading'
 import { GiFlour, GiBigEgg , GiPeanut, GiCrabClaw, GiMilkCarton } from 'react-icons/gi'
-import db from '../db/db.json'
+import DB from '../db/db.json'
+
 
 function Carta() {
 
@@ -13,8 +14,6 @@ function Carta() {
       left: 0,
     });
   }, ['/carta']);
-
-  console.log(db)
 
   return (
     <main className="pt-28 font-Roboto bg-gradient-to-b from-white to-light/50 w-full">
@@ -28,7 +27,7 @@ function Carta() {
         <div className='flex justify-between items-center border-b-2 border-dark/10 py-1'>
           <div className='flex flex-col lg:flex-row items-start justify-start'>
             <p className='inline mr-4 text-sm md:text-md lg:text-lg'>
-            {db.carta.category.sample.title}
+              { DB.productes[0].title }
             </p>
             <div className='flex'>              
               < GiFlour size={20} title='Gluten' />
@@ -39,7 +38,7 @@ function Carta() {
             </div>
           </div>
           <span className='text-md md:text-xl ml-4'>
-          {db.carta.category.sample.price} €
+          { DB.productes[0].price }€
           </span>
         </div>
         <div className='flex justify-between items-center border-b-2 border-dark/10 py-1'>

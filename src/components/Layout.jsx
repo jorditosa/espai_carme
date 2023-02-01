@@ -67,7 +67,7 @@ export default function Layout() {
         </div>
         <Link 
         className='text-lg lg:text-md font-bold block py-3 text-secondary hover:text-secondary/75' 
-        to='/#cartes'
+        to='/cartes'
         onClick={() => setOpenNav(false)}
         >Cartes
         </Link>
