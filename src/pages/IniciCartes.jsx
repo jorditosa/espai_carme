@@ -1,3 +1,4 @@
+import { useEffect } from "react"
 import SubHeading from "../components/SubHeading"
 import ImgCarta from '../assets/imatge_carta.webp'
 import ImgMenu from '../assets/formatge_gran.webp'
@@ -7,13 +8,8 @@ import { Link } from 'react-router-dom'
 function IniciCartes() {
 
 
+    useEffect(() => {
     const panels = document.querySelectorAll('.panel')
-
-    function removeActiveClasses() {
-        panels.forEach((panel) => {
-            panel.classList.remove('active')
-        })
-    }
 
     panels.forEach((panel) => {
         panel.addEventListener('mouseover', () => {
@@ -22,12 +18,15 @@ function IniciCartes() {
         })
     })
 
-    
-
-   
+    function removeActiveClasses() {
+        panels.forEach((panel) => {
+            panel.classList.remove('active')
+        })
+    }   
+    }, [])
 
   return (
-    <section id="cartes" className="bg-dark text-center lg:text-start text-secondary">
+    <section id="cartes" className="bg-gradient-to-b from-dark to-dark/5 py-4 text-center lg:text-start text-secondary">
 
         <div className="w-full h-screen flex flex-col md:flex-row">
             <div className="h-full panel text-light/75" style={{backgroundImage: `url(${ImgCarta})`, backgroundRepeat: 'no-repeat', backgroundSize: 'cover', backgroundPosition: 'center'}}>

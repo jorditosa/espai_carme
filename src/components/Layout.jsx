@@ -32,7 +32,7 @@ export default function Layout() {
   }, []);
  
   const navList = (
-    <ul className="w-full lg:px-24 flex flex-col items-center justify-between gap-y-3 font-Roboto uppercase">
+    <ul className={`${ openNav ? 'bg-light' : 'hidden'} w-full lg:px-24 flex flex-col items-center justify-between gap-y-3 font-Roboto uppercase`}>
          <Typography
         as="li"
         variant="small"
@@ -83,7 +83,7 @@ export default function Layout() {
   return (
     <>
       <nav className="w-full fixed bg-light z-10 shadow-lg shadow-primary/75">
-        <div className="w-full flex items-center justify-between px-12">
+        <div className="w-full flex items-center justify-between px-4 lg:px-12">
           <Link 
           to='/'
           onClick={() => setOpenNav(!openNav)}
