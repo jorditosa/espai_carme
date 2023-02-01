@@ -12,6 +12,7 @@ import MenuEspai from './pages/MenuEspai'
 import MenuLab from './pages/MenuLab'
 import Takespai from './pages/Takespai'
 import Celler from './pages/Celler'
+import IniciCartes from './pages/IniciCartes'
 
 
 const router = createBrowserRouter([
@@ -42,6 +43,10 @@ const router = createBrowserRouter([
         {
           path: '/menlab',
           element: <MenuLab />
+        },
+        {
+          path: '/cartes',
+          element: <IniciCartes />
         },
       ]
     },

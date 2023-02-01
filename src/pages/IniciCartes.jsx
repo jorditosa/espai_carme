@@ -30,9 +30,12 @@ function IniciCartes() {
 
         <div className="w-full h-screen flex flex-col md:flex-row">
             <div className="h-full panel text-light/75" style={{backgroundImage: `url(${ImgCarta})`, backgroundRepeat: 'no-repeat', backgroundSize: 'cover', backgroundPosition: 'center'}}>
-                <div className="h-full w-full flex justify-center items-center bg-gradient-to-b from-dark/75 to-light/10">
-                    <SubHeading>Carta</SubHeading>
-                </div>
+                <Link
+                to={'/carta'}>
+                    <div className="h-full w-full flex justify-center items-center bg-gradient-to-b from-dark/75 to-light/10">
+                        <SubHeading>Carta</SubHeading>
+                    </div>
+                </Link>
             </div>
             <div className="h-full panel text-light/75" style={{backgroundImage: `url(${ImgMenu})`, backgroundRepeat: 'no-repeat', backgroundSize: 'cover', backgroundPosition: 'center'}}>
                 <div className="h-full w-full flex justify-center items-center bg-gradient-to-b from-dark/75 to-light/10">
