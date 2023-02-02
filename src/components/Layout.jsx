@@ -32,7 +32,7 @@ export default function Layout() {
   }, []);
  
   const navList = (
-    <ul className={`${ openNav ? 'bg-light shadow-primary border-b-8 border-b-primary rounded-bl-full pb-6 md:pb-5' : 'hidden'} w-full lg:px-24 flex flex-col items-center justify-between gap-y-3 font-Roboto uppercase`}>
+    <ul className={`absolute w-full lg:px-24 flex flex-col items-end justify-between gap-y-3 pr-12 font-Roboto uppercase mt-24`}>
          <Typography
         as="li"
         variant="small"
@@ -47,7 +47,7 @@ export default function Layout() {
         </Link>
       </Typography>
         
-        <div className='w-1/2 lg:w-1/6 flex justify-evenly py-3'>
+        <div className='w-1/2 lg:w-1/6 flex justify-around py-3'>
           <a target='_blank' href='https://www.instagram.com/espaicarme/?hl=es'>
             <BsInstagram size={25} className='cursor-pointer text-secondary hover:translate-y-1 hover:text-primary transition ease-in-out duration-300' />
           </a>
@@ -75,8 +75,9 @@ export default function Layout() {
  
   return (
     <>
-      <nav className={`w-full ${ openNav ? 'bg-light h-[64px]' : ''} fixed bg-light z-10 shadow-lg shadow-primary/50`}>
-        <div className="w-full flex items-center justify-between px-4 lg:px-12 font-Roboto">
+      <nav className={`w-full ${ openNav ? 'bg-light h-[64px]' : ''} fixed z-20 shadow-lg `}>
+        <div className={`bg-light ${ openNav ? 'scale-[20] md:scale-[30] lg:scale-[40] z-20' : ''} w-10 h-10 rounded-full absolute right-0 top-0 z-0 border border-primary transition ease-in-out duration-500`}></div>
+        <div className="absolute z-20 bg-light shadow-primary/50 w-full flex items-center justify-between px-4 lg:px-12 font-Roboto">
           <Link 
           className='flex justify-center items-center gap-x-1 text-lg font-bold py-3 text-secondary hover:translate-y-1 hover:text-primary transition ease-in-out duration-300' 
           to='/takespai/#'
