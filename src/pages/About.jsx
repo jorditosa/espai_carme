@@ -13,7 +13,8 @@ function About() {
       <div className='w-full lg:max-w-[900px] mx-auto h-full py-24 lg:py-50 px-5 font-Roboto'>
         <div className="h-full flex flex-col items-start justify-start text-md lg:text-xl font-bold">
           <SubHeading >
-            L'autèntica cuina al forn de llenya
+            L'autèntica cuina <br/>
+            al forn de llenya
           </SubHeading>
           <p>
             Gaudeix dels nostres plats i productes frescos en una experiència gastronòmica que no et deixarà indiferent.

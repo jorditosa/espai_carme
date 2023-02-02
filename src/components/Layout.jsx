@@ -47,7 +47,7 @@ export default function Layout() {
         </Link>
       </Typography>
         
-        <div className='w-1/2 lg:w-1/6 flex justify-around py-3'>
+        <div className='w-1/2 lg:w-1/6 flex justify-evenly py-3'>
           <a target='_blank' href='https://www.instagram.com/espaicarme/?hl=es'>
             <BsInstagram size={25} className='cursor-pointer text-secondary hover:translate-y-1 hover:text-primary transition ease-in-out duration-300' />
           </a>
@@ -108,9 +108,9 @@ export default function Layout() {
               onClick={() => setOpenNav(!openNav)}
             >
               {openNav ? (
-                <CloseOutline size={50} />
+                <CloseOutline size={40} />
               ) : (
-                <MenuOutline size={50} />
+                <MenuOutline size={40} />
               )}
             </button>
           </div>

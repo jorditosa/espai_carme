@@ -7,8 +7,9 @@ function Contacte() {
 
         <form action="https://getform.io/f/a8caeb14-6d9c-4672-9931-5d23131bd367" method='POST' className="flex flex-col justify-center items-center text-dark mx-8 md:mx-0 font-Roboto">
             <h2 className="font-bold uppercase text-lg text-center">
-                Volem millorar! Ens agradarien les 5⭐. Ens ajudes?
+                Volem millorar!
             </h2>
+            <p>Ens agradarien les 5⭐. Ens ajudes?</p>
             <div className="w-full py-2">
                 <Input 
                 variant="outlined" 

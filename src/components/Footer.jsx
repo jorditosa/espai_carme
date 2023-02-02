@@ -30,17 +30,17 @@ function Footer() {
                     </ul>
                     <div className="my-8">
                         <h2 className="mb-6 text-md font-bold text-dark uppercase dark:text-white">Segueix-nos</h2>
-                        <div className='flex justify-around'>
+                        <div className='flex justify-evenly'>
                             <a href="#" className="text-gray-700 hover:text-secondary dark:hover:text-white">
-                                <BsFacebook size={35} />
+                                <BsFacebook size={30} />
                                 <span className="sr-only">Facebook page</span>
                             </a>
                             <a href="#" className="text-gray-700 hover:text-secondary dark:hover:text-white">
-                                <BsInstagram size={35} />
+                                <BsInstagram size={30} />
                                 <span className="sr-only">Instagram page</span>
                             </a>
                             <a href="#" className="text-gray-700 hover:text-secondary dark:hover:text-white">
-                                <BsTwitter size={35} />
+                                <BsTwitter size={30} />
                                 <span className="sr-only">Twitter page</span>
                             </a>
                             <a href="tel:+34938933358" className="text-gray-700 hover:text-secondary dark:hover:text-white">
