@@ -53,7 +53,7 @@ function Footer() {
             </div>
         </div>
         <hr className="my-6 border-gray-400 sm:mx-auto lg:my-8" />
-        <div className="text-center md:text-start flex flex-col md:flex-row gap-y-4 sm:items-start sm:justify-between">
+        <div className="text-center md:text-start flex flex-col md:flex-row gap-y-4 md:items-start sm:justify-between">
             <div className='mx-10'>
                 <ul className="text-gray-800">
                     <li className="mb-4">
@@ -61,7 +61,7 @@ function Footer() {
                     </li>
                 </ul>
             </div>  
-            <span className="text-md hover:text-secondary:text-gray-400">© {new Date().getFullYear()} <a href="#" className="hover:underline">Espai de la Carme &copy;.</a> <span>Tots els drets reservats.</span>
+            <span className="text-md">© {new Date().getFullYear()} <a href="#" className="hover:underline">Espai de la Carme &copy;.</a> <span>Tots els drets reservats.</span>
             </span>
         </div>
     </footer>

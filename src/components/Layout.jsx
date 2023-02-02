@@ -32,7 +32,7 @@ export default function Layout() {
   }, []);
  
   const navList = (
-    <ul className={`${ openNav ? 'bg-light shadow-primary' : 'hidden'} w-full lg:px-24 flex flex-col items-center justify-between gap-y-3 font-Roboto uppercase`}>
+    <ul className={`${ openNav ? 'bg-light shadow-primary border-b-8 border-b-primary rounded-bl-full pb-6 md:pb-5' : 'hidden'} w-full lg:px-24 flex flex-col items-center justify-between gap-y-3 font-Roboto uppercase`}>
          <Typography
         as="li"
         variant="small"
@@ -75,7 +75,7 @@ export default function Layout() {
  
   return (
     <>
-      <nav className="w-full fixed bg-light z-10 shadow-lg shadow-primary/50">
+      <nav className={`w-full ${ openNav ? 'bg-light h-[64px]' : ''} fixed bg-light z-10 shadow-lg shadow-primary/50`}>
         <div className="w-full flex items-center justify-between px-4 lg:px-12 font-Roboto">
           <Link 
           className='flex justify-center items-center gap-x-1 text-lg font-bold py-3 text-secondary hover:translate-y-1 hover:text-primary transition ease-in-out duration-300' 
