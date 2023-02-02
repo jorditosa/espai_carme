@@ -32,7 +32,7 @@ export default function Layout() {
   }, []);
  
   const navList = (
-    <ul className={`absolute w-full lg:px-24 flex flex-col items-end justify-between gap-y-3 pr-12 font-Roboto uppercase mt-24`}>
+    <ul className={`${ openNav ? '' : 'hidden'} absolute w-full lg:px-24 flex flex-col items-end justify-between gap-y-3 pr-12 font-Roboto uppercase mt-24`}>
          <Typography
         as="li"
         variant="small"
@@ -76,8 +76,8 @@ export default function Layout() {
   return (
     <>
       <nav className={`w-full ${ openNav ? 'bg-light h-[64px]' : ''} fixed z-20 shadow-lg `}>
-        <div className={`bg-light ${ openNav ? 'scale-[20] md:scale-[30] lg:scale-[40] z-20' : ''} w-10 h-10 rounded-full absolute right-0 top-0 z-0 border border-primary transition ease-in-out duration-500`}></div>
-        <div className="absolute z-20 bg-light shadow-primary/50 w-full flex items-center justify-between px-4 lg:px-12 font-Roboto">
+        <div className={`bg-light ${ openNav ? 'scale-[15] md:scale-[25] lg:scale-[30] z-20' : ''} w-12 h-12 rounded-full absolute right-0 top-0 z-0 border border-primary transition ease-in-out duration-500`}></div>
+        <div className="absolute z-20 bg-light w-full flex items-center justify-between px-4 lg:px-12 font-Roboto">
           <Link 
           className='flex justify-center items-center gap-x-1 text-lg font-bold py-3 text-secondary hover:translate-y-1 hover:text-primary transition ease-in-out duration-300' 
           to='/takespai/#'

@@ -8,6 +8,7 @@ import Productes, { loader as productesLoader } from './db/Productes'
 import NouProducte, { action as productesAction } from './db/NouProducte'
 import Inici from './pages/Inici'
 import Carta from './pages/Carta'
+import Menus from './pages/IniciMenus'
 import MenuEspai from './pages/MenuEspai'
 import MenuLab from './pages/MenuLab'
 import Takespai from './pages/Takespai'
@@ -47,6 +48,18 @@ const router = createBrowserRouter([
         {
           path: '/cartes',
           element: <IniciCartes />
+        },
+        {
+          path: '/menus',
+          element: <Menus />
+        },
+        {
+          path: '/menuespai',
+          element: <MenuEspai />
+        },
+        {
+          path: '/menulaborable',
+          element: <MenuLab />
         },
       ]
     },

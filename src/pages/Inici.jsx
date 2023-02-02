@@ -4,6 +4,7 @@ import LogoBlanc from '../assets/logos/logo_blanc.webp'
 import About from './About'
 import Footer from '../components/Footer'
 import IniciCartes from './IniciCartes'
+import Productes from './Productes'
 import Contacte from './Contacte'
 
 function Inici() {
@@ -36,6 +37,8 @@ function Inici() {
         <About />   
 
         <IniciCartes />
+
+        <Productes />
 
         <Footer />
         </>

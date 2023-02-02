@@ -27,7 +27,6 @@ function IniciCartes() {
 
   return (
     <section id="cartes" className="text-center lg:text-start text-secondary">
-
         <div className="w-full h-screen flex flex-col md:flex-row">
             <div className="h-full panel text-light/75" style={{backgroundImage: `url(${ImgCarta})`, backgroundRepeat: 'no-repeat', backgroundSize: 'cover', backgroundPosition: 'center'}}>
                 <Link
@@ -38,9 +37,12 @@ function IniciCartes() {
                 </Link>
             </div>
             <div className="h-full panel text-light/75" style={{backgroundImage: `url(${ImgMenu})`, backgroundRepeat: 'no-repeat', backgroundSize: 'cover', backgroundPosition: 'center'}}>
-                <div className="h-full w-full flex justify-center items-center bg-gradient-to-b from-dark/75 to-light/5">
-                    <SubHeading>Menús</SubHeading>
-                </div>
+                <Link
+                to={'/menus'}>
+                    <div className="h-full w-full flex justify-center items-center bg-gradient-to-b from-dark/75 to-light/5">
+                        <SubHeading>Menús</SubHeading>
+                    </div>
+                </Link>
             </div>
             <div className="h-full panel text-light/75" style={{backgroundImage: `url(${ImgCartaVi})`, backgroundRepeat: 'no-repeat', backgroundSize: 'cover', backgroundPosition: 'center'}}>
                 <div className="h-full w-full flex justify-center items-center bg-gradient-to-b from-dark/75 to-light/5">
@@ -48,7 +50,6 @@ function IniciCartes() {
                 </div>
             </div>
         </div>
-      
     </section>
   )
 }
