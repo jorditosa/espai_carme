@@ -36,7 +36,7 @@ function EditarProducte() {
 
     <div className="flex justify-end">
       <button 
-      className="bg-secondary text-light px-3 py-1 font-bold uppercase rounded-md"
+      className="bg-secondary text-light px-3 py-1 font-bold uppercase rounded-md hover:bg-secondary/50 hover:text-dark transition ease-in duration-200"
       onClick={() => navigate('/gestio/productes')}
       >
         Tornar
@@ -56,7 +56,7 @@ function EditarProducte() {
         <input 
         type="submit"
         value="Actualitzar Producte" 
-        className='mt-5 w-full bg-secondary p-3 uppercase text-light text-lg cursor-pointer rounded-md hover:bg-secondary/50'
+        className='mt-5 w-full bg-secondary p-3 uppercase text-light text-lg cursor-pointer rounded-md hover:bg-secondary/50 hover:text-dark transition ease-in duration-200'
         />
       </Form>
     </div>

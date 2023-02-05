@@ -14,14 +14,14 @@ function Item({producte}) {
     const navigate = useNavigate();
 
   return (
-        <tr className="border-b">
+        <tr className="border-b text-sm md:text-md xl:text-lg">
             <td className='p-3 space-y-2'>
-                <p className="text-lg text-dark">
+                <p className="text-dark">
                     {title}
                 </p>
             </td>
             <td className="p-3">
-                <p className="text-gray-600 font-bold text-xl">
+                <p className="text-gray-600 font-bold">
                     {price} €
                 </p>
             </td>

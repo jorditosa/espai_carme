@@ -2,6 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 
+
 import Layout from './components/Layout'
 import Gestio from './db/Gestio'
 import Productes, { loader as productesLoader } from './db/Productes'
@@ -16,6 +17,7 @@ import MenuLab from './pages/MenuLab'
 import Takespai from './pages/Takespai'
 import Celler from './pages/Celler'
 import IniciCartes from './pages/IniciCartes'
+import Login from './pages/Login'
 
 
 const router = createBrowserRouter([
@@ -62,6 +64,10 @@ const router = createBrowserRouter([
         {
           path: '/menulaborable',
           element: <MenuLab />
+        },
+        {
+          path: '/login',
+          element: <Login />
         },
       ]
     },

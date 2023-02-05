@@ -8,11 +8,18 @@
       "id": 1
     },
     {
-      "title": "Amanida Dali",
-      "price": "12,3",
-      "alergens": "crustaci",
-      "description": "ssss",
+      "title": "Spaghetti \"carbonara\" tartufata",
+      "price": "11",
+      "alergens": "",
+      "description": "pasta",
       "id": 2
+    },
+    {
+      "title": "Casarecci amb salsa de bolets i trufa",
+      "price": "13,50",
+      "alergens": "gluten",
+      "description": "item description",
+      "id": 3
     }
   ]
 }
