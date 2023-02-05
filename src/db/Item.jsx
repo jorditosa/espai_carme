@@ -1,7 +1,17 @@
+import { useNavigate, Form, redirect } from 'react-router-dom'
+import { eliminarProducte } from './app'
+
+export async function action({params}) {
+
+    await eliminarProducte(params.producteId)
+    return redirect('/gestio/productes')
+}
 
 function Item({producte}) {
 
-    const { title, price, alergens, id} = producte
+    const { title, price, alergens, description, id} = producte
+
+    const navigate = useNavigate();
 
   return (
         <tr className="border-b">
@@ -22,15 +32,27 @@ function Item({producte}) {
                 <button
                 type="button"
                 className="text-secondary text-sm" 
+                onClick={() => navigate(`/gestio/productes/${id}/editar`) }
                 >
                     Editar
                 </button>
-                <button
-                type="button"
-                className="text-error text-sm" 
+
+                <Form
+                method='POST'
+                action={`/gestio/productes/${id}/eliminar`}
+                onSubmit={(e) => {
+                    if(!confirm('Vols eliminar aquest Producte?')) {
+                        e.preventDefault()
+                    }
+                }}
                 >
-                    Eliminar
-                </button>
+                    <button
+                    type="submit"
+                    className="text-error text-sm" 
+                    >
+                        Eliminar
+                    </button>
+                </Form>
             </td>
         </tr>
 

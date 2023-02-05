@@ -1,29 +1,20 @@
-import { useNavigate, Form, useActionData } from 'react-router-dom'
-import Formulario from './FormularioDB'
+import { useNavigate, Form, useActionData, redirect } from 'react-router-dom'
+import Formulariodb from './FormularioDB'
 import Error from '../components/Error'
+import { agregarProducte } from './app';
 
 export async function action({request}) {
   const formData = await request.formData();
   const datos = Object.fromEntries(formData);
+  
+  // Agregar Producto
+  await agregarProducte(datos)
 
-  // Validacion
-  const errores = [];
-  if(Object.values(datos).includes('')) {
-    errores.push('Tots els camps són obligatoris')
-  }
-  console.log('submit')
-
-  // Retornar dades si hi ha errors
-  if(Object.keys(errores).length){
-    return errores
-  }
-  console.log('submit')
-
+  return redirect('/gestio/productes')
 
 }
 
 function NouProducte() {
-
   const errores = useActionData()
   const navigate = useNavigate()
 
@@ -51,8 +42,10 @@ function NouProducte() {
         } )}
         <Form
         method='post'
+        noValidate
         >
-          <Formulario />
+          <Formulariodb
+          />
 
           <input 
           type="submit"

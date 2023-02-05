@@ -1,16 +1,18 @@
 {
-    "productes": [
-        {
-            "id": 1,
-            "title": "Lasagna Octavi! pasta d’espinacs i bolognesa a la tartufata",
-            "price": "12,00",
-            "alergens": "gluten"
-        },
-        {
-            "id": 2,
-            "title": "Spaghetti carbonara tartufata",
-            "price": "11,00",
-            "alergens": "egg"
-        }
-    ]
+  "productes": [
+    {
+      "title": "Lasagna Octavi! pasta d’espinacs i bolognesa a la tartufata",
+      "price": "12",
+      "alergens": "gluten",
+      "description": "item description",
+      "id": 1
+    },
+    {
+      "title": "Amanida Dali",
+      "price": "12,3",
+      "alergens": "crustaci",
+      "description": "ssss",
+      "id": 2
+    }
+  ]
 }

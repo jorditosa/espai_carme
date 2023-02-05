@@ -5,7 +5,9 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import Layout from './components/Layout'
 import Gestio from './db/Gestio'
 import Productes, { loader as productesLoader } from './db/Productes'
-import NouProducte, { action as productesAction } from './db/NouProducte'
+import NouProducte, { action as nouProducteAction } from './db/NouProducte'
+import EditarProducte, { loader as editarProducteLoader, action as editarProducteAction } from './db/EditarProducte'
+import EliminarProducte, { action as eliminarProducteAction } from './db/Item'
 import Inici from './pages/Inici'
 import Carta from './pages/Carta'
 import Menus from './pages/IniciMenus'
@@ -75,7 +77,17 @@ const router = createBrowserRouter([
         {
           path: '/gestio/nouproducte',
           element: <NouProducte />,
-          action: productesAction
+          action: nouProducteAction
+        },
+        {
+          path: '/gestio/productes/:producteId/editar',
+          element: <EditarProducte />,
+          loader: editarProducteLoader,
+          action: editarProducteAction,
+        },
+        {
+          path: '/gestio/productes/:producteId/eliminar',
+          action: eliminarProducteAction
         },
       ]
     },

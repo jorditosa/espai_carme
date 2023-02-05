@@ -1,6 +1,5 @@
 
-
-const Formulario = ({producte}) => {
+const Formulariodb = ({producte}) => {
     return (
         <>
             <div className="mb-4">
@@ -14,6 +13,7 @@ const Formulario = ({producte}) => {
                     className="mt-2 block w-full p-3 bg-white rounded-md"
                     placeholder="Títol del producte"
                     name="title"
+                    defaultValue={producte?.title}
                 />
             </div>
 
@@ -24,10 +24,11 @@ const Formulario = ({producte}) => {
                 >Preu:</label>
                 <input 
                     id="price"
-                    type="number"
+                    type="text"
                     className="mt-2 block w-full p-3 bg-white rounded-md"
                     placeholder="Preu"
                     name="price"
+                    defaultValue={producte?.price}
                 />
             </div>
 
@@ -42,25 +43,27 @@ const Formulario = ({producte}) => {
                     className="mt-2 block w-full p-3 bg-white rounded-md"
                     placeholder="Àl·lèrgens"
                     name="alergens"
+                    defaultValue={producte?.alergens}
                 />
             </div>
 
             <div className="mb-4">
                 <label
                     className="text-gray-800"
-                    htmlFor="notas"
+                    htmlFor="description"
                 >Descripció:</label>
                 <textarea
                     as="textarea"
-                    id="notas"
+                    id="description"
                     type="text"
                     className="mt-2 block w-full p-3 bg-white h-40 align-self rounded-md"
                     placeholder="Descripció adicional"
-                    name="notas"
+                    name="description"
+                    defaultValue={producte?.description}
                 />
             </div>
         </>
     )
 }
 
-export default Formulario
+export default Formulariodb

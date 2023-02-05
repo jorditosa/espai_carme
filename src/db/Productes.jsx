@@ -1,37 +1,28 @@
 import { useLoaderData } from 'react-router-dom'
 import Item from './Item'
 
-export function loader() {
+export async function loader() {
 
-    const productes = [
-                {
-                    "id": "001",
-                    "title": "Lasagna Octavi! pasta d’espinacs i bolognesa a la tartufata",
-                    "price": "12,00",
-                    "alergens": "gluten"
-                },
-                {
-                    "id": "002",
-                    "title": "Spaghetti carbonara tartufata",
-                    "price": "11,00",
-                    "alergens": "egg"
-                },
-    ]
+    const url = 'http://localhost:3000/productes';
 
-    return productes;
+    const respuesta = await fetch(import.meta.env.VITE_API_URL);
+    const productes = await respuesta.json();
+
+    return productes
+    
 }
 
 function Productes() {
 
     // Con useLoaderData, lo que esté en la función loader será cargado aqui
-    const productesList = useLoaderData();
+    const productes = useLoaderData();
 
   return (
     <>
         <h1 className="font-black text-secondary text-4xl">Productes</h1>
         <span>Administrar els productes i begudes</span>
 
-        {productesList.length ? (
+        {productes.length ? (
             <table className='w-full bg-light shadow mt-5 table-auto'>
                 <thead className="bg-secondary text-light">
                     <tr>
@@ -43,10 +34,10 @@ function Productes() {
                 </thead>
 
                 <tbody className=''>
-                    {productesList.map((producte) => (
+                    {productes.map((productes) => (
                         <Item 
-                            producte={producte}
-                            key={producte.id}
+                            producte={productes}
+                            key={productes.id}
                         />
                     ))}
                 </tbody>
