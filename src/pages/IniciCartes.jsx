@@ -26,7 +26,13 @@ function IniciCartes() {
     }, [])
 
   return (
-    <section id="cartes" className="text-center lg:text-start text-secondary">
+    <section id="cartes" className="bg-dark text-start text-light">
+        <div className="py-24 w-full lg:max-w-[900px] mx-auto px-5">
+            <SubHeading>La nostre gastronomia</SubHeading>
+            <p className="text-md lg:text-xl font-bold">
+           Us oferim que gaudiu de la nostre gastronomia en un format de carta, menús (laborables i Espai) i una magnífica carta de vins amb producció i celler propi
+          </p>
+        </div>
         <div className="w-full h-screen flex flex-col md:flex-row">
             <div className="h-full panel text-light/75" style={{backgroundImage: `url(${ImgCarta})`, backgroundRepeat: 'no-repeat', backgroundSize: 'cover', backgroundPosition: 'center'}}>
                 <Link

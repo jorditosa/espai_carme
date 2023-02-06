@@ -27,8 +27,8 @@ function Productes() {
     }, [])
 
   return (
-    <section id="cartes" className="bg-dark lg:text-start text-light">
-        <div className="py-48 w-full lg:max-w-[900px] mx-auto px-5">
+    <section id="cartes" className="bg-dark text-start text-light">
+        <div className="py-24 w-full lg:max-w-[900px] mx-auto px-5">
             <SubHeading>El nostre producte</SubHeading>
             <p className="text-md lg:text-xl font-bold">
             Apostem per oferir-te un producte exquisit, amb proveïdors locals
