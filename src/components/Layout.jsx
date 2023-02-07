@@ -49,13 +49,13 @@ export default function Layout() {
         
         <div className='w-[200px] flex justify-around py-3'>
           <a target='_blank' href='https://www.instagram.com/espaicarme/?hl=es'>
-            <BsInstagram size={25} className='cursor-pointer text-secondary hover:translate-y-1 hover:text-primary transition ease-in-out duration-300' />
+            <BsInstagram size={25} className='cursor-pointer text-secondary hover:translate-y-1 hover:text-primary transition ease-in-out duration-300' aria-label="Icono Instagram" />
           </a>
           <a target='_blank' href='https://es-es.facebook.com/espai.carme/'>
-            <BsFacebook size={25} className='cursor-pointer text-secondary hover:translate-y-1 hover:text-primary transition ease-in-out duration-300' />
+            <BsFacebook size={25} className='cursor-pointer text-secondary hover:translate-y-1 hover:text-primary transition ease-in-out duration-300' aria-label="Icono Facebook" />
           </a>
           <a target='_blank' href='https://twitter.com/espaicarme'>
-            <BsTwitter size={25} className='cursor-pointer text-secondary hover:translate-y-1 hover:text-primary transition ease-in-out duration-300' />
+            <BsTwitter size={25} className='cursor-pointer text-secondary hover:translate-y-1 hover:text-primary transition ease-in-out duration-300' aria-label="Icono Twitter"/>
           </a>
         </div>
         <Link 
@@ -87,7 +87,7 @@ export default function Layout() {
           </Link>
           <div className="flex items-center gap-x-8">
             <a target='_blank' href='tel:+34938933308'>
-              <BsFillTelephoneFill size={30} className='cursor-pointer text-secondary hover:translate-y-1 hover:text-primary transition ease-in-out duration-300' />
+              <BsFillTelephoneFill size={30} className='cursor-pointer text-secondary hover:translate-y-1 hover:text-primary transition ease-in-out duration-300' aria-label="Telèfon restaurant" />
             </a>
             <span 
             className="font-bold text-secondary hover:translate-y-1 hover:text-primary transition ease-in-out duration-300 text-lg cursor-pointer"
@@ -107,6 +107,7 @@ export default function Layout() {
               variant="text"
               className="text-secondary hover:text-primary transition ease-in-out duration-300 block"
               onClick={() => setOpenNav(!openNav)}
+              aria-label="boton Navegacion"
             >
               {openNav ? (
                 <CloseOutline size={40} />

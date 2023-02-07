@@ -59,6 +59,8 @@ function Productes() {
                         <p className="text-sm md:text-lg mx-5">El parmigiano reggiano és un famòs formatge de procedència italiana de consistència dura, madura i grasa.</p>
                     </div>
             </div>
+        </div>
+        <div className="w-full h-12 bg-gradient-to-b from-dark/50 to-light">
 
         </div>
     </section>

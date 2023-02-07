@@ -9,6 +9,7 @@ export async function action({params}) {
 
 function Item({producte}) {
 
+    console.log(producte)
     const { title, price, alergens, description, id} = producte
 
     const navigate = useNavigate();
@@ -17,12 +18,12 @@ function Item({producte}) {
         <tr className="border-b text-sm md:text-md xl:text-lg">
             <td className='p-3 space-y-2'>
                 <p className="text-dark">
-                    {title}
+                    {producte.attributes.title}
                 </p>
             </td>
             <td className="p-3">
                 <p className="text-gray-600 font-bold">
-                    {price} €
+                    {producte.attributes.price} €
                 </p>
             </td>
             <td>

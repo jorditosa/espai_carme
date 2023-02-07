@@ -5,7 +5,7 @@ function Contacte() {
   return (
     <section className="w-full">
 
-        <form action="https://getform.io/f/a8caeb14-6d9c-4672-9931-5d23131bd367" method='POST' className="flex flex-col justify-center items-center text-dark mx-8 md:mx-0 font-Roboto">
+        <form action="https://getform.io/f/a8caeb14-6d9c-4672-9931-5d23131bd367" method='POST' className="flex flex-col justify-center items-center text-dark mx-2 md:mx-0 font-Roboto">
             <h2 className="font-bold uppercase text-lg text-center">
                 Volem millorar!
             </h2>

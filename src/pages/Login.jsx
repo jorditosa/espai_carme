@@ -10,7 +10,7 @@ function Login() {
   const handleLogin = (e) => {
     e.preventDefault();
 
-    if( user === 'espai_admin' && password === '123') {
+    if( user === 'espai_admin' && password === 'Carmetta2017') {
       navigate('/gestio/productes')
     } else {
       alert('Error, password o user incorrectes')
@@ -34,7 +34,7 @@ function Login() {
           </div>
           <div className="w-full">
             <label htmlFor="userName">Password</label>
-            <input type="text" name="user" id="user" className="block w-full  rounded-full border-none shadow-lg my-1"
+            <input type="password" name="password" id="password" className="block w-full  rounded-full border-none shadow-lg my-1"
             value={password}
             onChange={ (e) => setPassword(e.target.value)}
             />    

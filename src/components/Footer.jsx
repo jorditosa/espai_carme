@@ -30,7 +30,7 @@ function Footer() {
                     </ul>
                     <div className="my-8">
                         <h2 className="mb-6 text-md font-bold text-dark uppercase dark:text-white">Segueix-nos</h2>
-                        <div className='flex justify-evenly'>
+                        <div className='flex justify-between'>
                             <a href="#" className="text-gray-700 hover:text-secondary dark:hover:text-white">
                                 <BsFacebook size={30} />
                                 <span className="sr-only">Facebook page</span>
@@ -43,7 +43,7 @@ function Footer() {
                                 <BsTwitter size={30} />
                                 <span className="sr-only">Twitter page</span>
                             </a>
-                            <a href="tel:+34938933358" className="text-gray-700 hover:text-secondary dark:hover:text-white">
+                            <a href="tel:+34938933358" className="text-gray-700 hover:text-secondary dark:hover:text-white" aria-label="Telèfon restaurant">
                                 <BsFillTelephoneFill size={30} />
                                 <span className="sr-only">Telèfon</span>
                             </a>
@@ -59,9 +59,12 @@ function Footer() {
                     <li className="mb-4">
                         <a href="#" className="font-bold text-md uppercase hover:underline">Política privacitat</a>
                     </li>
+                    <Link to="/login" className="font-bold text-md uppercase hover:underline">
+                        <p>Admin</p>
+                    </Link>
                 </ul>
             </div>  
-            <span className="text-md">© {new Date().getFullYear()} <a href="#" className="hover:underline">Espai de la Carme &copy;.</a> <span>Tots els drets reservats.</span>
+            <span className="text-md">© {new Date().getFullYear()} <a href="#" className="hover:underline">Espai de la Carme &copy;.</a> <span className='block'>Tots els drets reservats.</span>
             </span>
         </div>
     </footer>

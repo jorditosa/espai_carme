@@ -1,15 +1,14 @@
+import { lazy } from 'react'
 import { useLoaderData } from 'react-router-dom'
 import Item from './Item'
 
 export async function loader() {
 
-    const url = 'http://localhost:3000/productes';
-
-    const respuesta = await fetch(import.meta.env.VITE_API_URL);
-    const productes = await respuesta.json();
+    const respuesta = await fetch("http://localhost:1337/api/cartas");
+    const resultado = await respuesta.json();
+    const productes = resultado.data
 
     return productes
-    
 }
 
 function Productes() {
