@@ -38,7 +38,7 @@ export async function actualizarProducte(id, datos) {
 
 export async function eliminarProducte(id) {
   try {
-    const respuesta = await fetch(`${import.meta.env.VITE_API_URL}/${id}`, {
+    const respuesta = await fetch(`${import.meta.env.VITE_API_URL}/:${id}`, {
       method: 'DELETE'
     });
     await respuesta.json()

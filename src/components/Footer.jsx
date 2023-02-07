@@ -7,7 +7,7 @@ import Contacte from '../pages/Contacte'
 function Footer() {
   return (
     
-    <footer className="h-full p-4 lg:p-8 font-Roboto">
+    <footer className="h-full p-4 lg:p-8 font-Roboto bg-light">
 
         <hr className="my-4 border-gray-400 sm:mx-auto lg:my-8" />
 
@@ -59,9 +59,6 @@ function Footer() {
                     <li className="mb-4">
                         <a href="#" className="font-bold text-md uppercase hover:underline">Política privacitat</a>
                     </li>
-                    <Link to="/login" className="font-bold text-md uppercase hover:underline">
-                        <p>Admin</p>
-                    </Link>
                 </ul>
             </div>  
             <span className="text-md">© {new Date().getFullYear()} <a href="#" className="hover:underline">Espai de la Carme &copy;.</a> <span className='block'>Tots els drets reservats.</span>

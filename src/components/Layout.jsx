@@ -60,9 +60,15 @@ export default function Layout() {
         </div>
         <Link 
         className='text-lg lg:text-md font-bold block py-3 text-secondary hover:translate-y-1 hover:text-primary transition ease-in-out duration-300' 
-        to='/cartes'
+        to='/carta'
         onClick={() => setOpenNav(false)}
-        >Cartes
+        >Carta
+        </Link>
+        <Link 
+        className='text-lg lg:text-md font-bold block py-3 text-secondary hover:translate-y-1 hover:text-primary transition ease-in-out duration-300' 
+        to='/menus'
+        onClick={() => setOpenNav(false)}
+        >Menus
         </Link>
         <Link 
         className='text-lg lg:text-md font-bold block py-3 text-secondary hover:translate-y-1 hover:text-primary transition ease-in-out duration-300'
@@ -76,10 +82,10 @@ export default function Layout() {
   return (
     <>
       <nav className={`w-full ${ openNav ? 'bg-light h-[64px]' : ''} fixed z-20 shadow-lg `}>
-        <div className={`bg-light ${ openNav ? 'scale-[15] md:scale-[25] lg:scale-[30] z-20' : ''} w-12 h-12 rounded-full absolute right-0 top-0 z-0 border border-primary transition ease-in-out duration-500`}></div>
-        <div className="absolute z-20 bg-light w-full flex items-center justify-between px-4 lg:px-12 font-Roboto">
+        <div className={`bg-light ${ openNav ? 'scale-[20] md:scale-[30] lg:scale-[35] z-20' : ''} w-12 h-12 rounded-full absolute right-0 top-0 z-0 border border-secondary transition ease-in-out duration-500`}></div>
+        <div className="absolute z-20 bg-secondary w-full flex items-center justify-between px-4 lg:px-12 font-Roboto shadow-lg">
           <Link 
-          className='flex justify-center items-center gap-x-1 text-lg font-bold py-3 text-secondary hover:translate-y-1 hover:text-primary transition ease-in-out duration-300' 
+          className='flex justify-center items-center gap-x-1 text-lg font-bold py-3 text-light hover:translate-y-1 hover:text-primary transition ease-in-out duration-300' 
           to='/takespai/#'
           onClick={() => setOpenNav(false)}
           >Takespai!
@@ -87,10 +93,10 @@ export default function Layout() {
           </Link>
           <div className="flex items-center gap-x-8">
             <a target='_blank' href='tel:+34938933308'>
-              <BsFillTelephoneFill size={30} className='cursor-pointer text-secondary hover:translate-y-1 hover:text-primary transition ease-in-out duration-300' aria-label="Telèfon restaurant" />
+              <BsFillTelephoneFill size={30} className='cursor-pointer text-light hover:translate-y-1 hover:text-primary transition ease-in-out duration-300' aria-label="Telèfon restaurant" />
             </a>
             <span 
-            className="font-bold text-secondary hover:translate-y-1 hover:text-primary transition ease-in-out duration-300 text-lg cursor-pointer"
+            className="font-bold text-light hover:translate-y-1 hover:text-primary transition ease-in-out duration-300 text-lg cursor-pointer"
             onClick={() => {
               if( language === 'Cat') {
                 setLanguage('Esp')
@@ -105,7 +111,7 @@ export default function Layout() {
             </span>
             <button
               variant="text"
-              className="text-secondary hover:text-primary transition ease-in-out duration-300 block"
+              className="text-light hover:text-primary transition ease-in-out duration-300 block"
               onClick={() => setOpenNav(!openNav)}
               aria-label="boton Navegacion"
             >

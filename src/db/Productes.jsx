@@ -32,7 +32,7 @@ function Productes() {
                     </tr>
                 </thead>
 
-                <tbody className=''>
+                <tbody>
                     {productes.map((productes) => (
                         <Item 
                             producte={productes}

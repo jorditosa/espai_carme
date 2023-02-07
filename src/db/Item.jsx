@@ -9,8 +9,7 @@ export async function action({params}) {
 
 function Item({producte}) {
 
-    console.log(producte)
-    const { title, price, alergens, description, id} = producte
+    const { title, price} = producte.attributes
 
     const navigate = useNavigate();
 
@@ -18,12 +17,12 @@ function Item({producte}) {
         <tr className="border-b text-sm md:text-md xl:text-lg">
             <td className='p-3 space-y-2'>
                 <p className="text-dark">
-                    {producte.attributes.title}
+                    {title}
                 </p>
             </td>
             <td className="p-3">
                 <p className="text-gray-600 font-bold">
-                    {producte.attributes.price} €
+                    {price} €
                 </p>
             </td>
             <td>
@@ -40,7 +39,7 @@ function Item({producte}) {
 
                 <Form
                 method='POST'
-                action={`/gestio/productes/${id}/eliminar`}
+                action={`${import.meta.env.VITE_API_URL}/${producte.id}`}
                 onSubmit={(e) => {
                     if(!confirm('Vols eliminar aquest Producte?')) {
                         e.preventDefault()

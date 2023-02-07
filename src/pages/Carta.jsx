@@ -1,11 +1,24 @@
 import { useEffect } from 'react';
+import { useLoaderData } from 'react-router-dom'
 import Footer from '../components/Footer'
 import SubHeading from '../components/SubHeading'
 import { GiFlour, GiBigEgg , GiPeanut, GiCrabClaw, GiMilkCarton } from 'react-icons/gi'
-import DB from '../db/db.json'
 
+export async function loader() {
+
+  const respuesta = await fetch("http://localhost:1337/api/cartas");
+  const resultado = await respuesta.json();
+  const productes = resultado.data
+
+  console.log(productes)
+
+  return productes
+}
 
 function Carta() {
+
+  // Con useLoaderData, lo que esté en la función loader será cargado aqui
+  const productes = useLoaderData();
 
   useEffect(() => {
     // "document.documentElement.scrollTo" is the magic for React Router Dom v6
@@ -14,8 +27,6 @@ function Carta() {
       left: 0,
     });
   }, ['/carta']);
-
-  const carta = DB.productes
 
   return (
     <main className="pt-28 font-Roboto bg-gradient-to-b from-white to-light/50 w-full">
@@ -26,15 +37,15 @@ function Carta() {
 
         <h3 className='text-xl font-bold py-5 italic'>FOIE I TARTUFO!!!</h3>
 
-          { carta.map( (producte, id) => (
-          <div className='flex justify-between items-center border-b-2 border-dark/10 py-1'>
+          { productes.map( (producte, id) => (
+          <div className='flex justify-between items-center border-b-2 border-dark/10 py-1' key={id}>
             <div className='flex flex-col lg:flex-row items-start justify-start'>
               <p className='inline mr-4 text-sm md:text-md lg:text-lg'>
-                { producte.title }
+                { producte.attributes.title }
               </p>
             </div>
             <span className='text-md md:text-xl ml-4'>
-            { producte.price }€
+            { producte.attributes.price } €
             </span>
           </div>
           ))}

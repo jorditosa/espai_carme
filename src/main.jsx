@@ -10,14 +10,14 @@ import NouProducte, { action as nouProducteAction } from './db/NouProducte'
 import EditarProducte, { loader as editarProducteLoader, action as editarProducteAction } from './db/EditarProducte'
 import EliminarProducte, { action as eliminarProducteAction } from './db/Item'
 import Inici from './pages/Inici'
-import Carta from './pages/Carta'
+import Carta , { loader as cartaLoader } from './pages/carta'
 import Menus from './pages/IniciMenus'
 import MenuEspai from './pages/MenuEspai'
 import MenuLab from './pages/MenuLab'
 import Takespai from './pages/Takespai'
 import Celler from './pages/Celler'
 import IniciCartes from './pages/IniciCartes'
-import Login from './pages/Login'
+import ErrorPage from './components/ErrorPage'
 
 
 const router = createBrowserRouter([
@@ -32,10 +32,6 @@ const router = createBrowserRouter([
         {
           path: '/takespai',
           element: <Takespai />
-        },
-        {
-          path: '/carta',
-          element: <Carta />,
         },
         {
           path: '/menuespai',
@@ -54,6 +50,11 @@ const router = createBrowserRouter([
           element: <IniciCartes />
         },
         {
+          path: '/carta',
+          element: <Carta />,
+          loader: cartaLoader
+        },
+        {
           path: '/menus',
           element: <Menus />
         },
@@ -65,15 +66,12 @@ const router = createBrowserRouter([
           path: '/menulaborable',
           element: <MenuLab />
         },
-        {
-          path: '/login',
-          element: <Login />
-        },
       ]
     },
     {
       path: '/gestio',
       element: <Gestio />,
+      errorElement: <ErrorPage />,
       children: [
         {
           path: '/gestio/productes',

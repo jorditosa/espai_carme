@@ -9,7 +9,7 @@ import ViNegre from '../assets/vi_cuso.webp'
 
 function About() {
   return (
-    <section className="text-light dark h-screen " style={{backgroundImage: `url(${Forn})`, backgroundRepeat: 'no-repeat', backgroundSize: 'cover', backgroundPosition: 'left'}} id="about">
+    <section className="text-light dark h-screen bg-dark" style={{backgroundImage: `url(${Forn})`, backgroundRepeat: 'no-repeat', backgroundSize: '100%', backgroundPosition: 'top center'}} id="about">
       <div className='w-full lg:max-w-[900px] mx-auto h-full py-24 lg:py-50 px-5 font-Roboto'>
         <div className="h-full flex flex-col items-start justify-start text-md lg:text-xl font-bold">
           <SubHeading >

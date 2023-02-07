@@ -58,12 +58,14 @@
 /* Expanding cards Carta i Menu */
 
 .panel {
+  opacity: 0.6;
     cursor: pointer;
     flex: 0.5;
     position: relative;
-    transition: flex 0.6s ease-in;
+    transition: all 0.8s ease-in-out;
 }
 
 .panel.active {
-    flex: 1;
+    flex: 1.4;
+    opacity: 1;
 }
