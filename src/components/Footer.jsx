@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 import LogoNegre from '../assets/logos/logo_negre.webp'
-import { BsInstagram, BsFacebook, BsTwitter, BsFillTelephoneFill } from 'react-icons/bs'
+import { BsInstagram, BsFacebook, BsTwitter, BsFillTelephoneFill, BsFillGeoAltFill } from 'react-icons/bs'
 import Contacte from '../pages/Contacte'
 
 
@@ -55,9 +55,14 @@ function Footer() {
         <hr className="my-6 border-gray-400 sm:mx-auto lg:my-8" />
         <div className="text-center md:text-start flex flex-col md:flex-row gap-y-4 md:items-start sm:justify-between">
             <div className='mx-10'>
-                <ul className="text-gray-800">
+                <ul className="text-gray-800 flex flex-col lg:flex-row justify-center items-center gap-2 lg:gap-24">
                     <li className="mb-4">
                         <a href="#" className="font-bold text-md uppercase hover:underline">Política privacitat</a>
+                    </li>
+                    <li>
+                        <a href="https://goo.gl/maps/PZ2xRmxxfKb2K3qJ9" target="_blank" rel="noopener noreferrer" className="text-gray-700 hover:text-secondary dark:hover:text-white" aria-label="Situació restaurant">
+                            <BsFillGeoAltFill size={30} />
+                        </a>
                     </li>
                 </ul>
             </div>  

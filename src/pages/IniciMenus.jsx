@@ -30,7 +30,7 @@ function IniciMenus() {
         <div className="h-full panel" style={{backgroundImage: `url(${ImgMenuEspai})`, backgroundRepeat: 'no-repeat', backgroundSize: 'cover', backgroundPosition: 'center'}}>
             <Link
             to={'/menu-espai'}>
-                <div className="h-full w-full text-light flex justify-center items-center bg-gradient-to-b from-dark via-light/5 to-dark">
+                <div className="h-full w-full text-light flex justify-center items-center bg-gradient-to-b from-secondary via-light/5 to-dark/50">
                     <SubHeading>Menú Espai</SubHeading>
                 </div>
             </Link>
@@ -38,7 +38,7 @@ function IniciMenus() {
         <div className="h-full panel" style={{backgroundImage: `url(${ImgMenuLab})`, backgroundRepeat: 'no-repeat', backgroundSize: 'cover', backgroundPosition: 'center'}}>
             <Link
             to={'/menu-laborable'}>
-                <div className="h-full w-full text-light flex justify-center items-center bg-gradient-to-b from-dark via-light/5 to-dark">
+                <div className="h-full w-full text-light flex justify-center items-center bg-gradient-to-b from-secondary via-light/5 to-dark">
                     <SubHeading>Menú laborables</SubHeading>
                 </div>
             </Link>

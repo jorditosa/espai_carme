@@ -6,7 +6,7 @@ import {
   Typography
 } from "@material-tailwind/react";
 import { Outlet, Link } from "react-router-dom";
-import { BsInstagram, BsFacebook, BsTwitter, BsFillTelephoneFill } from 'react-icons/bs'
+import { BsInstagram, BsFacebook, BsTwitter, BsFillTelephoneFill, BsFillGeoAltFill } from 'react-icons/bs'
 import { MdDeliveryDining } from 'react-icons/md'
 import { MenuOutline, CloseOutline } from '@styled-icons/evaicons-outline'
 import LogoNegre from '../assets/logos/logo_negre.webp'
@@ -49,13 +49,13 @@ export default function Layout() {
         
         <div className='w-[200px] flex justify-around py-3'>
           <a target='_blank' href='https://www.instagram.com/espaicarme/?hl=es'>
-            <BsInstagram size={25} className='cursor-pointer text-secondary hover:translate-y-1 hover:text-primary transition ease-in-out duration-300' aria-label="Icono Instagram" />
+            <BsInstagram size={30} className='cursor-pointer text-secondary hover:translate-y-1 hover:text-primary transition ease-in-out duration-300' aria-label="Icono Instagram" />
           </a>
           <a target='_blank' href='https://es-es.facebook.com/espai.carme/'>
-            <BsFacebook size={25} className='cursor-pointer text-secondary hover:translate-y-1 hover:text-primary transition ease-in-out duration-300' aria-label="Icono Facebook" />
+            <BsFacebook size={30} className='cursor-pointer text-secondary hover:translate-y-1 hover:text-primary transition ease-in-out duration-300' aria-label="Icono Facebook" />
           </a>
           <a target='_blank' href='https://twitter.com/espaicarme'>
-            <BsTwitter size={25} className='cursor-pointer text-secondary hover:translate-y-1 hover:text-primary transition ease-in-out duration-300' aria-label="Icono Twitter"/>
+            <BsTwitter size={30} className='cursor-pointer text-secondary hover:translate-y-1 hover:text-primary transition ease-in-out duration-300' aria-label="Icono Twitter"/>
           </a>
         </div>
         <Link 
@@ -76,6 +76,11 @@ export default function Layout() {
         onClick={() => setOpenNav(false)}
         >Vins
         </Link>
+        <li>
+          <a href="https://goo.gl/maps/PZ2xRmxxfKb2K3qJ9" target="_blank" rel="noopener noreferrer" className="block text-secondary hover:translate-y-1 hover:text-primary transition ease-in-out duration-300" aria-label="Situació restaurant">
+            <BsFillGeoAltFill size={30} />
+          </a>
+        </li>
     </ul>
   );
  
