@@ -38,9 +38,9 @@ function Celler() {
       <div className='w-full lg:max-w-screen-lg mx-auto py-8 lg:py-24 flex flex-col md:flex-row items-center'>
           <img src={ArnauVi} alt="imatge forn llenya" className='block md:w-1/4 order-2 md:order-none  rounded-lg shadow-lg shadow-light'
              />
-          <div className='p-0 w-full'>
+          <div className='px-10 w-full'>
               <SubHeading>L'essència familiar al teu paladar</SubHeading>
-          <p className='px-10 py-4'>
+          <p className='py-4'>
               Les vinyes situades a Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsa, inventore! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Asperiores reiciendis ea voluptatum, modi non illum veniam amet culpa animi fugit!
           </p>
           </div>

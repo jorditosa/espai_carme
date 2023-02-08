@@ -72,9 +72,9 @@ export default function Layout() {
         </Link>
         <Link 
         className='text-lg lg:text-md font-bold block py-3 text-secondary hover:translate-y-1 hover:text-primary transition ease-in-out duration-300'
-        to='/celler'
+        to='/carta-vins'
         onClick={() => setOpenNav(false)}
-        >Celler
+        >Vins
         </Link>
     </ul>
   );
@@ -116,9 +116,9 @@ export default function Layout() {
               aria-label="boton Navegacion"
             >
               {openNav ? (
-                <CloseOutline size={40} />
+                <CloseOutline size={45} />
               ) : (
-                <MenuOutline size={40} />
+                <MenuOutline size={45} />
               )}
             </button>
           </div>

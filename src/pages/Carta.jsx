@@ -3,7 +3,7 @@ import { useLoaderData } from 'react-router-dom'
 import Footer from '../components/Footer'
 import SubHeading from '../components/SubHeading'
 import { GiFlour, GiBigEgg , GiPeanut, GiCrabClaw, GiMilkCarton } from 'react-icons/gi'
-import BounceLoader  from "react-spinners/BounceLoader";
+import CircleLoader  from "react-spinners/CircleLoader";
 
 export async function loader() {
 
@@ -46,7 +46,7 @@ function Carta() {
         <h3 className='text-xl font-bold py-5 italic'>FOIE I TARTUFO!!!</h3>
 
     	    { loading ? 
-          <BounceLoader 
+          <CircleLoader 
           color={"#b08e6b"}
           loading={loading}
           size={50}
@@ -74,7 +74,7 @@ function Carta() {
         <h3 className='text-xl font-bold py-5 italic'>ENTRANTS</h3>
 
         { loading ? 
-          <BounceLoader 
+          <CircleLoader 
           color={"#b08e6b"}
           loading={loading}
           size={50}
@@ -102,7 +102,7 @@ function Carta() {
         <h3 className='text-xl font-bold py-5 italic'>AMANIDES</h3>
 
         { loading ? 
-          <BounceLoader 
+          <CircleLoader 
           color={"#b08e6b"}
           loading={loading}
           size={50}
@@ -130,7 +130,7 @@ function Carta() {
         <h3 className='text-xl font-bold py-5 italic'>PROVOLONES</h3>
 
         { loading ? 
-          <BounceLoader 
+          <CircleLoader 
           color={"#b08e6b"}
           loading={loading}
           size={50}
@@ -158,7 +158,7 @@ function Carta() {
         <h3 className='text-xl font-bold py-5 italic'>RISOTTOS</h3>
 
         { loading ? 
-          <BounceLoader 
+          <CircleLoader 
           color={"#b08e6b"}
           loading={loading}
           size={50}
@@ -186,7 +186,7 @@ function Carta() {
         <h3 className='text-xl font-bold py-5 italic'>PASTES</h3>
 
         { loading ? 
-          <BounceLoader 
+          <CircleLoader 
           color={"#b08e6b"}
           loading={loading}
           size={50}
@@ -214,7 +214,7 @@ function Carta() {
         <h3 className='text-xl font-bold py-5 italic'>PEIX</h3>
 
         { loading ? 
-          <BounceLoader 
+          <CircleLoader 
           color={"#b08e6b"}
           loading={loading}
           size={50}
@@ -242,7 +242,7 @@ function Carta() {
         <h3 className='text-xl font-bold py-5 italic'>CARN</h3>
 
         { loading ? 
-          <BounceLoader 
+          <CircleLoader 
           color={"#b08e6b"}
           loading={loading}
           size={50}
@@ -270,7 +270,7 @@ function Carta() {
         <h3 className='text-xl font-bold py-5 italic'>PIZZES 🍕 </h3>
 
         { loading ? 
-          <BounceLoader 
+          <CircleLoader 
           color={"#b08e6b"}
           loading={loading}
           size={50}
@@ -298,7 +298,7 @@ function Carta() {
         <h3 className='text-xl font-bold py-5 italic'>POSTRES</h3>
 
         { loading ? 
-          <BounceLoader 
+          <CircleLoader 
           color={"#b08e6b"}
           loading={loading}
           size={50}

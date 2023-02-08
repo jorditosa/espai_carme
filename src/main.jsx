@@ -8,14 +8,13 @@ import Gestio from './db/Gestio'
 import Productes, { loader as productesLoader } from './db/Productes'
 import NouProducte, { action as nouProducteAction } from './db/NouProducte'
 import EditarProducte, { loader as editarProducteLoader, action as editarProducteAction } from './db/EditarProducte'
-import EliminarProducte, { action as eliminarProducteAction } from './db/Item'
 import Inici from './pages/Inici'
-import Carta , { loader as cartaLoader } from './pages/carta'
+import Carta , { loader as cartaLoader } from './pages/Carta'
 import Menus from './pages/IniciMenus'
 import MenuEspai , { loader as menuEspaiLoader } from './pages/MenuEspai'
 import MenuLab from './pages/MenuLab'
 import Takespai from './pages/Takespai'
-import Celler from './pages/Celler'
+import Vins from './pages/Vins'
 import IniciCartes from './pages/IniciCartes'
 import ErrorPage from './components/ErrorPage'
 
@@ -38,10 +37,6 @@ const router = createBrowserRouter([
           element: <MenuEspai />
         },
         {
-          path: '/celler',
-          element: <Celler />
-        },
-        {
           path: '/menlab',
           element: <MenuLab />
         },
@@ -59,13 +54,17 @@ const router = createBrowserRouter([
           element: <Menus />
         },
         {
-          path: '/menuespai',
+          path: '/menu-espai',
           element: <MenuEspai />,
           loader: menuEspaiLoader
         },
         {
-          path: '/menulaborable',
+          path: '/menu-laborable',
           element: <MenuLab />
+        },
+        {
+          path: '/carta-vins',
+          element: <Vins />
         },
       ]
     },
@@ -92,7 +91,6 @@ const router = createBrowserRouter([
         },
         {
           path: '/gestio/productes/:producteId/eliminar',
-          action: eliminarProducteAction
         },
       ]
     },

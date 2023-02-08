@@ -1,7 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useLoaderData } from 'react-router-dom'
 import Footer from '../components/Footer'
-import SubHeading from '../components/SubHeading'
 import { GiFlour, GiBigEgg , GiPeanut, GiCrabClaw, GiMilkCarton } from 'react-icons/gi'
 import BounceLoader  from "react-spinners/BounceLoader";
 
@@ -9,9 +8,11 @@ export async function loader() {
 
   const respuesta = await fetch(import.meta.env.VITE_API_URL_MENU);
   const resultado = await respuesta.json();
-  const menuEspai = resultado.data
+  const menuEs = resultado.data
 
-  return menuEspai
+  console.log(menuEs)
+
+  return menuEs
 }
 
 function MenuEspai() {
@@ -35,7 +36,7 @@ function MenuEspai() {
       top: 0,
       left: 0,
     });
-  }, ['/carta']);
+  }, ['/menu-espai']);
 
   return (
     <main className="pt-28 font-Roboto bg-gradient-to-b from-white to-light/50 w-full">
@@ -61,9 +62,6 @@ function MenuEspai() {
                     { item.attributes.title }
                   </p>
                 </div>
-                <span className='text-md md:text-xl block ml-4'>
-                { item.attributes.price }€
-                </span>
               </div>
             ))}
           </>
@@ -89,13 +87,17 @@ function MenuEspai() {
                     { item.attributes.title }
                   </p>
                 </div>
-                <span className='text-md md:text-xl block ml-4'>
-                { item.attributes.price }€
-                </span>
               </div>
             ))}
           </>
         } 
+      </div>
+
+      <div className='pt-6 px-5 w-full md:max-w-[900px] mx-auto'>
+        <h3 className='text-xl font-bold py-5 italic'>Preu Menú <span className='text-3xl '>21,90 €</span></h3>
+        <p className='inline mr-4 text-sm md:text-md lg:text-lg'>
+          Primer ➕  Segon ➕ Postre o Café <small>(café supl. 1,60€ - cigaló o trifàsic 2€)</small> ➕ 1 Panet <strong>(IVA Inclòs)</strong> 
+        </p>
       </div>
 
       <div className='w-full md:max-w-[900px] mx-auto my-8 px-5'>
