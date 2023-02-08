@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { useLoaderData } from 'react-router-dom'
 import Footer from '../components/Footer'
 import { GiFlour, GiBigEgg , GiPeanut, GiCrabClaw, GiMilkCarton } from 'react-icons/gi'
-import BounceLoader  from "react-spinners/BounceLoader";
+import CircleLoader  from "react-spinners/CircleLoader";
 
 export async function loader() {
 
@@ -47,7 +47,7 @@ function MenuEspai() {
         <h3 className='text-xl font-bold py-5 italic'>Primers</h3>
 
     	    { loading ? 
-          <BounceLoader 
+          <CircleLoader 
           color={"#b08e6b"}
           loading={loading}
           size={50}
@@ -72,7 +72,7 @@ function MenuEspai() {
         <h3 className='text-xl font-bold py-5 italic'>Segons</h3>
 
         { loading ? 
-          <BounceLoader 
+          <CircleLoader 
           color={"#b08e6b"}
           loading={loading}
           size={50}
@@ -96,7 +96,10 @@ function MenuEspai() {
       <div className='pt-6 px-5 w-full md:max-w-[900px] mx-auto'>
         <h3 className='text-xl font-bold py-5 italic'>Preu Menú <span className='text-3xl '>21,90 €</span></h3>
         <p className='inline mr-4 text-sm md:text-md lg:text-lg'>
-          Primer ➕  Segon ➕ Postre o Café <small>(café supl. 1,60€ - cigaló o trifàsic 2€)</small> ➕ 1 Panet <strong>(IVA Inclòs)</strong> 
+          Primer ➕  Segon ➕ Postre o Café 
+          <span className='block'>(café supl. 1,60€ - cigaló o trifàsic 2€) ➕ 1 Panet  
+          <span className='block'> (IVA Inclòs)</span> 
+          </span>  
         </p>
       </div>
 

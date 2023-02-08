@@ -18,8 +18,8 @@ function Footer() {
                 </Link>
                 <Contacte />
                 <div className='text-center md:text-start'>
-                    <h2 className="mb-6 text-md font-bold text text-dark uppercase dark:text-white">Horari</h2>
-                    <ul className='text-gray-800 lg:text-start'>
+                    <h2 className="mb-6 text-md font-bold  text-dark uppercase dark:text-white">Horari</h2>
+                    <ul className='text-gray-800 text-start pl-6 lg:pl-0'>
                         <li>Dilluns <span className='text-sm ml-2 text-gray-700'>Tancat</span></li>
                         <li>Dimarts <span className='text-sm ml-2 text-gray-700'>13-00-15:45, 20:00-22:45</span></li>
                         <li>Dimecres <span className='text-sm ml-2 text-gray-700'>13-00-15:45, 20:00-22:45</span></li>
@@ -29,17 +29,17 @@ function Footer() {
                         <li>Diumenge <span className='text-sm ml-2 text-gray-700'>13-00-15:45, 20:00-22:45</span></li>
                     </ul>
                     <div className="my-8 mx-6 lg:mx-0">
-                        <h2 className="mb-6 text-md font-bold text-dark uppercase dark:text-white">Segueix-nos</h2>
-                        <div className='flex justify-between'>
-                            <a href="#" className="text-gray-700 hover:text-secondary dark:hover:text-white">
+                        <h2 className="mb-6 text-md font-bold text-dark uppercase">Segueix-nos</h2>
+                        <div className='w-[250px] flex justify-between'>
+                            <a href="https://es-es.facebook.com/espai.carme/" className="text-gray-700 hover:text-secondary dark:hover:text-white" target="_blank">
                                 <BsFacebook size={30} />
                                 <span className="sr-only">Facebook page</span>
                             </a>
-                            <a href="#" className="text-gray-700 hover:text-secondary dark:hover:text-white">
+                            <a href="https://www.instagram.com/espaicarme/?hl=es" className="text-gray-700 hover:text-secondary dark:hover:text-white" target="_blank">
                                 <BsInstagram size={30} />
                                 <span className="sr-only">Instagram page</span>
                             </a>
-                            <a href="#" className="text-gray-700 hover:text-secondary dark:hover:text-white">
+                            <a href="https://twitter.com/espaicarme" className="text-gray-700 hover:text-secondary dark:hover:text-white" target="_blank">
                                 <BsTwitter size={30} />
                                 <span className="sr-only">Twitter page</span>
                             </a>

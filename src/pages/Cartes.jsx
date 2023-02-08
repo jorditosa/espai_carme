@@ -1,4 +1,4 @@
-const IniciCartes = lazy(() => import("./IniciCartes"))
+import IniciCartes from './IniciCartes'
 
 
 function Cartes() {

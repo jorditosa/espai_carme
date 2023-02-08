@@ -3,7 +3,7 @@ import styled from "styled-components"
 // styled comp
 
 const Heading = styled.h2`
-  text-shadow: 0.1rem 0.1rem 0.1rem #f7c873;
+  text-shadow: 0.1rem 0.1rem 0.1rem #000;
 `
 
 function SubHeading({children}) {

@@ -26,12 +26,12 @@ function IniciCartes() {
     }, [])
 
   return (
-    <section id="cartes" className="bg-dark text-start">
+    <section id="cartes" className="bg-light text-start">
         <div className="w-full h-screen flex flex-col md:flex-row">
             <div className="h-full panel  hover:bg-primary" style={{backgroundImage: `url(${ImgCarta})`, backgroundRepeat: 'no-repeat', backgroundSize: 'cover', backgroundPosition: 'center'}}>
                 <Link
                 to={'/carta'}>
-                    <div className="h-full w-full text-light flex justify-center items-center bg-gradient-to-b from-dark via-dark/5 to-dark">
+                    <div className="h-full w-full text-light flex justify-center items-center ">
                         <SubHeading>Carta</SubHeading>
                     </div>
                 </Link>
@@ -39,13 +39,13 @@ function IniciCartes() {
             <div className="h-full panel" style={{backgroundImage: `url(${ImgMenu})`, backgroundRepeat: 'no-repeat', backgroundSize: 'cover', backgroundPosition: 'center'}}>
                 <Link
               to={'/menus'}>
-                    <div className="h-full w-full text-light flex justify-center items-center bg-gradient-to-b from-dark via-dark/5 to-dark">
+                    <div className="h-full w-full text-light flex justify-center items-center ">
                         <SubHeading>Menús</SubHeading>
                     </div>
                 </Link>
             </div>
             <div className="h-full panel" style={{backgroundImage: `url(${ImgCartaVi})`, backgroundRepeat: 'no-repeat', backgroundSize: 'cover', backgroundPosition: 'center'}}>
-                <div className="h-full w-full text-light flex justify-center items-center bg-gradient-to-b from-dark via-dark/5 to-dark">
+                <div className="h-full w-full text-light flex justify-center items-center ">
                     <SubHeading>Carta de Vins</SubHeading>
                 </div>
             </div>
