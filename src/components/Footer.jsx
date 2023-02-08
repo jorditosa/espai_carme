@@ -28,7 +28,7 @@ function Footer() {
                         <li>Dissabte <span className='text-sm ml-2 text-gray-700'>13-00-15:45, 20:00-22:45</span></li>
                         <li>Diumenge <span className='text-sm ml-2 text-gray-700'>13-00-15:45, 20:00-22:45</span></li>
                     </ul>
-                    <div className="my-8">
+                    <div className="my-8 mx-6 lg:mx-0">
                         <h2 className="mb-6 text-md font-bold text-dark uppercase dark:text-white">Segueix-nos</h2>
                         <div className='flex justify-between'>
                             <a href="#" className="text-gray-700 hover:text-secondary dark:hover:text-white">

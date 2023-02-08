@@ -1,10 +1,10 @@
-import { lazy } from 'react'
 import Portada from '../assets/local.webp'
 import LogoBlanc from '../assets/logos/logo_blanc.webp'
+import About from './About'
+import IniciCartes from './IniciCartes'
+import Productes from './Productes'
 import Footer from '../components/Footer'
-const About = lazy(() => import("./About"))
-const IniciCartes = lazy(() => import("./IniciCartes"))
-const Productes = lazy(() => import("./Productes"))
+
 
 function Inici() {
 

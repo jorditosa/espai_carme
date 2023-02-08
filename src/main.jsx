@@ -12,7 +12,7 @@ import EliminarProducte, { action as eliminarProducteAction } from './db/Item'
 import Inici from './pages/Inici'
 import Carta , { loader as cartaLoader } from './pages/carta'
 import Menus from './pages/IniciMenus'
-import MenuEspai from './pages/MenuEspai'
+import MenuEspai , { loader as menuEspaiLoader } from './pages/MenuEspai'
 import MenuLab from './pages/MenuLab'
 import Takespai from './pages/Takespai'
 import Celler from './pages/Celler'
@@ -60,7 +60,8 @@ const router = createBrowserRouter([
         },
         {
           path: '/menuespai',
-          element: <MenuEspai />
+          element: <MenuEspai />,
+          loader: menuEspaiLoader
         },
         {
           path: '/menulaborable',
