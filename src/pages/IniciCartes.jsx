@@ -27,6 +27,14 @@ function IniciCartes() {
 
   return (
     <section id="cartes" className="bg-light text-start">
+        <div className="h-screen w-full lg:max-w-[900px] mx-auto px-5 flex flex-col justify-center items-start">
+            <SubHeading>
+                Les nostres  experiències gastronòmiques
+            </SubHeading>
+            <p className="text-md lg:text-xl">
+            Oferim i treballem en diverses possiblitats per poder venir i degustar els nostres plats i especialitats.
+          </p>
+        </div>
         <div className="w-full h-screen flex flex-col md:flex-row">
             <div className="h-full panel  hover:bg-primary" style={{backgroundImage: `url(${ImgCarta})`, backgroundRepeat: 'no-repeat', backgroundSize: 'cover', backgroundPosition: 'center'}}>
                 <Link

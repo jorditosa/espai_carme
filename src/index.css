@@ -9,12 +9,11 @@
     flex: 0.5;
     position: relative;
     transition: all 0.8s ease-in-out;
-    filter: brightness(25%);
     
 }
 
 .panel.active {
-    flex: 1.4;
+    flex: 1.5;
     opacity: 1;
-    filter: brightness(100%);
+    filter: brightness(110%);
 }

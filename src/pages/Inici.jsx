@@ -10,7 +10,7 @@ function Inici() {
 
   return (
     <div className='bg-gradient-to-t from-secondary to-light'>
-          <header className="w-full h-screen bg-fixed flex flex-col items-start justify-start font-Roboto" style={{backgroundImage: `url(${Portada})`, backgroundRepeat: 'no-repeat', backgroundSize: 'cover', backgroundPosition: 'center'}}>
+          <header className="w-full h-screen flex flex-col items-start justify-start font-Roboto" style={{backgroundImage: `url(${Portada})`, backgroundRepeat: 'no-repeat', backgroundSize: 'cover', backgroundPosition: 'center'}}>
             <div className='w-full h-screen text-light py-24 lg:py-50 bg-gradient-to-b from-secondary/50 to-light/5'>
               <div className='w-full h-full lg:max-w-[250px] mx-auto flex justify-center items-start'>
                 <img src={LogoBlanc} alt="logo Espai negre" />
