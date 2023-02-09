@@ -1,13 +1,12 @@
 import { useState, useEffect } from 'react';
 import { useLoaderData } from 'react-router-dom'
 import Footer from '../components/Footer'
-import SubHeading from '../components/SubHeading'
 import { GiFlour, GiBigEgg , GiPeanut, GiCrabClaw, GiMilkCarton } from 'react-icons/gi'
 import CircleLoader  from "react-spinners/CircleLoader";
 
 export async function loader() {
 
-  const respuesta = await fetch(import.meta.env.VITE_API_URL_CARTA);
+  const respuesta = await fetch(`${import.meta.env.VITE_API_URL}/carta`);
   const resultado = await respuesta.json();
   const carta = resultado.data
 
@@ -267,7 +266,7 @@ function Carta() {
       </div>
 
       <div className='pt-6 px-5 w-full md:max-w-[900px] mx-auto' id='pizzes'>
-        <h3 className='text-xl font-bold py-5 italic'>PIZZES 🍕 </h3>
+        <h3 className='text-xl font-bold py-5 italic'>PIZZES </h3>
 
         { loading ? 
           <CircleLoader 

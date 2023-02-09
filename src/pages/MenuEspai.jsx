@@ -6,12 +6,9 @@ import CircleLoader  from "react-spinners/CircleLoader";
 
 export async function loader() {
 
-  const respuesta = await fetch(import.meta.env.VITE_API_URL_MENU);
+  const respuesta = await fetch(`${import.meta.env.VITE_API_URL}/menu-espai`);
   const resultado = await respuesta.json();
   const menuEs = resultado.data
-
-  console.log(menuEs)
-
   return menuEs
 }
 
