@@ -2,11 +2,17 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+    font-family: "Roboto Slab";
+    src: url("./assets/fonts/RobotoSlab-VariableFont_wght.ttf") format("truetype");
+    font-weight: 100 1000;
+  }
+
 /* Expanding cards Carta i Menu */
 
 .panel {
     cursor: pointer;
-    flex: 0.5;
+    flex: 0.8;
     position: relative;
     transition: all 0.8s ease-in-out;
     

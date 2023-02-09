@@ -1,16 +1,13 @@
 import { useState, useEffect } from 'react';
-import { useLoaderData } from 'react-router-dom'
-import Footer from '../components/Footer'
+import { useLoaderData, Link } from 'react-router-dom'
 import { GiFlour, GiBigEgg , GiPeanut, GiCrabClaw, GiMilkCarton } from 'react-icons/gi'
 import CircleLoader  from "react-spinners/CircleLoader";
+import { obtenirCarta } from '../db/app';
+import Footer from '../components/Footer'
 
 export async function loader() {
-
-  const respuesta = await fetch(`${import.meta.env.VITE_API_URL}/carta`);
-  const resultado = await respuesta.json();
-  const carta = resultado.data
-
-  return carta
+  const productesCarta = await obtenirCarta();
+  return productesCarta
 }
 
 function Carta() {
@@ -21,7 +18,7 @@ function Carta() {
     setLoading(true)
     setTimeout(()=> {
       setLoading(false)
-    }, 1500)
+    }, 1600)
   }, [])
 
 
@@ -39,7 +36,7 @@ function Carta() {
   return (
     <main className="pt-28 font-Roboto bg-gradient-to-b from-white to-light/50 w-full">
 
-      <hr className='border-b-8 border-primary/50' />
+      <hr className='border-b-8 border-secondary/50' />
 
       <div className='pt-6 px-5 w-full md:max-w-[900px] mx-auto' id='foie_tartufo'>
         <h3 className='text-xl font-bold py-5 italic'>FOIE I TARTUFO!!!</h3>
@@ -48,24 +45,22 @@ function Carta() {
           <CircleLoader 
           color={"#b08e6b"}
           loading={loading}
-          size={50}
+          size={60}
           aria-label="Loading Spinner"
           data-testid="loader"
           /> :  
-          <>
-            { productesCarta.filter(producte => producte.attributes.categoria === 'foie_tartufo').map( (item, id) => (
+           productesCarta.filter(producte => producte.attributes.categoria === 'foie_tartufo').map( (item, id) => (
               <div className='flex justify-between items-center border-b-2 border-dark/10 py-1' key={id}>
-                <div className='flex flex-col lg:flex-row items-start justify-start'>
+                <div className='flex flex-col lg:flex-row items-start justify-start w-5/6'>
                   <p className='inline mr-4 text-sm md:text-md lg:text-lg'>
                     { item.attributes.title }
                   </p>
                 </div>
-                <span className='text-md md:text-xl block ml-4'>
-                { item.attributes.price }€
+                <span className='text-md md:text-xl w-1/6'>
+                    { (item.attributes.price).toFixed(2) } €
                 </span>
               </div>
-            ))}
-          </>
+            ))
         } 
       </div>            
 
@@ -76,25 +71,22 @@ function Carta() {
           <CircleLoader 
           color={"#b08e6b"}
           loading={loading}
-          size={50}
+          size={60}
           aria-label="Loading Spinner"
           data-testid="loader"
           /> :  
-          <>
-            { productesCarta.filter(producte => producte.attributes.categoria === 'entrants').map( (item, id) => (
+           productesCarta.filter(producte => producte.attributes.categoria === 'entrants').map( (item, id) => (
               <div className='flex justify-between items-center border-b-2 border-dark/10 py-1' key={id}>
-                <div className='flex flex-col lg:flex-row items-start justify-start'>
+                <div className='flex flex-col lg:flex-row items-start justify-start w-5/6'>
                   <p className='inline mr-4 text-sm md:text-md lg:text-lg'>
                     { item.attributes.title }
                   </p>
                 </div>
-                <span className='text-md md:text-xl block ml-4'>
-                { item.attributes.price }€
+                <span className='text-md md:text-xl w-1/6'>
+                    { (item.attributes.price).toFixed(2) } €
                 </span>
               </div>
             ))}
-          </>
-        } 
       </div>
 
       <div className='pt-6 px-5 w-full md:max-w-[900px] mx-auto' id='amanides'>
@@ -104,25 +96,22 @@ function Carta() {
           <CircleLoader 
           color={"#b08e6b"}
           loading={loading}
-          size={50}
+          size={60}
           aria-label="Loading Spinner"
           data-testid="loader"
           /> :  
-          <>
-            { productesCarta.filter(producte => producte.attributes.categoria === 'amanides').map( (item, id) => (
+           productesCarta.filter(producte => producte.attributes.categoria === 'amanides').map( (item, id) => (
               <div className='flex justify-between items-center border-b-2 border-dark/10 py-1' key={id}>
-                <div className='flex flex-col lg:flex-row items-start justify-start'>
+                <div className='flex flex-col lg:flex-row items-start justify-start w-5/6'>
                   <p className='inline mr-4 text-sm md:text-md lg:text-lg'>
                     { item.attributes.title }
                   </p>
                 </div>
-                <span className='text-md md:text-xl block ml-4'>
-                { item.attributes.price }€
+                <span className='text-md md:text-xl w-1/6'>
+                    { (item.attributes.price).toFixed(2) } €
                 </span>
               </div>
             ))}
-          </>
-        } 
       </div>
 
       <div className='pt-6 px-5 w-full md:max-w-[900px] mx-auto' id='provolones'>
@@ -132,25 +121,22 @@ function Carta() {
           <CircleLoader 
           color={"#b08e6b"}
           loading={loading}
-          size={50}
+          size={60}
           aria-label="Loading Spinner"
           data-testid="loader"
           /> :  
-          <>
-            { productesCarta.filter(producte => producte.attributes.categoria === 'provolones').map( (item, id) => (
+          productesCarta.filter(producte => producte.attributes.categoria === 'provolones').map( (item, id) => (
               <div className='flex justify-between items-center border-b-2 border-dark/10 py-1' key={id}>
-                <div className='flex flex-col lg:flex-row items-start justify-start'>
+                <div className='flex flex-col lg:flex-row items-start justify-start w-5/6'>
                   <p className='inline mr-4 text-sm md:text-md lg:text-lg'>
                     { item.attributes.title }
                   </p>
                 </div>
-                <span className='text-md md:text-xl block ml-4'>
-                { item.attributes.price }€
+                <span className='text-md md:text-xl w-1/6'>
+                    { (item.attributes.price).toFixed(2) } €
                 </span>
               </div>
             ))}
-          </>
-        } 
       </div>
 
       <div className='pt-6 px-5 w-full md:max-w-[900px] mx-auto' id='risottos'>
@@ -160,25 +146,22 @@ function Carta() {
           <CircleLoader 
           color={"#b08e6b"}
           loading={loading}
-          size={50}
+          size={60}
           aria-label="Loading Spinner"
           data-testid="loader"
           /> :  
-          <>
-            { productesCarta.filter(producte => producte.attributes.categoria === 'risottos').map( (item, id) => (
+           productesCarta.filter(producte => producte.attributes.categoria === 'risottos').map( (item, id) => (
               <div className='flex justify-between items-center border-b-2 border-dark/10 py-1' key={id}>
-                <div className='flex flex-col lg:flex-row items-start justify-start'>
+                <div className='flex flex-col lg:flex-row items-start justify-start w-5/6'>
                   <p className='inline mr-4 text-sm md:text-md lg:text-lg'>
                     { item.attributes.title }
                   </p>
                 </div>
-                <span className='text-md md:text-xl block ml-4'>
-                { item.attributes.price }€
+                <span className='text-md md:text-xl w-1/6'>
+                    { (item.attributes.price).toFixed(2) } €
                 </span>
               </div>
             ))}
-          </>
-        } 
       </div>
 
       <div className='pt-6 px-5 w-full md:max-w-[900px] mx-auto' id='pastes'>
@@ -188,25 +171,22 @@ function Carta() {
           <CircleLoader 
           color={"#b08e6b"}
           loading={loading}
-          size={50}
+          size={60}
           aria-label="Loading Spinner"
           data-testid="loader"
           /> :  
-          <>
-            { productesCarta.filter(producte => producte.attributes.categoria === 'pastes').map( (item, id) => (
+           productesCarta.filter(producte => producte.attributes.categoria === 'pastes').map( (item, id) => (
               <div className='flex justify-between items-center border-b-2 border-dark/10 py-1' key={id}>
-                <div className='flex flex-col lg:flex-row items-start justify-start'>
+                <div className='flex flex-col lg:flex-row items-start justify-start w-5/6'>
                   <p className='inline mr-4 text-sm md:text-md lg:text-lg'>
                     { item.attributes.title }
                   </p>
                 </div>
-                <span className='text-md md:text-xl block ml-4'>
-                { item.attributes.price }€
+                <span className='text-md md:text-xl w-1/6'>
+                    { (item.attributes.price).toFixed(2) } €
                 </span>
               </div>
             ))}
-          </>
-        } 
       </div>
 
       <div className='pt-6 px-5 w-full md:max-w-[900px] mx-auto' id='peix'>
@@ -216,25 +196,22 @@ function Carta() {
           <CircleLoader 
           color={"#b08e6b"}
           loading={loading}
-          size={50}
+          size={60}
           aria-label="Loading Spinner"
           data-testid="loader"
           /> :  
-          <>
-            { productesCarta.filter(producte => producte.attributes.categoria === 'peix').map( (item, id) => (
+           productesCarta.filter(producte => producte.attributes.categoria === 'peix').map( (item, id) => (
               <div className='flex justify-between items-center border-b-2 border-dark/10 py-1' key={id}>
-                <div className='flex flex-col lg:flex-row items-start justify-start'>
+                <div className='flex flex-col lg:flex-row items-start justify-start w-5/6'>
                   <p className='inline mr-4 text-sm md:text-md lg:text-lg'>
                     { item.attributes.title }
                   </p>
                 </div>
-                <span className='text-md md:text-xl block ml-4'>
-                { item.attributes.price }€
+                <span className='text-md md:text-xl w-1/6'>
+                    { (item.attributes.price).toFixed(2) } €
                 </span>
               </div>
             ))}
-          </>
-        } 
       </div>
 
       <div className='pt-6 px-5 w-full md:max-w-[900px] mx-auto' id='carn'>
@@ -244,25 +221,22 @@ function Carta() {
           <CircleLoader 
           color={"#b08e6b"}
           loading={loading}
-          size={50}
+          size={60}
           aria-label="Loading Spinner"
           data-testid="loader"
           /> :  
-          <>
-            { productesCarta.filter(producte => producte.attributes.categoria === 'carn').map( (item, id) => (
+           productesCarta.filter(producte => producte.attributes.categoria === 'carn').map( (item, id) => (
               <div className='flex justify-between items-center border-b-2 border-dark/10 py-1' key={id}>
-                <div className='flex flex-col lg:flex-row items-start justify-start'>
+                <div className='flex flex-col lg:flex-row items-start justify-start w-5/6'>
                   <p className='inline mr-4 text-sm md:text-md lg:text-lg'>
                     { item.attributes.title }
                   </p>
                 </div>
-                <span className='text-md md:text-xl block ml-4'>
-                { item.attributes.price }€
+                <span className='text-md md:text-xl w-1/6'>
+                    { (item.attributes.price).toFixed(2) } €
                 </span>
               </div>
             ))}
-          </>
-        } 
       </div>
 
       <div className='pt-6 px-5 w-full md:max-w-[900px] mx-auto' id='pizzes'>
@@ -272,25 +246,22 @@ function Carta() {
           <CircleLoader 
           color={"#b08e6b"}
           loading={loading}
-          size={50}
+          size={60}
           aria-label="Loading Spinner"
           data-testid="loader"
           /> :  
-          <>
-            { productesCarta.filter(producte => producte.attributes.categoria === 'pizzes').map( (item, id) => (
+           productesCarta.filter(producte => producte.attributes.categoria === 'pizzes').map( (item, id) => (
               <div className='flex justify-between items-center border-b-2 border-dark/10 py-1' key={id}>
-                <div className='flex flex-col lg:flex-row items-start justify-start'>
+                <div className='flex flex-col lg:flex-row items-start justify-start w-5/6'>
                   <p className='inline mr-4 text-sm md:text-md lg:text-lg'>
                     { item.attributes.title }
                   </p>
                 </div>
-                <span className='text-md md:text-xl block ml-4'>
-                { item.attributes.price }€
+                <span className='text-md md:text-xl w-1/6'>
+                    { (item.attributes.price).toFixed(2) } €
                 </span>
               </div>
             ))}
-          </>
-        } 
       </div>
 
       <div className='pt-6 px-5 w-full md:max-w-[900px] mx-auto' id='postres'>
@@ -300,25 +271,22 @@ function Carta() {
           <CircleLoader 
           color={"#b08e6b"}
           loading={loading}
-          size={50}
+          size={60}
           aria-label="Loading Spinner"
           data-testid="loader"
           /> :  
-          <>
-            { productesCarta.filter(producte => producte.attributes.categoria === 'postres').map( (item, id) => (
+           productesCarta.filter(producte => producte.attributes.categoria === 'postres').map( (item, id) => (
               <div className='flex justify-between items-center border-b-2 border-dark/10 py-1' key={id}>
-                <div className='flex flex-col lg:flex-row items-start justify-start'>
+                <div className='flex flex-col lg:flex-row items-start justify-start w-5/6'>
                   <p className='inline mr-4 text-sm md:text-md lg:text-lg'>
                     { item.attributes.title }
                   </p>
                 </div>
-                <span className='text-md md:text-xl block ml-4'>
-                { item.attributes.price }€
+                <span className='text-md md:text-xl w-1/6'>
+                    { (item.attributes.price).toFixed(2) } €
                 </span>
               </div>
             ))}
-          </>
-        } 
       </div>
 
       <div className='w-full md:max-w-[900px] mx-auto my-8 px-5'>

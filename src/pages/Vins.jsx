@@ -1,12 +1,5 @@
 import { useEffect } from 'react'
-
-import {
-    Card,
-    CardHeader,
-    CardBody,
-    CardFooter,
-    Typography,
-  } from "@material-tailwind/react";
+import { Link } from 'react-router-dom'
 import CopesVi from '../assets/copes_vi.webp'
 import ArnauVi from '../assets/vi_cuso.webp'
 import SubHeading from '../components/SubHeading'
@@ -45,6 +38,9 @@ function Vins() {
           <p className='py-4'>
               Les vinyes situades a Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsa, inventore! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Asperiores reiciendis ea voluptatum, modi non illum veniam amet culpa animi fugit!
           </p>
+          <Link to={'/carta-vins'}>
+            <button type="submit" className="w-72 cursor-pointer text-light bg-secondary hover:text-dark hover:bg-primary rounded-full py-2 px-4 font-bold text-md lg:text-xl mt-12 transition-all ease-in-out duration-200">Ves a la Carta de Vins</button>
+          </Link>
           </div>
       </div>
 

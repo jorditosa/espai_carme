@@ -15,7 +15,7 @@ import ViBlanc from '../assets/vi_blanc.jpg'
 import ViNegre from '../assets/vi_negre.jpg'
 
 
-function Celler() {
+function CartaVins() {
 
   useEffect(() => {
     // "document.documentElement.scrollTo" is the magic for React Router Dom v6
@@ -35,23 +35,12 @@ function Celler() {
         <hr className='border-b-8' />
       </div>
 
-      <div className='w-full lg:max-w-screen-lg mx-auto py-8 lg:py-24 flex flex-col md:flex-row items-center'>
-          <img src={ArnauVi} alt="imatge forn llenya" className='block md:w-1/4 order-2 md:order-none  rounded-lg shadow-lg shadow-light'
-             />
-          <div className='px-10 w-full'>
-              <SubHeading>L'essència familiar al teu paladar</SubHeading>
-          <p className='py-4'>
-              Les vinyes situades a Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsa, inventore! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Asperiores reiciendis ea voluptatum, modi non illum veniam amet culpa animi fugit!
-          </p>
-          </div>
-      </div>
-
       { /* Carta vins Cards */ }
       <div id="cartes_vins" className="text-light w-full lg:max-w-screen-lg mx-auto my-10 lg:my-24">
         <SubHeading>
             Descobreix la nostra bodega
         </SubHeading>
-        <div className="grid grid-cols-1 lg:grid-cols-2 content-center gap-y-10">
+        <div className="grid grid-cols-1 lg:grid-cols-2 content-center gap-y-10 mt-4">
         <Card className="w-80 mx-auto shadow-lg shadow-light rounded-lg bg-green-200/25">
             <CardHeader color="blue" className="relative h-56">
                 <img
@@ -61,7 +50,7 @@ function Celler() {
                 />
             </CardHeader>
             <CardBody className="text-center">
-                <Typography className='text-start text-gray-100'>
+                <Typography className='text-start text-gray-100 p-4'>
                 Vi Blanc. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Distinctio dolore odit iure aspernatur sapiente molestiae aut voluptatibus. Nisi, unde suscipit?
                 </Typography>
             </CardBody>
@@ -70,7 +59,7 @@ function Celler() {
             </CardFooter>
         </Card>
         
-        <Card className="w-80 mx-auto shadow-lg shadow-light rounded-lg bg-red-900/25">
+        <Card className="w-80 mx-auto shadow-lg shadow-light rounded-lg bg-red-900/50">
             <CardHeader color="blue" className="relative h-56">
                 <img
                 src={ViNegre}
@@ -79,7 +68,7 @@ function Celler() {
                 />
             </CardHeader>
             <CardBody className="text-center">
-                <Typography className='text-start text-gray-100'>
+                <Typography className='text-start text-gray-100 p-4'>
                 Vi Negre. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt delectus animi saepe libero minima odit. Praesentium ipsa consequuntur ipsum illo.
                 </Typography>
             </CardBody>
@@ -99,4 +88,4 @@ function Celler() {
   )
 }
 
-export default Celler
+export default CartaVins

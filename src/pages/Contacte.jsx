@@ -13,29 +13,26 @@ function Contacte() {
             <div className="w-full py-4">
                 <label htmlFor="name"></label>
                 <Input 
-                size="lg" 
                 name="nom"
                 id="name"
                 placeholder="El teu nom"
-                className="text-dark pl-4 my-2 border-3 rounded-lg shadow-secondary/75 shadow-md" />
+                className="text-dark pl-4 my-2 py-3 border-3 rounded-lg shadow-secondary/75 shadow-md" />
             </div>
             <div className="w-full py-4">
                 <Input 
-                size="lg" 
                 name="email"
                 id="email"
                 placeholder="El teu email (opcional)"
-                className="text-dark pl-4 my-2 border-3 rounded-lg shadow-secondary/75 shadow-md" />
+                className="text-dark pl-4 my-2 py-3 border-3 rounded-lg shadow-secondary/75 shadow-md" />
             </div>
             <div className="w-full py-4">
                 <Textarea 
-                size="lg" 
                 name="missatge"
                 id="message"
                 placeholder="Deixan's la teva opinió"
-                className="text-dark pl-4 my-2 border-3 rounded-lg shadow-secondary/75 shadow-md border-none" />
+                className="text-dark pl-4 my-2 py-3 border-3 rounded-lg shadow-secondary/75 shadow-md border-none" />
             </div>
-            <button type="submit" className="w-40 cursor-pointer text-light bg-secondary hover:text-dark hover:bg-primary rounded-full py-2 px-4 font-bold text-md lg:text-xl mt-12 transition-all ease-in-out duration-200">Opina!</button>
+            <button type="submit" className="w-48 cursor-pointer text-light bg-secondary hover:text-dark hover:bg-primary rounded-full py-2 px-4 font-bold text-md lg:text-xl mt-12 transition-all ease-in-out duration-200">Opina!</button>
             
         </form>
         
