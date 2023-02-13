@@ -19,10 +19,10 @@ function Vins() {
   }, ['/celler']);
 
   return (
-    <section className='text-light bg-dark'>
+    <section className='text-light bg-gradient-to-b from-dark via-dark to-light'>
       <div className='h-[500px] md:h-full py-5'>
         <img src={CopesVi} alt="Copes de vi" className='block mx-auto w-screen'/>
-        <div className='mx-10'>
+        <div className='mx-10 max-w-[900px] md:mx-auto'>
             <SubHeading>
             El Celler Cusó
             </SubHeading>
@@ -30,17 +30,17 @@ function Vins() {
         <hr className='border-b-8' />
       </div>
 
-      <div className='w-full lg:max-w-screen-lg mx-auto py-8 lg:py-24 flex flex-col md:flex-row items-center'>
-          <img src={ArnauVi} alt="imatge forn llenya" className='block md:w-1/4 order-2 md:order-none  rounded-lg shadow-lg shadow-light'
+      <div className='w-full lg:max-w-screen-lg mx-auto py-8 lg:py-60 flex flex-col md:flex-row items-center '>
+          <img src={ArnauVi} alt="imatge forn llenya" className='block md:w-1/4 order-2 md:order-none  shadow-md shadow-light'
              />
           <div className='px-10 w-full'>
-              <SubHeading>L'essència familiar al teu paladar</SubHeading>
-          <p className='py-4'>
-              Les vinyes situades a Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsa, inventore! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Asperiores reiciendis ea voluptatum, modi non illum veniam amet culpa animi fugit!
-          </p>
-          <Link to={'/carta-vins'}>
-            <button type="submit" className="w-72 cursor-pointer text-light bg-secondary hover:text-dark hover:bg-primary rounded-full py-2 px-4 font-bold text-md lg:text-xl mt-12 transition-all ease-in-out duration-200">Ves a la Carta de Vins</button>
-          </Link>
+            <SubHeading>L'essència familiar al teu paladar</SubHeading>
+            <p className='py-4'>
+                Les vinyes situades a Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsa, inventore! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Asperiores reiciendis ea voluptatum, modi non illum veniam amet culpa animi fugit!
+            </p>
+            <Link to={'/carta-vins'}>
+              <button type="submit" className="w-72 cursor-pointer text-light bg-secondary hover:text-dark hover:bg-primary rounded-full py-2 px-4 font-bold text-md lg:text-xl my-6 md:mt-12 transition-all ease-in-out duration-200">Ves a la Carta de Vins</button>
+            </Link>
           </div>
       </div>
 

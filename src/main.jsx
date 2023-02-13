@@ -2,17 +2,18 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 
-
 import Layout from './components/Layout'
 import Inici from './pages/Inici'
-import Carta, {loader as productesCartaLoader } from './pages/Carta'
+import Carta from './pages/Carta'
 import Menus from './pages/IniciMenus'
-import MenuEspai , { loader as menuEspaiLoader } from './pages/MenuEspai'
+import MenuEspai from './pages/MenuEspai'
 import MenuLab from './pages/MenuLab'
 import Takespai from './pages/Takespai'
 import Vins from './pages/Vins'
 import CartaVins from './pages/CartaVins'
 import IniciCartes from './pages/IniciCartes'
+import Landing from './pages/Landing'
+import Welcome from './components/Welcome'
 import ErrorPage from './components/ErrorPage'
 
 
@@ -44,8 +45,7 @@ const router = createBrowserRouter([
         },
         {
           path: '/carta',
-          element: <Carta />,
-          loader: productesCartaLoader
+          element: <Carta />
         },
         {
           path: '/menus',
@@ -53,8 +53,7 @@ const router = createBrowserRouter([
         },
         {
           path: '/menu-espai',
-          element: <MenuEspai />,
-          loader: menuEspaiLoader
+          element: <MenuEspai />
         },
         {
           path: '/menu-laborable',
@@ -68,8 +67,20 @@ const router = createBrowserRouter([
           path: '/carta-vins',
           element: <CartaVins />
         },
+        {
+          path: '/landing',
+          element: <Landing />
+        },
       ]
-    }
+    },
+    {
+      path: '/landing',
+      element: <Landing />
+    },
+    {
+      path: '/welcome',
+      element: <Welcome />
+    },
   ]);
 
 

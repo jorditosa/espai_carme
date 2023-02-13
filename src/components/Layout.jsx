@@ -7,7 +7,7 @@ import {
 } from "@material-tailwind/react";
 import { Outlet, Link } from "react-router-dom";
 import { BsInstagram, BsFacebook, BsTwitter, BsFillGeoAltFill } from 'react-icons/bs'
-import { MdOutlineWifiCalling3 } from 'react-icons/md'
+import { AiFillPhone, AiFillEnvironment } from 'react-icons/ai'
 import { MdDeliveryDining } from 'react-icons/md'
 import { MenuOutline, CloseOutline } from '@styled-icons/evaicons-outline'
 import LogoNegre from '../assets/logos/logo_negre.webp'
@@ -79,7 +79,7 @@ export default function Layout() {
         </Link>
         <li>
           <a href="https://goo.gl/maps/PZ2xRmxxfKb2K3qJ9" target="_blank" rel="noopener noreferrer" className="block text-secondary hover:translate-y-1 hover:text-primary transition ease-in-out duration-300" aria-label="Situació restaurant">
-            <BsFillGeoAltFill size={30} />
+            <AiFillEnvironment size={40} />
           </a>
         </li>
     </ul>
@@ -99,7 +99,7 @@ export default function Layout() {
           </Link>
           <div className="flex items-center gap-x-8">
             <a target='_blank' href='tel:+34938933308'>
-              <MdOutlineWifiCalling3 size={35} className='cursor-pointer text-secondary hover:translate-y-1 hover:text-primary transition ease-in-out duration-300' aria-label="Telèfon restaurant" />
+              <AiFillPhone size={35} className='cursor-pointer text-secondary hover:translate-y-1 hover:text-primary transition ease-in-out duration-300' aria-label="Telèfon restaurant" />
             </a>
             <span 
             className="font-bold text-secondary hover:translate-y-1 hover:text-primary transition ease-in-out duration-300 text-lg cursor-pointer"

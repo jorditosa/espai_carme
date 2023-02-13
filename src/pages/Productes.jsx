@@ -38,27 +38,27 @@ function Productes() {
         </div>
         <div className="w-full h-screen flex flex-col md:flex-row text-center">
             <div className="h-full panel text-light" style={{backgroundImage: `url(${Mozarella})`, backgroundRepeat: 'no-repeat', backgroundSize: 'cover', backgroundPosition: 'center'}}>
-                    <div className="h-full w-full flex flex-col justify-start pt-2 md:pt-48 items-center bg-gradient-to-b from-dark/50">
+                    <div className="h-full w-full flex flex-col justify-start pt-2 md:pt-48 items-center bg-gradient-to-b from-dark/50 to-dark/25">
                         <SubHeading>Mozzarella</SubHeading>
-                        <p className="text-light font-bold text-sm md:text-lg mx-5">La mozzarella i mozzarella de búfala, suposa un producte exquisit per la nostre cuina.</p>
+                        <p className="text-light font-bold text-xs md:text-lg mx-5">La mozzarella i mozzarella de búfala, suposa un producte exquisit per la nostre cuina.</p>
                     </div>
             </div>
             <div className="h-full panel text-light" style={{backgroundImage: `url(${Tofona})`, backgroundRepeat: 'no-repeat', backgroundSize: 'cover', backgroundPosition: 'center'}}>
-                    <div className="h-full w-full flex justify-start pt-2 md:pt-48 flex-col items-center bg-gradient-to-b from-dark/50">
+                    <div className="h-full w-full flex justify-start pt-2 md:pt-48 flex-col items-center bg-gradient-to-b from-dark/50 to-dark/25">
                         <SubHeading>Tòfona</SubHeading>
-                        <p className="text-light font-bold text-sm md:text-lg mx-5">La tòfona és un bolet d'hivern, que aporta un gust diferencial al producte sobre el qual és afegida.</p>
+                        <p className="text-light font-bold text-xs md:text-lg mx-5">La tòfona és un bolet d'hivern, que aporta un gust diferencial al producte sobre el qual és afegida.</p>
                     </div>
             </div>
             <div className="h-full panel text-light" style={{backgroundImage: `url(${Foie})`, backgroundRepeat: 'no-repeat', backgroundSize: 'cover', backgroundPosition: 'center'}}>
-                    <div className="h-full w-full flex justify-start pt-2 md:pt-48 flex-col items-center bg-gradient-to-b from-dark/50">
+                    <div className="h-full w-full flex justify-start pt-2 md:pt-48 flex-col items-center bg-gradient-to-b from-dark/50 to-dark/25">
                         <SubHeading>Foie gras</SubHeading>
-                        <p className="text-light font-bold text-sm md:text-lg mx-5">El foie gras és per excelència un producte exquisit francés, fet amb el fetge del ànec.</p>
+                        <p className="text-light font-bold text-xs md:text-lg mx-5">El foie gras és per excelència un producte exquisit francés, fet amb el fetge del ànec.</p>
                     </div>
             </div>
             <div className="h-full panel text-light" style={{backgroundImage: `url(${Parmigiano})`, backgroundRepeat: 'no-repeat', backgroundSize: 'cover', backgroundPosition: 'center'}}>
-                    <div className="h-full w-full flex justify-start pt-2 md:pt-48 flex-col items-center bg-gradient-to-b from-dark/50">
+                    <div className="h-full w-full flex justify-start pt-2 md:pt-48 flex-col items-center bg-gradient-to-b from-dark/50 to-dark/25">
                         <SubHeading>Parmigiano</SubHeading>
-                        <p className="text-light font-bold text-sm md:text-lg mx-5">El parmigiano reggiano és un famòs formatge de procedència italiana de consistència dura, madura i grasa.</p>
+                        <p className="text-light font-bold text-xs md:text-lg mx-5">El parmigiano reggiano és un famòs formatge de procedència italiana de consistència dura, madura i grasa.</p>
                     </div>
             </div>
         </div>

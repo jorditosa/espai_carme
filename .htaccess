@@ -1,4 +1,60 @@
 RewriteEngine On
 RewriteBase /
-RewriteCond %{SERVER_PORT} 80
-RewriteRule ^(.\*)$ https://www.espaidelacarme.com/ [R,L]
+RewriteRule ^index\.html$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-l
+RewriteRule . /index.html [L]
+
+<IfModule mod_deflate.c>
+    <IfModule mod_headers.c>
+        Header append Vary User-Agent env=!dont-vary
+    </IfModule>
+    AddOutputFilterByType DEFLATE text/css
+    AddOutputFilterByType DEFLATE text/x-component
+    AddOutputFilterByType DEFLATE application/x-javascript
+    AddOutputFilterByType DEFLATE application/javascript
+    AddOutputFilterByType DEFLATE text/javascript
+    AddOutputFilterByType DEFLATE text/x-js
+    AddOutputFilterByType DEFLATE text/html
+    AddOutputFilterByType DEFLATE text/richtext
+    AddOutputFilterByType DEFLATE image/svg+xml
+    AddOutputFilterByType DEFLATE text/plain
+    AddOutputFilterByType DEFLATE text/xsd
+    AddOutputFilterByType DEFLATE text/xsl
+    AddOutputFilterByType DEFLATE text/xml
+    AddOutputFilterByType DEFLATE image/bmp
+    AddOutputFilterByType DEFLATE application/java
+    AddOutputFilterByType DEFLATE application/msword
+    AddOutputFilterByType DEFLATE application/vnd.ms-fontobject
+    AddOutputFilterByType DEFLATE application/x-msdownload
+    AddOutputFilterByType DEFLATE image/x-icon
+    AddOutputFilterByType DEFLATE application/json
+    AddOutputFilterByType DEFLATE application/vnd.ms-access
+    AddOutputFilterByType DEFLATE application/vnd.ms-project
+    AddOutputFilterByType DEFLATE application/x-font-otf
+    AddOutputFilterByType DEFLATE application/vnd.ms-opentype
+    AddOutputFilterByType DEFLATE application/vnd.oasis.opendocument.database
+    AddOutputFilterByType DEFLATE application/vnd.oasis.opendocument.chart
+    AddOutputFilterByType DEFLATE application/vnd.oasis.opendocument.formula
+    AddOutputFilterByType DEFLATE application/vnd.oasis.opendocument.graphics
+    AddOutputFilterByType DEFLATE application/vnd.oasis.opendocument.presentation
+    AddOutputFilterByType DEFLATE application/vnd.oasis.opendocument.spreadsheet
+    AddOutputFilterByType DEFLATE application/vnd.oasis.opendocument.text
+    AddOutputFilterByType DEFLATE audio/ogg
+    AddOutputFilterByType DEFLATE application/pdf
+    AddOutputFilterByType DEFLATE application/vnd.ms-powerpoint
+    AddOutputFilterByType DEFLATE application/x-shockwave-flash
+    AddOutputFilterByType DEFLATE image/tiff
+    AddOutputFilterByType DEFLATE application/x-font-ttf
+    AddOutputFilterByType DEFLATE application/vnd.ms-opentype
+    AddOutputFilterByType DEFLATE audio/wav
+    AddOutputFilterByType DEFLATE application/vnd.ms-write
+    AddOutputFilterByType DEFLATE application/font-woff
+    AddOutputFilterByType DEFLATE application/font-woff2
+    AddOutputFilterByType DEFLATE application/vnd.ms-excel
+    <IfModule mod_mime.c>
+        # DEFLATE by extension
+        AddOutputFilter DEFLATE js css htm html xml
+    </IfModule>
+</IfModule>

@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom'
 import LogoNegre from '../assets/logos/logo_negre.webp'
-import { BsInstagram, BsFacebook, BsTwitter, BsFillGeoAltFill } from 'react-icons/bs'
-import { MdOutlineWifiCalling3 } from 'react-icons/md'
+import { BsInstagram, BsFacebook, BsTwitter } from 'react-icons/bs'
+import { AiFillHome, AiFillPhone, AiFillEnvironment } from 'react-icons/ai'
 import Contacte from '../pages/Contacte'
 
 
@@ -33,19 +33,19 @@ function Footer() {
                         <h2 className="mb-6 text-md font-bold text-dark uppercase">Segueix-nos</h2>
                         <div className='w-full lg:w-[250px] flex justify-between'>
                             <a href="https://es-es.facebook.com/espai.carme/" className="text-gray-700 hover:text-secondary dark:hover:text-white" target="_blank">
-                                <BsFacebook size={30} />
+                                <BsFacebook size={35} />
                                 <span className="sr-only">Facebook page</span>
                             </a>
                             <a href="https://www.instagram.com/espaicarme/?hl=es" className="text-gray-700 hover:text-secondary dark:hover:text-white" target="_blank">
-                                <BsInstagram size={30} />
+                                <BsInstagram size={35} />
                                 <span className="sr-only">Instagram page</span>
                             </a>
                             <a href="https://twitter.com/espaicarme" className="text-gray-700 hover:text-secondary dark:hover:text-white" target="_blank">
-                                <BsTwitter size={30} />
+                                <BsTwitter size={35} />
                                 <span className="sr-only">Twitter page</span>
                             </a>
                             <a href="tel:+34938933358" className="text-gray-700 hover:text-secondary dark:hover:text-white" aria-label="Telèfon restaurant">
-                                <MdOutlineWifiCalling3 size={35} />
+                                <AiFillPhone size={35} />
                                 <span className="sr-only">Telèfon</span>
                             </a>
                         </div>
@@ -56,18 +56,25 @@ function Footer() {
         <hr className="my-6 border-gray-400 sm:mx-auto lg:my-8" />
         <div className="text-center md:text-start flex flex-col md:flex-row gap-y-4 md:items-start sm:justify-between">
             <div className='mx-10'>
-                <ul className="text-gray-800 flex flex-col items-center justify-center lg:flex-row gap-2 lg:gap-24">
+                <ul className="text-gray-800 flex flex-col items-center justify-center lg:flex-row gap-2 lg:gap-12">
                     <li>
                         <a href="#" className="block font-bold text-md uppercase hover:underline">Política privacitat</a>
                     </li>
-                    <li>
-                        <a href="https://goo.gl/maps/PZ2xRmxxfKb2K3qJ9" target="_blank" rel="noopener noreferrer" className="text-gray-700 hover:text-secondary dark:hover:text-white" aria-label="Situació restaurant">
-                            <BsFillGeoAltFill size={30} />
-                        </a>
-                    </li>
+                    <div className='flex gap-5 md:flex-row'>
+                        <li>
+                            <Link to={'/'} className="text-gray-700 hover:text-secondary dark:hover:text-white" aria-label="Situació restaurant">
+                                <AiFillHome size={35} />
+                            </Link>
+                        </li>
+                        <li>
+                            <a href="https://goo.gl/maps/PZ2xRmxxfKb2K3qJ9" target="_blank" rel="noopener noreferrer" className="text-gray-700 hover:text-secondary dark:hover:text-white" aria-label="Situació restaurant">
+                                <AiFillEnvironment size={35} />
+                            </a>
+                        </li>
+                    </div>
                 </ul>
             </div>  
-            <span className="text-md">© {new Date().getFullYear()} <a href="#" className="hover:underline">Espai de la Carme &copy;.</a> <span className='block'>Tots els drets reservats.</span>
+            <span className="text-md">{new Date().getFullYear()} <a href="#" className="hover:underline">Espai de la Carme &copy;.</a> <span className='block'>Tots els drets reservats.</span>
             </span>
         </div>
     </footer>
