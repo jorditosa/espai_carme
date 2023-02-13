@@ -5,7 +5,6 @@ import { GiFlour, GiBigEgg , GiPeanut, GiCrabClaw, GiMilkCarton, GiDoubleFish, G
 import Spinner from '../components/Spinner';
 import Footer from '../components/Footer'
 
-const parseJSON = (resp) => (resp.json ? resp.json() : resp);
 const headers = { 'Content-Type': 'application/json' };
 
 function CartaVins() {
@@ -15,15 +14,22 @@ function CartaVins() {
 
   useEffect(() => {
     fetch(`${import.meta.env.VITE_API_URL}/vins`, { headers, method: 'GET' })
-    .then(parseJSON)
-    .then(({data}) => setProductesVins(data))
-    .then(setLoading(false))
-    .catch((error) => console.log(error))
-    
+    .then(res => res.json())
+    .then((data) => {
+      setLoading(false);
+      setProductesVins(data.data);
+    }
+    )
+    .catch((error) => {
+      setLoading(false);
+    })
   }, [])
 
+   
   function renderProducte(categoria) { 
-
+    if(loading) {
+      return <Spinner />
+    }
     return (
       productesVins.filter(producte => producte.attributes.categoria === categoria).map( (item, id) => (
                   <div className='flex justify-between items-center border-b-2 border-dark/10 py-1' key={id}>
@@ -39,6 +45,8 @@ function CartaVins() {
                 ))
     )
   }
+
+
 
   useEffect(() => {
     // "document.documentElement.scrollTo" is the magic for React Router Dom v6

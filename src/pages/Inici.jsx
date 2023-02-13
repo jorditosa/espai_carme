@@ -29,7 +29,6 @@ function Inici() {
           </header> 
 
         <CookieConsent 
-        debug={true} 
         style={{ background: "#00000088", textAlign: "left", padding: "10px 0" }}
         buttonStyle={{ background: "#A68A6D", color: "#fff", borderRadius: "50px", padding: "6px 24px"}}
         buttonText="Accepto"

@@ -5,22 +5,46 @@ import { GiFlour, GiBigEgg , GiPeanut, GiCrabClaw, GiMilkCarton, GiDoubleFish, G
 import Spinner from '../components/Spinner';
 import Footer from '../components/Footer'
 
-const parseJSON = (resp) => (resp.json ? resp.json() : resp);
 const headers = { 'Content-Type': 'application/json' };
 
 function MenuLab() {
 
   const [productesMenuLab, setProductesMenuLab] = useState([]);
   const [ loading, setLoading ] = useState(true)
-
+ 
   useEffect(() => {
-    fetch(`${import.meta.env.VITE_API_URL}/menu-labs?pagination[limit]=50`, { headers, method: 'GET' })
-    .then(parseJSON)
-    .then(({data}) => setProductesMenuLab(data))
-    .then(setLoading(false))
-    .catch((error) => console.log(error))
-    
-  }, [])
+      fetch(`${import.meta.env.VITE_API_URL}/menu-labs?pagination[limit]=50`, { headers, method: 'GET' })
+      .then(res => res.json())
+      .then((data) => {
+        setLoading(false);
+        setProductesMenuLab(data.data);
+      }
+      )
+      .catch((error) => {
+        setLoading(false);
+      })
+    }, [])
+  
+     
+    function renderProducte(categoria) { 
+      if(loading) {
+        return <Spinner />
+      }
+      return (
+        productesMenuEspai.filter(producte => producte.attributes.categoria === categoria).map( (item, id) => (
+                    <div className='flex justify-between items-end border-b-2 border-dark/10 py-1' key={id}>
+                      <div className='flex flex-col lg:flex-row items-start justify-start w-5/6'>
+                        <p className='inline mr-4 text-sm md:text-md lg:text-lg'>
+                          { item.attributes.title }
+                        </p>
+                      </div>
+                      <span>
+                        {renderAlergen(item.attributes.alergens)}
+                      </span>
+                    </div>
+                  ))
+      )
+    }
   
   function renderProducte(categoria) { 
     return (
@@ -52,6 +76,9 @@ function MenuLab() {
       <Link to="/" className="text-sm md:text-md lg:text-lg opacity-60 font-Roboto">
         Inici
       </Link>
+      <Link to="/menus" className="text-sm md:text-md lg:text-lg opacity-60 font-Roboto">
+        Menús
+      </Link>
       <Link href="#" className="text-sm md:text-md lg:text-lg font-Roboto font-bold">
         Menú Laborable
       </Link>
@@ -62,12 +89,12 @@ function MenuLab() {
 
       <div className='pt-6 px-5 w-full md:max-w-[900px] mx-auto' id='primers'>
         <h3 className='text-xl font-bold py-5 italic'>Primers a escollir</h3>
-        { loading ? <Spinner /> : renderProducte('primers') } 
+        { renderProducte('primers') } 
       </div>            
 
       <div className='pt-6 px-5 w-full md:max-w-[900px] mx-auto' id='segons'>
         <h3 className='text-xl font-bold py-5 italic'>Segons a escollir</h3>
-        { loading ? <Spinner /> : renderProducte('segons') } 
+        { renderProducte('segons') } 
       </div>
 
       <div className='pt-6 px-5 w-full md:max-w-[900px] mx-auto'>

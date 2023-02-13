@@ -45,7 +45,8 @@ const router = createBrowserRouter([
         },
         {
           path: '/carta',
-          element: <Carta />
+          element: <Carta />,
+          errorElement: <ErrorPage />
         },
         {
           path: '/menus',
@@ -53,11 +54,13 @@ const router = createBrowserRouter([
         },
         {
           path: '/menu-espai',
-          element: <MenuEspai />
+          element: <MenuEspai />,
+          errorElement: <ErrorPage />
         },
         {
           path: '/menu-laborable',
-          element: <MenuLab />
+          element: <MenuLab />,
+          errorElement: <ErrorPage />
         },
         {
           path: '/vins',
@@ -65,7 +68,8 @@ const router = createBrowserRouter([
         },
         {
           path: '/carta-vins',
-          element: <CartaVins />
+          element: <CartaVins />,
+          errorElement: <ErrorPage />
         },
         {
           path: '/landing',
