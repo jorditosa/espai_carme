@@ -11,7 +11,7 @@
 /* Expanding cards Carta i Menu */
 
 .panel {
-    cursor: pointer;
+    cursor: auto;
     flex: 0.8;
     position: relative;
     transition: all 0.8s ease-in-out;
@@ -24,45 +24,184 @@
     filter: brightness(110%);
 }
 
-/*  Spinner  */
+/* Skeleton spinner loading **/
 
-.spinner {
-    width: 75px;
-    height: 75px;
-    position: relative;
-    margin: 0 auto;
-  }
+.skeleton {
   
-  .double-bounce1, .double-bounce2 {
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
-    background-color: #A68A6D;
-    opacity: 0.6;
-    position: absolute;
-    top: 0;
-    left: 0;
-    
-    -webkit-animation: sk-bounce 2.0s infinite ease-in-out;
-    animation: sk-bounce 2.0s infinite ease-in-out;
+}
+
+.skeleton-bar {
+  width: 100%;
+  height: 0.8rem;
+  border-radius: 0.2rem;
+  animation: skeleton-loading 1s linear infinite alternate
+}
+
+@keyframes skeleton-loading {
+  0% {
+    background-color:  #e8e9e9;
   }
-  
-  .double-bounce2 {
-    -webkit-animation-delay: -1.0s;
-    animation-delay: -1.0s;
+  100% {
+    background-color:  #a7a7a7e8;
   }
-  
-  @-webkit-keyframes sk-bounce {
-    0%, 100% { -webkit-transform: scale(0.0) }
-    50% { -webkit-transform: scale(1.0) }
+}
+
+
+/* Spinner Pizza */
+
+.pizza {
+  height: 20vmin;
+  width: 20vmin;
+  align-items: center;
+  background: none;
+  position: relative;
+  -webkit-animation: rotate 13s linear infinite;
+          animation: rotate 13s linear infinite;
+}
+@-webkit-keyframes rotate {
+  to {
+    transform: rotate(360deg);
   }
-  
-  @keyframes sk-bounce {
-    0%, 100% { 
-      transform: scale(0.0);
-      -webkit-transform: scale(0.0);
-    } 50% { 
-      transform: scale(1.0);
-      -webkit-transform: scale(1.0);
-    }
+}
+@keyframes rotate {
+  to {
+    transform: rotate(360deg);
   }
+}
+.pizza .slice {
+  z-index: -1;
+  overflow: visible;
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 10vmin 2.75vmin 0 2.75vmin;
+  border-color: #ffdc73 transparent transparent transparent;
+  left: 7.5vmin;
+  top: 0;
+  transform-origin: 50% 100%;
+  transform: rotate(0deg);
+  -webkit-animation: loading 2s ease-in-out infinite;
+          animation: loading 2s ease-in-out infinite;
+}
+@-webkit-keyframes loading {
+  0% {
+    opacity: 1;
+  }
+  49% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  99% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes loading {
+  0% {
+    opacity: 1;
+  }
+  49% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  99% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.pizza .slice:nth-of-type(2n):after {
+  box-shadow: 0.5vmin 2.5vmin 0 #cc333f;
+}
+.pizza .slice:nth-of-type(4n):after {
+  box-shadow: 0.5vmin 2.5vmin 0 #cc333f, 1.5vmin 5vmin 0 #cc333f;
+}
+.pizza .slice:nth-of-type(1) {
+  transform: rotate(-27.75deg);
+  -webkit-animation-delay: -0.0625s;
+          animation-delay: -0.0625s;
+}
+.pizza .slice:nth-of-type(2) {
+  transform: rotate(-55.5deg);
+  -webkit-animation-delay: -0.125s;
+          animation-delay: -0.125s;
+}
+.pizza .slice:nth-of-type(3) {
+  transform: rotate(-83.25deg);
+  -webkit-animation-delay: -0.1875s;
+          animation-delay: -0.1875s;
+}
+.pizza .slice:nth-of-type(4) {
+  transform: rotate(-111deg);
+  -webkit-animation-delay: -0.25s;
+          animation-delay: -0.25s;
+}
+.pizza .slice:nth-of-type(5) {
+  transform: rotate(-138.75deg);
+  -webkit-animation-delay: -0.3125s;
+          animation-delay: -0.3125s;
+}
+.pizza .slice:nth-of-type(6) {
+  transform: rotate(-166.5deg);
+  -webkit-animation-delay: -0.375s;
+          animation-delay: -0.375s;
+}
+.pizza .slice:nth-of-type(7) {
+  transform: rotate(-194.25deg);
+  -webkit-animation-delay: -0.4375s;
+          animation-delay: -0.4375s;
+}
+.pizza .slice:nth-of-type(8) {
+  transform: rotate(-222deg);
+  -webkit-animation-delay: -0.5s;
+          animation-delay: -0.5s;
+}
+.pizza .slice:nth-of-type(9) {
+  transform: rotate(-249.75deg);
+  -webkit-animation-delay: -0.5625s;
+          animation-delay: -0.5625s;
+}
+.pizza .slice:nth-of-type(10) {
+  transform: rotate(-277.5deg);
+  -webkit-animation-delay: -0.625s;
+          animation-delay: -0.625s;
+}
+.pizza .slice:nth-of-type(11) {
+  transform: rotate(-305.25deg);
+  -webkit-animation-delay: -0.6875s;
+          animation-delay: -0.6875s;
+}
+.pizza .slice:nth-of-type(12) {
+  transform: rotate(-333deg);
+  -webkit-animation-delay: -0.75s;
+          animation-delay: -0.75s;
+}
+.pizza .slice:before {
+  content: "";
+  position: absolute;
+  height: 1.5vmin;
+  width: 6vmin;
+  background: #A68A6D;
+  top: -10.5vmin;
+  left: -3vmin;
+  border-radius: 100vmin 100vmin 0.5vmin 0.5vmin/50vmin 50vmin;
+}
+.pizza .slice:after {
+  content: "";
+  border-radius: 100%;
+  position: absolute;
+  width: 1.25vmin;
+  height: 1.25vmin;
+  background: #cc333f;
+  left: -1vmin;
+  top: -7vmin;
+  z-index: 2;
+}

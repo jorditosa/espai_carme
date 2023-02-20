@@ -4,32 +4,39 @@ import { Breadcrumbs } from "@material-tailwind/react";
 import { GiFlour, GiBigEgg , GiPeanut, GiCrabClaw, GiMilkCarton, GiDoubleFish, GiMolecule, GiBubblingBowl, GiPeas, GiSesame, GiAbstract094, GiAcorn, GiPlanks, GiMineralPearls } from 'react-icons/gi'
 import Spinner from '../components/Spinner';
 import Footer from '../components/Footer'
-
-const headers = { 'Content-Type': 'application/json' };
+import { useTranslation } from 'react-i18next'
 
 function MenuEspai() {
 
+  const [t, i18n] = useTranslation("global");
+
   const [productesMenuEspai, setProductesMenuEspai] = useState([]);
   const [ loading, setLoading ] = useState(true)
+  const [ lang, setLang ] = useState('')
 
   useEffect(() => {
-    fetch(`${import.meta.env.VITE_API_URL}/menu-espais?pagination[limit]=50`, { headers, method: 'GET' })
-    .then(res => res.json())
-    .then((data) => {
-      setLoading(false);
-      setProductesMenuEspai(data.data);
+    setLang(i18n.language);
+    getProducts();
+  })
+  
+  const getProducts = () => {
+    try{
+      fetch(`${import.meta.env.VITE_API_URL}/menu-espais?pagination[limit]=50&locale=${lang}`, { method: 'GET' })
+      .then(res => {
+      if ( res.ok) return res.json()
+      if ( res.status === 401) window.location.reload()  
+      })
+      .then((data) => {
+        setLoading(false);
+        setProductesMenuEspai(data.data)});
+    } catch(error) {
+      window.location.reload()
+    } finally {
+      
     }
-    )
-    .catch((error) => {
-      setLoading(false);
-    })
-  }, [])
+  }
 
-   
   function renderProducte(categoria) { 
-    if(loading) {
-      return <Spinner />
-    }
     return (
       productesMenuEspai.filter(producte => producte.attributes.categoria === categoria).map( (item, id) => (
                   <div className='flex justify-between items-end border-b-2 border-dark/10 py-1' key={id}>
@@ -93,13 +100,13 @@ function MenuEspai() {
 
     <Breadcrumbs className='max-w-[900px] mx-auto'>
       <Link to="/" className="text-sm md:text-md lg:text-lg opacity-60 font-Roboto">
-        Inici
+      {t("menu.breadcumb-1")}
       </Link>
       <Link to="/menus" className="text-sm md:text-md lg:text-lg opacity-60 font-Roboto">
-        Menús
+      {t("menu.breadcumb-2")}
       </Link>
       <Link href="#" className="text-sm md:text-md lg:text-lg font-Roboto font-bold">
-        Menú Espai
+      {t("menu.breadcumb-espai")}
       </Link>
     </Breadcrumbs>
 
@@ -107,84 +114,119 @@ function MenuEspai() {
 
 
       <div className='pt-6 px-5 w-full md:max-w-[900px] mx-auto' id='primers'>
-        <h3 className='text-xl font-bold py-5 italic'>Primers</h3>
-        { renderProducte('primers') } 
+        <h3 className='text-xl font-bold py-5 italic'>
+        {t("menu.primers")}
+        </h3>
+        { loading ? <Spinner /> : renderProducte('primers') } 
       </div>            
 
       <div className='pt-6 px-5 w-full md:max-w-[900px] mx-auto' id='segons'>
-        <h3 className='text-xl font-bold py-5 italic'>Segons</h3>
-        { renderProducte('segons') } 
+        <h3 className='text-xl font-bold py-5 italic'>
+        {t("menu.segons")}
+        </h3>
+        { loading ? <Spinner /> : renderProducte('segons') } 
       </div>
 
       <div className='pt-6 px-5 w-full md:max-w-[900px] mx-auto'>
-        <h3 className='text-xl font-bold py-5 italic'>Preu Menú <span className='text-3xl '>21,90 €</span></h3>
+        <h3 className='text-xl font-bold py-5 italic'>
+        {t("menu.precio")} <span className='text-3xl '>21,90 €</span></h3>
         <p className='inline mr-4 text-sm md:text-md lg:text-lg'>
-          Primer, Segon, Postre o Café i 1 panet
-          <span className='block'>(café supl. 1,60€ - cigaló o trifàsic 2€) 
-          <span className='block'> (IVA Inclòs)</span> 
+        {t("menu.precio-text")}
+          <span className='block'>{t("menu.precio-supl")}
+          <span className='block'> {t("menu.precio-iva")}</span> 
           </span>  
         </p>
       </div>
 
       <div className='w-full md:max-w-[900px] mx-auto my-8 px-5'>
-          <h3 className='text-xl font-bold py-5 italic'>Llegenda d'al·lèrgens</h3>
-          <div className='flex gap-x-4 py-1'>
-            < GiFlour size={30} title='Gluten' />
-            <span>Conté Gluten</span>
-          </div>
-          <div className='flex gap-x-4 py-1'>
-            < GiBigEgg size={30} title='Ou' />
-            <span>Conté Ou</span>
-          </div>
-          <div className='flex gap-x-4 py-1'>
-            < GiPeanut size={30} title='Cacauet' />
-            <span>Conté Traces de cacahuet</span>
-          </div>
-          <div className='flex gap-x-4 py-1'>
-            < GiAcorn size={30} title='Fruits secs' />
-            <span>Conté Fruits secs</span>
-          </div>
-          <div className='flex gap-x-4 py-1'>
-            < GiMineralPearls size={30} title='Lupins' />
-            <span>Conté Lupins</span>
-          </div>
-          <div className='flex gap-x-4 py-1'>
-            < GiPeas size={30} title='Soja' />
-            <span>Conté Soja</span>
-          </div>
-          <div className='flex gap-x-4 py-1'>
-            < GiPlanks size={30} title='Api' />
-            <span>Conté Api</span>
-          </div>
-          <div className='flex gap-x-4 py-1'>
-            < GiCrabClaw size={30} title='Crustaci' />
-            <span>Conté Crustaci</span>
-          </div>
-          <div className='flex gap-x-4 py-1'>
-            < GiAbstract094 size={30} title='Molusc' />
-            <span>Conté Molusc</span>
-          </div>
-          <div className='flex gap-x-4 py-1'>
-            < GiDoubleFish size={30} title='Peix' />
-            <span>Conté Peix</span>
-          </div>
-          <div className='flex gap-x-4 py-1'>
-            < GiMilkCarton size={30} title='Lactosa' />
-            <span>Conté Lactosa</span>
-          </div>
-          <div className='flex gap-x-4 py-1'>
-            < GiMolecule size={30} title='Sulfits' />
-            <span>Conté Sulfits</span>
-          </div>
-          <div className='flex gap-x-4 py-1'>
-            < GiBubblingBowl size={30} title='Mostassa' />
-            <span>Conté Mostassa</span>
-          </div>
-          <div className='flex gap-x-4 py-1'>
-            < GiSesame size={30} title='Sesam' />
-            <span>Conté Sèsam</span>
-          </div>
-      </div>
+            <h3 className='text-xl font-bold py-5 italic uppercase'>
+            {t("carta.alergens-title")}
+            </h3>
+            <div className='flex gap-x-4 py-1'>
+              < GiFlour size={30} title='Gluten' />
+              <span>
+              {t("carta.alergen-1")}
+              </span>
+            </div>
+            <div className='flex gap-x-4 py-1'>
+              < GiBigEgg size={30} title='Ou' />
+              <span>
+              {t("carta.alergen-2")}
+              </span>
+            </div>
+            <div className='flex gap-x-4 py-1'>
+              < GiPeanut size={30} title='Cacauet' />
+              <span>
+              {t("carta.alergen-3")}
+              </span>
+            </div>
+            <div className='flex gap-x-4 py-1'>
+              < GiAcorn size={30} title='Fruits secs' />
+              <span>
+              {t("carta.alergen-4")}
+              </span>
+            </div>
+            <div className='flex gap-x-4 py-1'>
+              < GiMineralPearls size={30} title='Lupins' />
+              <span>
+              {t("carta.alergen-5")}
+              </span>
+            </div>
+            <div className='flex gap-x-4 py-1'>
+              < GiPeas size={30} title='Soja' />
+              <span>
+              {t("carta.alergen-6")}
+              </span>
+            </div>
+            <div className='flex gap-x-4 py-1'>
+              < GiPlanks size={30} title='Api' />
+              <span>
+              {t("carta.alergen-7")}
+              </span>
+            </div>
+            <div className='flex gap-x-4 py-1'>
+              < GiCrabClaw size={30} title='Crustaci' />
+              <span>
+              {t("carta.alergen-8")}
+              </span>
+            </div>
+            <div className='flex gap-x-4 py-1'>
+              < GiAbstract094 size={30} title='Molusc' />
+              <span>
+              {t("carta.alergen-9")}
+              </span>
+            </div>
+            <div className='flex gap-x-4 py-1'>
+              < GiDoubleFish size={30} title='Peix' />
+              <span>
+              {t("carta.alergen-10")}
+              </span>
+            </div>
+            <div className='flex gap-x-4 py-1'>
+              < GiMilkCarton size={30} title='Lactosa' />
+              <span>
+              {t("carta.alergen-11")}
+              </span>
+            </div>
+            <div className='flex gap-x-4 py-1'>
+              < GiMolecule size={30} title='Sulfits' />
+              <span>
+              {t("carta.alergen-12")}
+              </span>
+            </div>
+            <div className='flex gap-x-4 py-1'>
+              < GiBubblingBowl size={30} title='Mostassa' />
+              <span>
+              {t("carta.alergen-13")}
+              </span>
+            </div>
+            <div className='flex gap-x-4 py-1'>
+              < GiSesame size={30} title='Sesam' />
+              <span>
+              {t("carta.alergen-14")}
+              </span>
+            </div>
+        </div>
 
     <Footer />
     </main>  

@@ -1,17 +1,21 @@
 import { useState, useEffect } from "react";
 import {
   MobileNav,
-  IconButton,
-  Navbar,
+  Menu,
+  MenuHandler,
+  MenuList,
+  MenuItem,
+  Button,
   Typography
 } from "@material-tailwind/react";
 import { Outlet, Link } from "react-router-dom";
-import { BsInstagram, BsFacebook, BsTwitter, BsFillGeoAltFill } from 'react-icons/bs'
+import { BsInstagram, BsFacebook, BsTwitter, BsTranslate } from 'react-icons/bs'
 import { AiFillPhone, AiFillEnvironment } from 'react-icons/ai'
 import { MdDeliveryDining } from 'react-icons/md'
 import { MenuOutline, CloseOutline } from '@styled-icons/evaicons-outline'
-import LogoNegre from '../assets/logos/logo_negre.webp'
 import styled from 'styled-components'
+
+import { useTranslation } from 'react-i18next'
 
 
 // styled comp
@@ -22,8 +26,7 @@ display: inline;
 export default function Layout() {
   const [openNav, setOpenNav] = useState(false);
 
-  // Idiomes
-  const [ language, setLanguage] = useState('Cat')
+  const [t, i18n] = useTranslation("global");
  
   useEffect(() => {
     window.addEventListener(
@@ -41,14 +44,14 @@ export default function Layout() {
         className="p-1 font-normal"
       >
         <Link 
-        className='text-lg lg:text-md font-bold block py-4 text-secondary hover:translate-y-1 hover:text-primary transition ease-in-out duration-300' 
+        className='text-xl font-bold block py-4 text-secondary hover:translate-y-1 hover:text-primary transition ease-in-out duration-300' 
         to='/'
         onClick={() => setOpenNav(false)}
-        >Espai de la carme
+        >Espai de la Carme
         </Link>
       </Typography>
         
-        <div className='w-[200px] flex justify-around py-3'>
+        <div className='w-[200px] flex justify-between py-3'>
           <a target='_blank' href='https://www.instagram.com/espaicarme/?hl=es'>
             <BsInstagram size={30} className='cursor-pointer text-secondary hover:translate-y-1 hover:text-primary transition ease-in-out duration-300' aria-label="Icono Instagram" />
           </a>
@@ -60,22 +63,25 @@ export default function Layout() {
           </a>
         </div>
         <Link 
-        className='text-lg lg:text-md font-bold block py-3 text-secondary hover:translate-y-1 hover:text-primary transition ease-in-out duration-300' 
+        className='text-xl font-bold block py-3 text-secondary hover:translate-y-1 hover:text-primary transition ease-in-out duration-300' 
         to='/carta'
         onClick={() => setOpenNav(false)}
-        >La Carta
+        >
+          {t("layout.carta")}
         </Link>
         <Link 
-        className='text-lg lg:text-md font-bold block py-3 text-secondary hover:translate-y-1 hover:text-primary transition ease-in-out duration-300' 
+        className='text-xl font-bold block py-3 text-secondary hover:translate-y-1 hover:text-primary transition ease-in-out duration-300' 
         to='/menus'
         onClick={() => setOpenNav(false)}
-        >Els Menus
+        >
+          {t("layout.menus")}
         </Link>
         <Link 
-        className='text-lg lg:text-md font-bold block py-3 text-secondary hover:translate-y-1 hover:text-primary transition ease-in-out duration-300'
+        className='text-xl font-bold block py-3 text-secondary hover:translate-y-1 hover:text-primary transition ease-in-out duration-300'
         to='/vins'
         onClick={() => setOpenNav(false)}
-        >El Celler
+        >
+          {t("layout.celler")}
         </Link>
         <li>
           <a href="https://goo.gl/maps/PZ2xRmxxfKb2K3qJ9" target="_blank" rel="noopener noreferrer" className="block text-secondary hover:translate-y-1 hover:text-primary transition ease-in-out duration-300" aria-label="Situació restaurant">
@@ -88,7 +94,7 @@ export default function Layout() {
   return (
     <>
       <nav className={`w-full ${ openNav ? 'bg-light h-[64px]' : ''} fixed z-20 shadow-lg `}>
-        <div className={`bg-light ${ openNav ? 'scale-[22] md:scale-[30] lg:scale-[35] z-20' : ''} w-12 h-12 rounded-full absolute right-5 top-0 z-0 border border-secondary transition ease-in-out duration-500`}></div>
+        <div className={`bg-light ${ openNav ? 'scale-[22] md:scale-[] lg:scale-[30] z-20' : ''} w-12 h-12 rounded-full absolute right-5 top-0 z-0 border border-secondary transition ease-in-out duration-500`}></div>
         <div className="absolute z-20 bg-light w-full flex items-center justify-between px-4 lg:px-12 font-Roboto shadow-lg">
           <Link 
           className='flex justify-center items-center gap-x-1 text-lg font-bold py-3 text-secondary hover:translate-y-1 hover:text-primary transition ease-in-out duration-300' 
@@ -101,20 +107,18 @@ export default function Layout() {
             <a target='_blank' href='tel:+34938933308'>
               <AiFillPhone size={35} className='cursor-pointer text-secondary hover:translate-y-1 hover:text-primary transition ease-in-out duration-300' aria-label="Telèfon restaurant" />
             </a>
-            <span 
-            className="font-bold text-secondary hover:translate-y-1 hover:text-primary transition ease-in-out duration-300 text-lg cursor-pointer"
-            onClick={() => {
-              if( language === 'Cat') {
-                setLanguage('Esp')
-              } else if( language === 'Esp') {
-                setLanguage('Eng')
-              } else if( language === 'Eng') {
-                setLanguage('Cat')
-              } 
-            } }
-            >
-              {language}
-            </span>
+            <Menu >
+              <MenuHandler className="shadow-none text-secondary text-lg p-0 hover:text-primary transition ease-in-out duration-300">
+                <Button aria-label="boton Idiomas" className="hover:translate-y-1 hover:text-primary transition ease-in-out duration-300">
+                  <BsTranslate size={35}/>
+                </Button>
+              </MenuHandler>
+              <MenuList className="bg-light font-Roboto font-bold text-lg text-secondary px-0 py-1 mx-auto">
+                <MenuItem onClick={() => i18n.changeLanguage('ca') } className={`px-5 py-1 my-1  hover:text-secondary/50 transition ease-in-out duration-300 ${ i18n.language === 'ca' ? 'bg-gradient-to-r from-light via-primary/75 to-light' : '' }`}>Cat</MenuItem>
+                <MenuItem onClick={() => i18n.changeLanguage('es') } className={`px-5 py-1 my-1  hover:text-secondary/50 transition ease-in-out duration-300 ${ i18n.language === 'es' ? 'bg-gradient-to-r from-light via-primary/75 to-light' : '' }`}>Esp</MenuItem>
+                {/* <MenuItem onClick={() => i18n.changeLanguage('en') }>Eng</MenuItem> */}
+              </MenuList>
+            </Menu>
             <button
               variant="text"
               className="text-secondary hover:text-primary transition ease-in-out duration-300 block"

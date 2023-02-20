@@ -1,14 +1,15 @@
 import { useEffect } from 'react'
 import { Link } from 'react-router-dom'
-import CopesVi from '../assets/copes_vi.webp'
+import ImgCartaVi from '../assets/raim.webp'
 import ArnauVi from '../assets/vi_cuso.webp'
 import SubHeading from '../components/SubHeading'
 import Footer from '../components/Footer'
-import ViBlanc from '../assets/vi_blanc.jpg'
-import ViNegre from '../assets/vi_negre.jpg'
+import { useTranslation } from 'react-i18next'
 
 
 function Vins() {
+
+  const [t, i18n] = useTranslation("global");
 
   useEffect(() => {
     // "document.documentElement.scrollTo" is the magic for React Router Dom v6
@@ -19,27 +20,29 @@ function Vins() {
   }, ['/celler']);
 
   return (
-    <section className='text-light bg-gradient-to-b from-dark via-dark to-light'>
+    <section className='text-dark bg-gradient-to-b from-light to-light/50'>
       <div className='h-[500px] md:h-full py-5'>
-        <img src={CopesVi} alt="Copes de vi" className='block mx-auto w-screen'/>
-        <div className='mx-10 max-w-[900px] md:mx-auto'>
+        <img src={ImgCartaVi} alt="Copes de vi" className='block mx-auto w-screen'/>
+        <div className='mx-10 py-4 max-w-[900px] md:mx-auto'>
             <SubHeading>
             El Celler Cusó
             </SubHeading>
         </div>
-        <hr className='border-b-8' />
+        <hr className='border-b-8 border-secondary/50' />
       </div>
 
-      <div className='w-full lg:max-w-screen-lg mx-auto py-8 lg:py-60 flex flex-col md:flex-row items-center '>
-          <img src={ArnauVi} alt="imatge forn llenya" className='block md:w-1/4 order-2 md:order-none  shadow-md shadow-light'
+      <div className='w-full lg:max-w-screen-lg mx-auto py-2 lg:py-60 flex flex-col md:flex-row items-center '>
+          <img src={ArnauVi} alt="imatge vi negre Cuso" className='block md:w-1/4 order-2 md:order-none  shadow-md shadow-light'
              />
           <div className='px-10 w-full'>
-            <SubHeading>L'essència familiar al teu paladar</SubHeading>
+            <SubHeading>{t("celler.title")}</SubHeading>
             <p className='py-4'>
-                Les vinyes situades a Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsa, inventore! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Asperiores reiciendis ea voluptatum, modi non illum veniam amet culpa animi fugit!
+            {t("celler.text")}
             </p>
             <Link to={'/carta-vins'}>
-              <button type="submit" className="w-72 cursor-pointer text-light bg-secondary hover:text-dark hover:bg-primary rounded-full py-2 px-4 font-bold text-md lg:text-xl my-6 md:mt-12 transition-all ease-in-out duration-200">Ves a la Carta de Vins</button>
+              <button type="submit" className="w-72 cursor-pointer text-light bg-secondary hover:text-dark hover:bg-primary rounded-full py-2 px-4 font-bold text-md lg:text-xl my-12 md:mt-12 transition-all ease-in-out duration-200">
+              {t("celler.button")}
+              </button>
             </Link>
           </div>
       </div>

@@ -1,11 +1,12 @@
 
 function Spinner() {
   return (
-    <section className="py-12 flex justify-center items-center">
-        <div className="spinner">
-            <div className="double-bounce1"></div>
-            <div className="double-bounce2"></div>
-        </div>
+    <section className="py-2 flex flex-col gap-y-2 justify-center items-start skeleton">
+      <div className="skeleton-bar"></div>
+      <div className="skeleton-bar"></div>
+      <div className="skeleton-bar"></div>
+      <div className="skeleton-bar"></div>
+      <div className="skeleton-bar"></div>
     </section>
   )
 }

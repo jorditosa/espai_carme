@@ -3,9 +3,13 @@ import { Link, useNavigate } from 'react-router-dom'
 import SubHeading from "../components/SubHeading";
 import LogoTakespai from '../assets/logos/logo_takespai.webp'
 import { BsTelephone } from 'react-icons/bs'
+import { useTranslation } from 'react-i18next'
+import SpinnerPizza from "../components/SpinnerPizza";
 
 
 function Takespai() {
+
+  const [t, i18n] = useTranslation("global");
 
   const navigate = useNavigate();
 
@@ -18,23 +22,27 @@ function Takespai() {
   }, ['/takespai']);
 
   return (
-    <div className="w-full h-full md:h-screen px-4 py-24 bg-gradient-to-t from-light/75 to-light text-dark text-md md:text-lg flex flex-col justify-center items-center gap-y-4">
-      <img src={LogoTakespai} alt="logo Takespai" width={"280px"} />
-      <SubHeading>En construcció!</SubHeading>
-      <span className="text-2xl">💛</span>
+    <div className="w-full h-full px-4 pt-24 to-light text-dark text-md md:text-lg flex flex-col justify-center items-center gap-y-4">
+      <img src={LogoTakespai} alt="logo Takespai" width={"220px"} />
+      <SubHeading>{t("takespai.title")} 
+        <SpinnerPizza />
+      </SubHeading>
+      
       <div className="w-full max-w-[500px] mx-auto">
-        <p>Ben aviat podreu gaudir de les vostres comandes online.</p>
-        <p>De moment, ja sabeu que podeu fer la vostre comanda per take away o domicili trucant al 🔽 </p>
-        <SubHeading>
-          <a className="block my-4 text-3xl text-light text-center font-black hover:text-light/50 bg-clip-text text-transparent bg-gradient-to-b from-dark to-dark/75" href='tel:938933308'> 
-          93 893 33 08
+        <p className="text-sm px-10 md:px-1">
+        {t("takespai.description")}
+        </p>
+        <div className="flex items-center justify-center">
+          <BsTelephone style={{ display: "inline"}} size={35} />
+          <a className="inline pl-4 my-4 text-3xl text-light text-center font-black hover:text-light/50 bg-clip-text text-transparent bg-gradient-to-b from-dark to-dark/75" href='tel:938933308'> 
+            93 893 33 08
           </a>
-        </SubHeading>
+        </div>
+        <button className="w-full cursor-pointer my-2 text-light bg-dark hover:text-dark hover:bg-primary rounded-lg py-2 font-bold text-md lg:text-xl transition-all ease-in-out duration-200"
+                onClick={() => navigate('/')}>
+                {t("takespai.button")}
+        </button>
       </div>
-      <button className="w-48 cursor-pointer text-light bg-dark hover:text-dark hover:bg-primary rounded-full py-2 px-4 font-bold text-md lg:text-xl mt-12 transition-all ease-in-out duration-200"
-              onClick={() => navigate('/')}>
-              Tornar al Inici
-      </button>
     </div>
   )
 }

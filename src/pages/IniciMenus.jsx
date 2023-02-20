@@ -1,6 +1,6 @@
 import { useEffect } from "react"
 import SubHeading from "../components/SubHeading"
-import ImgMenuLab from '../assets/menu_pissarra.jpg'
+import ImgMenuLab from '../assets/forn_pizza.webp'
 import ImgMenuEspai from '../assets/imatge_menulab.webp'
 import { Link } from 'react-router-dom'
 

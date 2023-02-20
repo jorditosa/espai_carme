@@ -1,6 +1,24 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+import { I18nextProvider } from 'react-i18next'
+import i18next from 'i18next'
+
+import global_ca from './translations/ca/global.json'
+import global_es from './translations/es/global.json'
+
+i18next.init({
+  interpolation: { escapeValue: false},
+  lng: 'ca',
+  resources: {
+    ca: {
+      global: global_ca
+    },
+    es: {
+      global: global_es
+    }
+  }
+})
 
 import Layout from './components/Layout'
 import Inici from './pages/Inici'
@@ -15,7 +33,7 @@ import IniciCartes from './pages/IniciCartes'
 import Landing from './pages/Landing'
 import Welcome from './components/Welcome'
 import ErrorPage from './components/ErrorPage'
-
+import Politica from './pages/Politica'
 
 const router = createBrowserRouter([
     {
@@ -75,6 +93,10 @@ const router = createBrowserRouter([
           path: '/landing',
           element: <Landing />
         },
+        {
+          path: '/politica',
+          element: <Politica />
+        },
       ]
     },
     {
@@ -87,9 +109,10 @@ const router = createBrowserRouter([
     },
   ]);
 
-
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+      <I18nextProvider i18n={i18next}>
+        <RouterProvider router={router} />
+      </I18nextProvider>
   </React.StrictMode>,
 )

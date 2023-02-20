@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react"
 import Welcome from "../components/Welcome"
 import SubHeading from "../components/SubHeading"
-import ImgCarta from '../assets/imatge_carta.webp'
+import ImgCarta from '../assets/plat_xato.webp'
 import ImgMenu from '../assets/formatge_gran.webp'
-import ImgCartaVi from '../assets/copes_vi.webp'
+import ImgCartaVi from '../assets/raim.webp'
 import { Link } from 'react-router-dom'
 
 function Landing() {
@@ -39,8 +39,8 @@ function Landing() {
 
         {
             welcome ? <Welcome /> : (
-                <div className="w-full h-screen flex flex-col md:flex-row">
-                <div className="h-full panel" style={{backgroundImage: `url(${ImgCarta})`, backgroundRepeat: 'no-repeat', backgroundSize: 'cover', backgroundPosition: 'center'}}>
+            <div className="w-full h-screen flex flex-col md:flex-row">
+                <div className="h-full panel  hover:bg-primary" style={{backgroundImage: `url(${ImgCarta})`, backgroundRepeat: 'no-repeat', backgroundSize: 'cover', backgroundPosition: 'center'}}>
                     <Link
                     to={'/carta'}>
                         <div className="h-full w-full text-light flex justify-center items-center ">
@@ -50,19 +50,19 @@ function Landing() {
                 </div>
                 <div className="h-full panel" style={{backgroundImage: `url(${ImgMenu})`, backgroundRepeat: 'no-repeat', backgroundSize: 'cover', backgroundPosition: 'center'}}>
                     <Link
-                  to={'/menus'}>
+                to={'/menus'}>
                         <div className="h-full w-full text-light flex justify-center items-center ">
                             <SubHeading>Menús</SubHeading>
                         </div>
                     </Link>
                 </div>
                 <div className="h-full panel" style={{backgroundImage: `url(${ImgCartaVi})`, backgroundRepeat: 'no-repeat', backgroundSize: 'cover', backgroundPosition: 'center'}}>
-                    <Link
-                    to={'/carta-vins'}>
+                <Link
+                to={'/carta-vins'}>
                     <div className="h-full w-full text-light flex justify-center items-center ">
                         <SubHeading>Carta de Vins</SubHeading>
                     </div>
-                    </Link>
+                </Link>
                 </div>
             </div>
             )

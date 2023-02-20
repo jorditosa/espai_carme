@@ -1,29 +1,28 @@
-import styled from 'styled-components'
 import SubHeading from '../components/SubHeading'
 import Forn from '../assets/forn_llenya.webp'
-import Formatge from '../assets/formatge_gran.webp'
-import Local from '../assets/local.webp'
-import ViNegre from '../assets/vi_cuso.webp'
+import { useTranslation } from 'react-i18next'
 
 // styled comp
 
 function About() {
+
+  const [t, i18n] = useTranslation("global");
+
   return (
     <section className="text-light dark h-screen bg-light bg-fixed" style={{backgroundImage: `url(${Forn})`, backgroundRepeat: 'no-repeat', backgroundSize: 'cover', backgroundPosition: 'top 40%'}} id="about">
-      <div className='w-full lg:max-w-[900px] mx-auto h-full py-24 lg:py-50 px-5 font-Roboto'>
-        <div className="h-full flex flex-col items-start justify-center text-md lg:text-xl">
+      <div className='w-full h-full py-24 lg:py-50 px-10 font-Roboto bg-gradient-to-b from-dark/50 to-dark/25'>
+        <div className="max-w-[900px] mx-auto h-full flex flex-col items-start justify-center text-md lg:text-xl">
           <SubHeading >
-            L'autèntica cuina <br/>
-            al forn de llenya
+          {t("about.title")}
           </SubHeading>
-          <p>
-            Gaudeix dels nostres plats i productes frescos en una experiència gastronòmica que no et deixarà indiferent.
+          <p className='py-2'>
+            {t("about.paragraph-1")}
           </p>
-          <p>
-            Les nostres pizzes i plats amb fusió d'ingredients de la cuina catalana de tota la vida amb la cuina italiana.
+          <p className='py-2'>
+          {t("about.paragraph-2")}
           </p>
-          <p>
-            Deixa't sorpendre per al varietat del nostre menú, en un ambient acollidor ben aprop teu, amb producte local i de referència, a Vilanova i la Geltrú.
+          <p className='py-2'>
+          {t("about.paragraph-3")}
           </p>
         </div>  
       </div>

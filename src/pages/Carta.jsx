@@ -4,32 +4,37 @@ import { Breadcrumbs } from "@material-tailwind/react";
 import { GiFlour, GiBigEgg , GiPeanut, GiCrabClaw, GiMilkCarton, GiDoubleFish, GiMolecule, GiBubblingBowl, GiPeas, GiSesame, GiAbstract094, GiAcorn, GiPlanks, GiMineralPearls } from 'react-icons/gi'
 import Spinner from '../components/Spinner';
 import Footer from '../components/Footer'
-
-const headers = { 'Content-Type': 'application/json' };
+import { useTranslation } from 'react-i18next'
 
 function Carta() {
 
+  const [t, i18n] = useTranslation("global");
+
   const [productesCarta, setProductesCarta] = useState([]);
   const [ loading, setLoading ] = useState(true)
-
+  const [ lang, setLang ] = useState('')
 
   useEffect(() => {
-    fetch(`${import.meta.env.VITE_API_URL}/cartas?pagination[limit]=100`, { headers, method: 'GET' })
-    .then(res => res.json())
-    .then((data) => {
-      setLoading(false);
-      setProductesCarta(data.data);
-    }
-    )
-    .catch((error) => {
-      setLoading(false);
-    })
-  }, [])
+    setLang(i18n.language);
+    getProducts();
+  })
+
+  const getProducts = () => {
+    try{
+      fetch(`${import.meta.env.VITE_API_URL}/cartas?pagination[limit]=100&locale=${lang}`, { method: 'GET' })
+      .then(res => {
+      if ( res.ok) return res.json()
+      if ( res.status === 401) window.location.reload()  
+      })
+      .then((data) => {
+        setLoading(false);
+        setProductesCarta(data.data)});
+    } catch(error) {
+      window.location.reload()
+    } 
+  }
 
   const renderProducte = (categoria) => { 
-    if(loading) {
-      return <Spinner />
-    }
     return (
       productesCarta.filter(producte => producte.attributes.categoria === categoria).map( (item, id) => (
                   <div className='flex justify-between items-center border-b-2 border-dark/10 py-1' key={id}>
@@ -41,7 +46,7 @@ function Carta() {
                       {renderAlergen(item.attributes.alergens)}
                     </span>
                     </div>
-                    <span className='text-md md:text-xl w-1/6'>
+                    <span className='text-sm'>
                         { (item.attributes.price).toFixed(2) } €
                     </span>
                   </div>
@@ -97,122 +102,171 @@ function Carta() {
 
     <Breadcrumbs className='max-w-[900px] mx-auto'>
       <Link to="/" className="text-sm md:text-md lg:text-lg opacity-60 font-Roboto">
-        Inici
+      {t("carta.breadcumb-1")}
       </Link>
       <Link href="#" className="text-sm md:text-md lg:text-lg font-Roboto font-bold">
-        Carta
+      {t("carta.breadcumb-2")}
       </Link>
     </Breadcrumbs>
 
       <hr className='border-b-8 border-secondary/75' />
 
           <div className='pt-6 px-5 w-full md:max-w-[900px] mx-auto' id='foie_tartufo'>
-              <h3 className='text-xl font-bold py-5 italic'>FOIE I TARTUFO!!!</h3>
-              { renderProducte('foie_tartufo') } 
+              <h3 className='text-xl font-bold py-5 italic uppercase'>
+              {t("carta.section-1")}
+              </h3>
+              { loading ? <Spinner /> : renderProducte('foie_tartufo') } 
           </div>            
 
           <div className='pt-6 px-5 w-full md:max-w-[900px] mx-auto' id='entrants'>
-            <h3 className='text-xl font-bold py-5 italic'>ENTRANTS</h3>
-              { renderProducte('entrants') }  
+            <h3 className='text-xl font-bold py-5 italic uppercase'>
+            {t("carta.section-2")}
+            </h3>
+              { loading ? <Spinner /> : renderProducte('entrants') }  
           </div>
 
           <div className='pt-6 px-5 w-full md:max-w-[900px] mx-auto' id='amanides'>
-            <h3 className='text-xl font-bold py-5 italic'>AMANIDES</h3>
-            { renderProducte('amanides') } 
+            <h3 className='text-xl font-bold py-5 italic uppercase'>
+            {t("carta.section-3")}
+            </h3>
+            { loading ? <Spinner /> : renderProducte('amanides') } 
           </div>
 
           <div className='pt-6 px-5 w-full md:max-w-[900px] mx-auto' id='provolones'>
-            <h3 className='text-xl font-bold py-5 italic'>PROVOLONES</h3>
-            { renderProducte('provolones') } 
+            <h3 className='text-xl font-bold py-5 italic uppercase'>
+            {t("carta.section-4")}
+            </h3>
+            { loading ? <Spinner /> : renderProducte('provolones') } 
           </div>
 
           <div className='pt-6 px-5 w-full md:max-w-[900px] mx-auto' id='risottos'>
-            <h3 className='text-xl font-bold py-5 italic'>RISOTTOS</h3>
-            { renderProducte('risottos') } 
+            <h3 className='text-xl font-bold py-5 italic uppercase'>
+            {t("carta.section-5")}
+            </h3>
+            { loading ? <Spinner /> : renderProducte('risottos') } 
           </div>
 
           <div className='pt-6 px-5 w-full md:max-w-[900px] mx-auto' id='pastes'>
-            <h3 className='text-xl font-bold py-5 italic'>PASTES</h3>
-            { renderProducte('pastes') } 
+            <h3 className='text-xl font-bold py-5 italic uppercase'>
+            {t("carta.section-6")}
+            </h3>
+            { loading ? <Spinner /> : renderProducte('pastes') } 
           </div>
 
           <div className='pt-6 px-5 w-full md:max-w-[900px] mx-auto' id='peix'>
-            <h3 className='text-xl font-bold py-5 italic'>PEIX</h3>
-            { renderProducte('peix') } 
+            <h3 className='text-xl font-bold py-5 italic uppercase'>
+            {t("carta.section-7")}
+            </h3>
+            { loading ? <Spinner /> : renderProducte('peix') } 
           </div>
 
           <div className='pt-6 px-5 w-full md:max-w-[900px] mx-auto' id='carn'>
-            <h3 className='text-xl font-bold py-5 italic'>CARN</h3>
-            { renderProducte('carn') } 
+            <h3 className='text-xl font-bold py-5 italic uppercase'>
+            {t("carta.section-8")}
+            </h3>
+            { loading ? <Spinner /> : renderProducte('carn') } 
           </div>
 
           <div className='pt-6 px-5 w-full md:max-w-[900px] mx-auto' id='pizzes'>
-            <h3 className='text-xl font-bold py-5 italic'>PIZZES </h3>
-            { renderProducte('pizzes') } 
+            <h3 className='text-xl font-bold py-5 italic uppercase'>
+            {t("carta.section-9")} </h3>
+            { loading ? <Spinner /> : renderProducte('pizzes') } 
           </div>
 
           <div className='pt-6 px-5 w-full md:max-w-[900px] mx-auto' id='postres'>
-            <h3 className='text-xl font-bold py-5 italic'>POSTRES</h3>
-            { renderProducte('postres') } 
+            <h3 className='text-xl font-bold py-5 italic uppercase'>
+            {t("carta.section-10")}
+            </h3>
+            { loading ? <Spinner /> : renderProducte('postres') } 
           </div>
 
           <div className='w-full md:max-w-[900px] mx-auto my-8 px-5'>
-            <h3 className='text-xl font-bold py-5 italic'>Llegenda d'al·lèrgens</h3>
+            <h3 className='text-xl font-bold py-5 italic uppercase'>
+            {t("carta.alergens-title")}
+            </h3>
             <div className='flex gap-x-4 py-1'>
               < GiFlour size={30} title='Gluten' />
-              <span>Conté Gluten</span>
+              <span>
+              {t("carta.alergen-1")}
+              </span>
             </div>
             <div className='flex gap-x-4 py-1'>
               < GiBigEgg size={30} title='Ou' />
-              <span>Conté Ou</span>
+              <span>
+              {t("carta.alergen-2")}
+              </span>
             </div>
             <div className='flex gap-x-4 py-1'>
               < GiPeanut size={30} title='Cacauet' />
-              <span>Conté Traces de cacahuet</span>
+              <span>
+              {t("carta.alergen-3")}
+              </span>
             </div>
             <div className='flex gap-x-4 py-1'>
               < GiAcorn size={30} title='Fruits secs' />
-              <span>Conté Fruits secs</span>
+              <span>
+              {t("carta.alergen-4")}
+              </span>
             </div>
             <div className='flex gap-x-4 py-1'>
               < GiMineralPearls size={30} title='Lupins' />
-              <span>Conté Lupins</span>
+              <span>
+              {t("carta.alergen-5")}
+              </span>
             </div>
             <div className='flex gap-x-4 py-1'>
               < GiPeas size={30} title='Soja' />
-              <span>Conté Soja</span>
+              <span>
+              {t("carta.alergen-6")}
+              </span>
             </div>
             <div className='flex gap-x-4 py-1'>
               < GiPlanks size={30} title='Api' />
-              <span>Conté Api</span>
+              <span>
+              {t("carta.alergen-7")}
+              </span>
             </div>
             <div className='flex gap-x-4 py-1'>
               < GiCrabClaw size={30} title='Crustaci' />
-              <span>Conté Crustaci</span>
+              <span>
+              {t("carta.alergen-8")}
+              </span>
             </div>
             <div className='flex gap-x-4 py-1'>
               < GiAbstract094 size={30} title='Molusc' />
-              <span>Conté Molusc</span>
+              <span>
+              {t("carta.alergen-9")}
+              </span>
             </div>
             <div className='flex gap-x-4 py-1'>
               < GiDoubleFish size={30} title='Peix' />
-              <span>Conté Peix</span>
+              <span>
+              {t("carta.alergen-10")}
+              </span>
             </div>
             <div className='flex gap-x-4 py-1'>
               < GiMilkCarton size={30} title='Lactosa' />
-              <span>Conté Lactosa</span>
+              <span>
+              {t("carta.alergen-11")}
+              </span>
             </div>
             <div className='flex gap-x-4 py-1'>
               < GiMolecule size={30} title='Sulfits' />
-              <span>Conté Sulfits</span>
+              <span>
+              {t("carta.alergen-12")}
+              </span>
             </div>
             <div className='flex gap-x-4 py-1'>
               < GiBubblingBowl size={30} title='Mostassa' />
-              <span>Conté Mostassa</span>
+              <span>
+              {t("carta.alergen-13")}
+              </span>
             </div>
             <div className='flex gap-x-4 py-1'>
               < GiSesame size={30} title='Sesam' />
-              <span>Conté Sèsam</span>
+              <span>
+              {t("carta.alergen-14")}
+              </span>
             </div>
         </div>
 

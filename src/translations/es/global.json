@@ -1,0 +1,142 @@
+{
+    "layout": {
+        "carta": "La Carta",
+        "menus": "Los menús",
+        "celler": "La Bodega"
+    },
+    "takespai": {
+        "title": "En construcción",
+        "description": "Pronto podréis disfrutar de vuestros pedidos online. tanto para take away cómo a domicilio. De momento, podéis seguir realizando los pedidos cómo siempre, llamando al:",
+        "button": "Volver al Inicio"
+    },
+    "about": {
+        "title": "La auténtica cocina al horno de leña",
+        "paragraph-1": "¡Bienvenidos a nuestro restaurante, un espacio gastronómico único donde podrás disfrutar de una experiencia culinaria inolvidable! En nuestro establecimiento, te ofrecemos una amplia selección de platos exquisitos elaborados con ingredientes de calidad y una gran pasión por la cocina. Desde nuestros aperitivos hasta nuestros postres, cada plato está diseñado para sorprender tus sentidos y dejarte con un sabor de boca memorable.",
+        "paragraph-2": "Además, nuestro restaurante ofrece un ambiente acogedor y agradable, ideal para todo tipo de ocasiones, desde comidas en familia hasta cenas románticas. Asimismo, disponemos de una carta de vinos cuidadosamente seleccionada que complementa perfectamente nuestra oferta gastronómica.",
+        "paragraph-3": "Déjate sorprender por la variedad de nuestro menú, fusión de cocina catalana con italiana, bien cerca de ti, en Vilanova i la Geltrú."
+    },
+    "cartas": {
+        "title": "Nuestras experiencias gastronómicas",
+        "description-1": "Nos apasiona la comida y creemos que la gastronomía es una forma de explorar la cultura, la historia y las tradiciones de diferentes lugares del mundo. Por eso, Espai de la Carme es un espacio para los amantes de la comida y de la bebida, donde podrás encontrar un buen momento para tus aventuras culinarias.",
+        "description-2": "Cada menú ha sido cuidadosamente diseñado por nuestro equipo de chefs y se compone de una selección de platos creativos y sabrosos, elaborados con ingredientes frescos y de alta calidad.",
+        "slide-carta": "Carta",
+        "slide-menu": "Menús",
+        "slide-vi": "Carta de vinos"
+    },
+    "productes": {
+        "title": "Nuestros ingredientes",
+        "description-1": "En nuestro restaurante, nos enorgullece utilizar únicamente los ingredientes más frescos y de alta calidad para crear nuestros platos. Desde las verduras y frutas de temporada hasta los cortes más finos de carne y pescado, nos aseguramos de que cada ingrediente sea seleccionado cuidadosamente para garantizar el sabor y la calidad de nuestros platos.",
+        "description-2": "Trabajamos con proveedores locales para obtener los ingredientes más frescos posibles y nos aseguramos de que nuestros productos sean sostenibles y respetuosos con el medio ambiente. También colaboramos con pequeños productores y agricultores para ofrecer una selección única de ingredientes que no encontrarás en cualquier otro lugar.",
+        "slide-mozzarella-title": "Mozzarella",
+        "slide-mozzarella-description": "La mozzarella y mozzarella de búfala, supone un producto muy especial en su textura para nuestra cocina.",
+        "slide-tofona-title": "Trufa",
+        "slide-tofona-description": "La trufa es una seta de invierno, que aporta un gusto diferencial al producto sobre el cual es añadida.",
+        "slide-foie-title": "Foie gras",
+        "slide-foie-description": "El foie gras es por excelencia un producte exquisito francés, hecho con hígado de pato principalmente.",
+        "slide-parmigiano-title": "Parmigiano",
+        "slide-parmigiano-description": "El parmigiano reggiano es un famoso queso de procedencia italiana con una consistencia dura, madura y grasa."
+    },
+    "celler": {
+        "title": "La esencia local en tu paladar",
+        "text": "No solo nos centramos en el producto gastronómico, si no que hemos hecho un paso más y hemos creado una reserva propia de vinos de la casa, reserva Cusó. Con un producto de denominación de origen Catalan,  ponemos a tu gusto una gama de tintos, blancos y rosados para que puedas disfrutar aún más de tu experiencia gastronómica.",
+        "button": "Ve a la Carta de vinos"
+    },
+    "carta": {
+        "breadcumb-1": "Inicio",
+        "breadcumb-2": "Carta",
+        "section-1": "Foie y Trufa",
+        "section-2": "Entrantes",
+        "section-3": "Ensaladas",
+        "section-4": "Provolones",
+        "section-5": "Risottos",
+        "section-6": "Pastas",
+        "section-7": "Pescado",
+        "section-8": "Carne",
+        "section-9": "Pizzas",
+        "section-10": "Postres",
+        "alergens-title": "Leyenda de alérgenos",
+        "alergen-1": "Contiene Gluten",
+        "alergen-2": "Contiene Huevo",
+        "alergen-3": "Contiene Cacahuete",
+        "alergen-4": "Contiene Frutos Secos",
+        "alergen-5": "Contiene Altramuces",
+        "alergen-6": "Contiene Soja",
+        "alergen-7": "Contiene Apio",
+        "alergen-8": "Contiene Crustáceo",
+        "alergen-9": "Contiene Molusco",
+        "alergen-10": "Contiene Pescado",
+        "alergen-11": "Contiene Lactosa",
+        "alergen-12": "Contiene Sulfitos",
+        "alergen-13": "Contiene Mostaza",
+        "alergen-14": "Contiene Sésamo"
+    },
+    "menu": {
+        "breadcumb-1": "Inicio",
+        "breadcumb-2": "Menús",
+        "breadcumb-espai": "Menú Espai",
+        "breadcumb-lab": "Menú Laborable",
+        "primers": "Primeros",
+        "segons": "Segundos",
+        "postres": "Postres artesanos y caseros",
+        "precio": "Precio Menú",
+        "precio-text": "Primero, Segundo, Postre o Café y 1 Panecillo",
+        "precio-text-vino": "Copa de Vino Cusó Crianza o Cerveza Maestra supl 0,50€, Alhambra 1,20€",
+        "precio-text-lab": "Primero, Segundo, 1 bebida + 1 panecillo + Postre o café",
+        "precio-text-lab-ind": "Primero y 1 Bebida",
+        "precio-supl": "(café supl. 1,60€ - Carajillo o trifásico 2€)",
+        "precio-iva": "(IVA Incluido)"
+    },
+    "vins": {
+        "breadcumb-1": "Inicio",
+        "breadcumb-2": "Carta de Vinos",
+        "negres": "tintos",
+        "blancs": "blancos",
+        "rosats": "rosados",
+        "caves": "cavas",
+        "sangria": "sangria",
+        "lambruscos": "lambrusco",
+        "copa-casa": "Copa de Vino de la Casa",
+        "copa-criança": "Copa de Vino Crianza de la Casa",
+        "copa-cava": "Copa de Cava de la Casa"
+    },  
+    "footer": {
+        "contact-title": "¡Queremos mejorar!",
+        "contact-text": "Nos gustarían las 5⭐. ¿Nos ayudas?",
+        "contact-name": "Tu nombre",
+        "contact-email": "Tu email (opcional)",
+        "contact-message": "Déjanos tu opinión",
+        "contact-button": "¡Opina!",
+        "time-title": "Horario",
+        "time-closed": "Cerrado",
+        "time-monday": "Lunes",
+        "time-tuesday": "Martes",
+        "time-wednesday": "Miércoles",
+        "time-thursday": "Jueves",
+        "time-friday": "Viernes",
+        "time-saturday": "Sábado",
+        "time-sunday": "Domingo",
+        "follow-us": "Síguenos",
+        "politica": "Política de privacidad",
+        "copyrights": "Todos los derechos reservados"
+    },
+    "error": {
+        "title": "Uups! Se ha producido un error",
+        "text": "El lado oscuro intervenido ha, actualitzar la página tu debes de",
+        "button": "Recargar la página"
+    },
+    "politica": {
+        "breadcumb-1": "Inicio",
+        "breadcumb-2": "Política de privacidad y cookies",
+        "section-1": "La presente Política de Privacidad constituye, junto con las Normas de participación y el aviso legal, el marco jurídico que regula el uso del sitio web www.espaidelacarme.com. Esta Política de Privacidad en concreto regula el uso y tratamiento que Espai de la Carme da a sus datos de carácter personal como usuario del sitio web, ya que al acceder a la página web www.espaidelacarme.com pasáis a tener la condición de usuario de este sitio web (en adelante, el \"Usuario\").",
+        "section-2": "El presente sitio web es propiedad de la compañía de la sociedad Fermacu SL, con domicilio social en Carrer sant Antoni, 6 - BJ, Vilanova i la Geltru, 08800, Barcelona y CIF: B63047955.",
+        "section-3": "En el Sitio Web encontraréis a vuestra disposición la presente Política de Privacidad en catalán para que la podáis consultar, archivar o imprimir en cualquier momento. Es posible que varíe con el tiempo como consecuencia de cambios en el Sitio Web, novedades legislativas o jurisprudenciales o porque surjan criterios nuevos de la Agencia Española de Protección de Datos o la nueva normativa europea nos obligue a hacer futuras modificaciones. Por ello, Espai de la Carme se reserva el derecho a modificar la presente Política de Privacidad y recomienda leer detenidamente la Política de Privacidad siempre que se acceda al Sitio Web.",
+        "section-4": "Espai de la Carme se compromete a cumplir su obligación de secreto de los datos de carácter personal y el deber de guardarlos de forma confidencial y adopta las medidas necesarias para evitar su alteración, pérdida, tratamiento o acceso no autorizado, teniendo en cuenta en todo momento el estado de la tecnología.",
+        "section-5": "Espai de la Carme garantiza la adopción de las medidas oportunas para asegurar el tratamiento confidencial de estos datos. Por ello, ha implantado todas las medidas de seguridad técnicas y organizativas necesarias que garanticen la integridad, confidencialidad y disponibilidad de los datos personales facilitados por el usuario, en particular las estipuladas en el RGDP (Reglamento General de la Protección de Datos - UE 2016/679, del 27 de abril), que ha ampliado el alcance de la Ley Orgánica 15/1999, de 13 de diciembre, de Protección de Datos de Carácter Personal (LOPD) y su Reglamento de Despliegue RD 1720/2007.",
+        "section-6": "Los datos personales facilitados voluntariamente serán tratados de manera confidencial, bajo la protección y las especificaciones contenidas en el reglamento vigente, y se recogerán en fichero debidamente inscrito en la Agencia de Protección de Datos, cuyo responsable es Fermacu SL, y la finalidad del cual es la gestión de los usuarios y suscriptores, así como la venta en línea de productos y la resolución de consultas.",
+        "section-7": "La base legal para el tratamiento de datos es el consentimiento del suscriptor. Tratamos los datos personales de los inscritos en el boletín con la única finalidad de enviarles nuestra newsletter. Tratamos los datos personales de los usuarios registrados y los suscriptores de pago con la única finalidad de gestionar su vinculación con el digital a Espai de la Carme, el cobro de las cuotas (si corresponde), la organización de actividades y campañas y el envío de comunicaciones informativas y comerciales (también por vía electrónica).",
+        "section-8": "Los datos personales no se cederán a terceros (con excepción de obligación legal) y se conservarán durante el plazo de seis (6) años de conformidad con la normativa contable vigente y, si corresponde, durante diez (10) segundos la normativa de prevención de blanqueo de capitales. El usuario puede acceder a los datos personales, así como solicitar la rectificación de los datos inexactos o, si corresponde, solicitar la cancelación o supresión cuando los datos ya no sean necesarios para las finalidades que fueron recogidas. También podrá solicitar la limitación, portabilidad y oposición del tratamiento de sus datos, en determinadas circunstancias y por motivos relacionados con su situación particular.",
+        "section-9": "Podrá revocar el consentimiento al envío de comunicaciones comerciales y ejercer los derechos referidos anteriormente, mediante el envío de un correo electrónico a reserves@espaidelacarme.com o dirigiéndose por correo ordinario al responsable del fichero ubicado en Calle San Antonio, 6 - BJ, Vilanova i la Geltru, en ambos casos con la referencia: \"Protección de Datos\", a través de un escrito firmado a tal efecto y adjuntando copia de su DNI.",
+        "section-10": "Para la resolución de todas las controversias o cuestiones relacionadas con el presente sitio web o de las actividades que se desarrollan en él, se aplica la legislación española en todos los casos, a la cual se someten expresamente las partes. El mero hecho de la utilización de los servicios de este sitio web presupone la aceptación expresa de la dicha aceptación de la jurisdicción española. Asimismo, y con la excepción de lo expresado en el párrafo siguiente, las partes que intervienen acuerdan que todo litigio, discrepancia, cuestión o reclamación resultante de la ejecución o interpretación de las presentes condiciones o relacionado, o de otros textos que pudieran haber en el sitio web, se resolverán definitivamente mediante sometimiento a los Juzgados y Tribunales de Vilanova i la Geltrú con renuncia expresa a cualquier otro fuero o demarcación jurisdiccional que pudiera resultar competente. El párrafo anterior no se aplica en el caso de que una de las partes sea un consumidor o usuario según la definición de la normativa de protección de los Consumidores y Usuarios (Real Decreto Legislativo 1/2007, de 16 de noviembre, por el que se aprueba el texto refundido de la Ley General para la Defensa de los Consumidores y Usuarios y otras leyes complementarias), en este caso, (y para un conflicto relacionado y amparado por la Ley) se aplicaría preferentemente el lugar designado en dicha legislación",
+        "section-11": "Espai de la Carme utiliza cookies en la navegación del usuario por sus sitios web para facilitar la personalización y la comodidad de la navegación. Una cookie es un fragmento de información enviado desde un servidor de páginas web a un navegador que puede ser devuelto por el navegador en posteriores accesos a este servidor. Las cookies se asocian al usuario anónimo y a su ordenador y no proporcionan por sí mismas ni el nombre ni los apellidos del usuario. En este sitio web se utilizan cookies de Google para mostrar anuncios publicitarios basados en visitas anteriores al sitio web o a otros sitios web que también muestran anuncios de Google. Los usuarios pueden optar por no admitir el seguimiento mediante cookies de publicidad accediendo a: https://www.google.com/settings/ads."
+    }
+}

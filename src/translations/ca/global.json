@@ -1,0 +1,142 @@
+{
+    "layout": {
+        "carta": "La Carta",
+        "menus": "Els menús",
+        "celler": "El Celler"
+    },
+    "takespai": {
+        "title": "En construcció",
+        "description": "Ben aviat podreu gaudir de les vostres comandes online, tant per take away com a domicili. De moment, podeu seguir fent la vostre comanda com sempre, trucant al:",
+        "button": "Tornar al Inici"
+    },
+    "about": {
+        "title": "L'autèntica cuina al forn de llenya",
+        "paragraph-1": "Benvinguts al nostre restaurant, un espai gastronòmic únic on podràs gaudir d'una experiència culinària inoblidable. Al nostre establiment, t'oferim una ampla selecció de plats exquisits elaborats amb ingredients de qualitat i una gran passió per la cuina. Des dels nostres aperitius fins als nostres postres, cada plat està dissenyat per sorprendre els teus sentits i deixar-te amb un sabor de boca memorable.",
+        "paragraph-2": "A més, el nostre restaurant ofereix un ambient acollidor i agradable, ideal per a tot tipus d'ocasions, des de dinars en família fins a sopars romàntics. A més, disposem d'una carta de vins cuidadosament seleccionada que complementa perfectament la nostra oferta gastronòmica.",
+        "paragraph-3": "Deixa't sorprendre per al varietat del nostre menú, fusió de cuina catalana i italiana, ben aprop teu, a Vilanova i la Geltrú."
+    },
+    "cartas": {
+        "title": "Les nostres experiències gastronòmiques",
+        "description-1": "Ens apassiona la cuina i creiem que la gastronomia és una forma d'explorar la cultura, la història i les tradicions de diferents llocs del món. Per això, Espai de la Carme és un espai per als amants de la cuina i de la beguda, on podràs trobar un bon moment per a les teves aventures culinàries.",
+        "description-2": "Cada menú ha estat dissenyat cuidadosament pel nostre equip de cuiners i consta d'una selecció de plats creatius i saborosos, elaborats amb ingredients frescos i de primera qualitat.",
+        "slide-carta": "Carta",
+        "slide-menu": "Menús",
+        "slide-vi": "Carta de vins"
+    },
+    "productes": {
+        "title": "Els nostres ingredients",
+        "description-1": "Al nostre restaurant, ens enorgullim d'utilitzar només els ingredients més frescos i de alta qualitat per crear els nostres plats. Des de les verdures i fruites de temporada fins als talls més fi ns de carn i peix, ens assegurem que cada ingredient sigui seleccionat cuidadosament per garantir el sabor i la qualitat dels nostres plats.",
+        "description-2": "Treballem amb proveïdors locals per obtenir els ingredients més frescos possibles i ens assegurem que els nostres productes siguin sostenibles i respectuosos amb el medi ambient. També col·laborem amb petits productors i agricultors per oferir una selecció única d'ingredients que no trobaràs en cap altre lloc.",
+        "slide-mozzarella-title": "Mozzarella",
+        "slide-mozzarella-description": "La mozzarella i mozzarella de búfala, suposa un producte molt especial en les seves textures, per a la nostre cuina.",
+        "slide-tofona-title": "Tòfona",
+        "slide-tofona-description": "La tòfona és un bolet d'hivern, que aporta un gust diferencial al producte sobre el qual és afegida.",
+        "slide-foie-title": "Foie gras",
+        "slide-foie-description": "El foie gras és per excelencia un producte exquisit francés, fet amb el fetge del ànec.",
+        "slide-parmigiano-title": "Parmigiano",
+        "slide-parmigiano-description": "El parmigiano reggiano és un famós formatge de procedència italiana de consistència dura, madura i grasa."
+    },
+    "celler": {
+        "title": "L'essència local al teu paladar",
+        "text": "No només ens centrem en el producte gastronòmic, sinó que hem fet un pas més enllà i hem creat una reserva pròpia de vins de la casa, reserva Cusó. Amb un producte amb denominació d'origen Català, posem al teu gust una gama de negres, blancs i rosats perque puguis gaudir encara més de la teva experiència.",
+        "button": "Ves a la Carta de vins"
+    },
+    "carta": {
+        "breadcumb-1": "Inici",
+        "breadcumb-2": "Carta",
+        "section-1": "Foie i Tartufo",
+        "section-2": "Entrants",
+        "section-3": "Amanides",
+        "section-4": "Provolones",
+        "section-5": "Risottos",
+        "section-6": "Pastes",
+        "section-7": "Peix",
+        "section-8": "Carn",
+        "section-9": "Pizzes",
+        "section-10": "Postres",
+        "alergens-title": "Llegenda d'al·lèrgens",
+        "alergen-1": "Conté Gluten",
+        "alergen-2": "Conté Ou",
+        "alergen-3": "Conté Traces de cacahuet",
+        "alergen-4": "Conté Fruits Secs",
+        "alergen-5": "Conté Lupins",
+        "alergen-6": "Conté Soja",
+        "alergen-7": "Conté Api",
+        "alergen-8": "Conté Crustaci",
+        "alergen-9": "Conté Molusc",
+        "alergen-10": "Conté Peix",
+        "alergen-11": "Conté Lactosa",
+        "alergen-12": "Conté Sulfits",
+        "alergen-13": "Conté Mostassa",
+        "alergen-14": "Conté Sésam"
+    },
+    "menu": {
+        "breadcumb-1": "Inici",
+        "breadcumb-2": "Menús",
+        "breadcumb-espai": "Menú Espai",
+        "breadcumb-lab": "Menú Laborable",
+        "primers": "Primers",
+        "segons": "Segons",
+        "postres": "Postres artesans i casolans",
+        "precio": "Preu Menú",
+        "precio-text": "Primer, Segon, Postre o Café i 1 Panet",
+        "precio-text-lab": "Primer, Segon, 1 beguda + 1 panet + Postres o cafè",
+        "precio-text-lab-ind": "Primer i 1 Beguda",
+        "precio-text-vino": "Copa de Vi Cusó Criança o Cervesa Maestra supl 0,50€, Alhambra 1,20€",
+        "precio-supl": "(café supl. 1,60€ - cigaló o trifàsic 2€)",
+        "precio-iva": "(IVA Inclós)"
+    },
+    "vins": {
+        "breadcumb-1": "Inici",
+        "breadcumb-2": "Carta de Vins",
+        "negres": "negres",
+        "blancs": "blancs",
+        "rosats": "rosats",
+        "caves": "caves",
+        "sangria": "sangria",
+        "lambruscos": "lambrusco",
+        "copa-casa": "Copa de Vi de la Casa",
+        "copa-criança": "Copa de Vi Criança de la Casa",
+        "copa-cava": "Copa de Cava de la Casa"
+    },  
+    "footer": {
+        "contact-title": "Volem millorar!",
+        "contact-text": "Ens agradaria les 5⭐. Ens ajudes?",
+        "contact-name": "El teu nom",
+        "contact-email": "El teu email (opcional)",
+        "contact-message": "Deixa'ns la teva opinió",
+        "contact-button": "Opina!",
+        "time-title": "Horari",
+        "time-closed": "Tancat",
+        "time-monday": "Dilluns",
+        "time-tuesday": "Dimarts",
+        "time-wednesday": "Dimecres",
+        "time-thursday": "Dijous",
+        "time-friday": "Divendres",
+        "time-saturday": "Dissabte",
+        "time-sunday": "Diumenge",
+        "follow-us": "Segueix-nos",
+        "politica": "Política de privacitat",
+        "copyrights": "Tot els drest reservats"
+    },
+    "error": {
+        "title": "Oops! S'ha produït un error",
+        "text": "El lado oscuro intervingut ha, actualitzar la pàgina tu has de",
+        "button": "Refrescar la pàgina"
+    },
+    "politica": {
+        "breadcumb-1": "Inici",
+        "breadcumb-2": "Política de privacitat i cookies",
+        "section-1": "La present Política de Privacitat constitueix juntament amb les Normes de participació i l’avís legal el marc jurídic que regula l’ús del lloc web www.espaidelacarme.com. La present Política de Privacitat en concret regula l’ús i tractament que Espai de la Carme dóna a les vostres dades de caràcter personal com a usuari del Lloc web, ja que en accedir a la pàgina web www.espaidelacarme.com passeu a tenir la condició d’usuari d’aquest web (en endavant, l’“Usuari”).",
+        "section-2": "El present lloc web és titularitat de la companyia de la societat Fermacu SL, amb domicili social a Carrer sant Antoni, 6 - BJ, Vilanova i la Geltru, 08800 , Barcelona i C.I.F.: B63047955.",
+        "section-3": "Al Lloc Web trobareu a la vostra disposició la present Política de Privacitat en català perquè la pugueu consultar, arxivar o imprimir en qualsevol moment. És possible que variï amb el temps com a conseqüència de canvis al Lloc Web, novetats legislatives o jurisprudencials o perquè sorgeixin criteris nous de l’Agència Espanyola de Protecció de Dades o la nova normativa europea ens obligui a fer futures modificacions. Per això, Espai de la Carme es reserva el dret a modificar la present Política de Privacitat i recomana llegir detingudament la Política de Privacitat sempre que s’accedeixi al Lloc Web.",
+        "section-4": "Espai de la Carme es compromet a complir la seva obligació de secret de les dades de caràcter personal i el deure de guardar-les de forma confidencial i adopta les mesures necessàries per evitar-ne l’alteració, pèrdua, tractament o accés no autoritzat, tenint en compte en tot moment l’estat de la tecnologia.",
+        "section-5": "Espai de la Carme garanteix l’adopció de les mesures oportunes per assegurar el tractament confidencial d’aquestes dades. Per això, ha implantat totes les mesures de seguretat tècniques i organitzatives necessàries que garanteixin la integritat, confidencialitat i disponibilitat de les dades personals facilitades per l’usuari, en particular les estipulades en el RGDP (Reglament General de la Protecció de Dades – UE 2016/679, del 27 d’abril), que ha ampliat l’abast de la Llei Orgànica 15/1999, de 13 de desembre, de Protecció de Dades de Caràcter Personal (LOPD) i el seu Reglament de Desplegament RD 1720/2007.",
+        "section-6": "Les dades personals facilitades voluntàriament seran tractades de manera confidencial, sota la protecció i les especificacions contingudes en el reglament vigent, i es recolliran en fitxer degudament inscrit a l’Agència de Protecció de Dades, el responsable del qual és de Fermacu SL, i la finalitat del qual és la gestió dels usuaris i subscriptors, així com la venda en línia de productes i la resolució de consultes.",
+        "section-7": "La base legal per al tractament de dades és el consentiment del subscriptor. Tractem les dades personals dels inscrits al butlletí amb la finalitat exclusiva d’enviar-los la nostra newsletter. Tractem les dades personals dels usuaris registrats i els subscriptors de pagament amb l’única finalitat de gestionar la seva vinculació amb el digital a Espai de la Carme, el cobrament de les quotes (si s’escau), l’organització d’activitats i campanyes i l’enviament de comunicacions informatives i comercials (també per via electrònica).",
+        "section-8": "Les dades personals no se cediran a tercers (a excepció d’obligació legal) i es conservaran durant el termini de sis (6) anys de conformitat amb la normativa comptable vigent i, si s’escau, durant deu (10) segons la normativa de prevenció de blanqueig de capitals. L’usuari pot accedir a les dades personals, així com sol·licitar la rectificació de les dades inexactes o, si escau, sol·licitar la cancel·lació o supressió quan les dades ja no siguin necessàries per a les finalitats que van ser recollides. També podrà sol·licitar la limitació, portabilitat i oposició del tractament de les seves dades, en determinades circumstàncies i per motius relacionats amb la seva situació particular.",
+        "section-9": "Podrà revocar el consentiment a l’enviament de comunicacions comercials i exercir els drets referits anteriorment, mitjançant l’enviament d’un correu electrònic a reserves@espaidelacarme.com o adreçant-se per correu ordinari al responsable del fitxer ubicat a Carrer sant Antoni, 6 - BJ, Vilanova i la Geltru, en tots dos casos amb la referència: “Protecció de Dades”, a través d’un escrit signat a l’efecte i adjuntant còpia del seu DNI.",
+        "section-10": "Per a la resolució de totes les controvèrsies o qüestions relacionades amb el present lloc web o de les activitats que s’hi desenvolupen, s’aplica la legislació espanyola en tots els casos, a la qual se sotmeten expressament les parts. El mer fet de la utilització dels serveis aquest lloc web pressuposa l’acceptació expressa de la dita acceptació de la jurisdicció espanyola. Així mateix, i amb l’excepció del que s’expressa en el paràgraf següent, les parts que hi intervenen acorden que tot litigi, discrepància, qüestió o reclamació resultant de l’execució o interpretació de les presents condicions o relacionat, o d’altres textos que pogués haver-hi al lloc web, es resoldran definitivament mitjançant sotmetiment als Jutjats i Tribunals de Vilanova i la Geltrú amb renúncia expressa a qualsevol altre fur o demarcació jurisdiccional que pogués resultar competent. El paràgraf anterior no s’aplica en el cas que una de les parts sigui un consumidor o usuari segons la definició de la normativa de protecció dels Consumidors i Usuaris (Reial Decret Legislatiu 1/2007, de 16 de novembre, pel qual s’aprova el text refós de la Llei General per a la Defensa dels Consumidors i Usuaris i altres lleis complementàries), en aquest cas, (i per a un conflicte relacionat i emparat per la Llei) s’aplicaria preferent el lloc designat en la dita legislació.",
+        "section-11": "Espai de la Carme utilitza galetes (‘cookies’) en la navegació de l’usuari pels seus llocs web per facilitar la personalització i la comoditat de la navegació. Una galeta és un fragment d’informació enviat des d’un servidor de pàgines web a un navegador que pot ésser retornada pel navegador en posteriors accessos a aquest servidor. Les ‘cookies’ s’associen a l’usuari anònim i al seu ordinador i no proporcionen per si mateixes ni el nom ni els cognoms de l’usuari En aquest web s’utilitzen cookies de Google per mostrar anuncis publicitaris basats en anteriors visites al web o a d’altres webs que també mostren anuncis de Google. Els usuaris poden optar per no admetre el seguiment mitjançant cookies de publicitat accedint a: https://www.google.com/settings/ads."
+    }
+}
