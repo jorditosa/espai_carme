@@ -84,6 +84,13 @@ function MenuEspai() {
         {t("menu.primers")}
         </h3>
         { loading ? <Spinner /> : renderProducte('primers') } 
+      </div>  
+
+      <div className='pt-6 px-5 w-full md:max-w-[900px] mx-auto' id='segons'>
+        <h3 className='text-xl font-bold py-5 italic'>
+        {t("menu.segons")}
+        </h3>
+        { loading ? <Spinner /> : renderProducte('segons') } 
       </div>            
 
       <Llegenda />

@@ -31,8 +31,8 @@ function Vins() {
         <hr className='border-b-8 border-secondary/50' />
       </div>
 
-      <div className='w-full lg:max-w-screen-lg mx-auto py-2 lg:py-60 flex flex-col md:flex-row items-center '>
-          <img src={ArnauVi} alt="imatge vi negre Cuso" className='block md:w-1/4 order-2 md:order-none  shadow-md shadow-light'
+      <div className='w-full py-2 lg:py-60 grid grid-cols-1 md:grid-cols-2 items-center'>
+          <img src={ArnauVi} alt="imatge vi negre Cuso" className='w-full shadow-md shadow-light'
              />
           <div className='px-10 w-full'>
             <SubHeading>{t("celler.title")}</SubHeading>
