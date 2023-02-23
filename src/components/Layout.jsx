@@ -107,7 +107,7 @@ export default function Layout() {
                   <BsTranslate size={35}/>
                 </Button>
               </MenuHandler>
-              <MenuList className="bg-light font-Roboto font-bold text-lg text-secondary px-0 py-1 mx-auto">
+              <MenuList className="bg-light font-Roboto font-bold text-lg text-secondary px-0 py-2 mx-auto">
                 <MenuItem onClick={() => i18n.changeLanguage('ca') } className={`px-5 py-1 my-1  hover:text-secondary/50 transition ease-in-out duration-300 ${ i18n.language === 'ca' ? 'bg-gradient-to-r from-primary via-primary/75 to-primary' : '' }`}>Cat</MenuItem>
                 <MenuItem onClick={() => i18n.changeLanguage('es') } className={`px-5 py-1 my-1  hover:text-secondary/50 transition ease-in-out duration-300 ${ i18n.language === 'es' ? 'bg-gradient-to-r from-primary via-primary/75 to-primary' : '' }`}>Esp</MenuItem>
                 {/* <MenuItem onClick={() => i18n.changeLanguage('en') }>Eng</MenuItem> */}
