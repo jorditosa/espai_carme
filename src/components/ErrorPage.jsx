@@ -22,6 +22,9 @@ function ErrorPage() {
             onClick={refreshPage}
             >  {t("error.button")}
             </button>
+
+            <p>{error.message}</p>
+            
             
         </div>
     )

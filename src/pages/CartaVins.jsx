@@ -5,6 +5,8 @@ import {  GiMolecule, GiWineGlass } from 'react-icons/gi'
 import Spinner from '../components/Spinner';
 import Footer from '../components/Footer'
 import { useTranslation } from 'react-i18next'
+import renderAlergen from '../common/renderAlergens';
+import Llegenda from '../components/Llegenda';
 
 function CartaVins() {
 
@@ -19,7 +21,7 @@ function CartaVins() {
 
   const getProducts = () => {
     try{
-      fetch(`${import.meta.env.VITE_API_URL}/vins?pagination[limit]=75`, { method: 'GET' })
+      fetch(`${import.meta.env.VITE_API_URL}/vins`, { method: 'GET' })
       .then(res => {
       if ( res.ok) return res.json()
       if ( res.status === 401) window.location.reload()  
@@ -60,7 +62,6 @@ function CartaVins() {
                 ))
     )
   }
-
 
 
   useEffect(() => {
@@ -152,15 +153,7 @@ function CartaVins() {
             </span>
           </div>
 
-<div className='w-full md:max-w-[900px] mx-auto my-8 px-5'>
-          <h3 className='text-xl font-bold py-5 italic uppercase'> {t("carta.alergens-title")}</h3>
-          <div className='flex gap-x-4 py-1'>
-            < GiMolecule size={30} title='Sulfits' />
-            <span>
-            {t("carta.alergen-12")}
-            </span>
-          </div>
-      </div>
+      <Llegenda />
 
     <Footer />
     </main>  

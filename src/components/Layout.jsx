@@ -16,12 +16,6 @@ import { MenuOutline, CloseOutline } from '@styled-icons/evaicons-outline'
 import styled from 'styled-components'
 
 import { useTranslation } from 'react-i18next'
-
-
-// styled comp
-const BikeTake = styled.div`
-display: inline;
-`
  
 export default function Layout() {
   const [openNav, setOpenNav] = useState(false);
@@ -94,7 +88,7 @@ export default function Layout() {
   return (
     <>
       <nav className={`w-full ${ openNav ? 'bg-light h-[64px]' : ''} fixed z-20 shadow-lg `}>
-        <div className={`bg-light ${ openNav ? 'scale-[22] md:scale-[] lg:scale-[30] z-20' : ''} w-12 h-12 rounded-full absolute right-5 top-0 z-0 border border-secondary transition ease-in-out duration-500`}></div>
+        <div className={`bg-light ${ openNav ? 'scale-[22] md:scale-[25] lg:scale-[30] z-20' : ''} w-12 h-12 rounded-full absolute right-5 top-0 z-0 border border-secondary transition ease-in-out duration-500`}></div>
         <div className="absolute z-20 bg-light w-full flex items-center justify-between px-4 lg:px-12 font-Roboto shadow-lg">
           <Link 
           className='flex justify-center items-center gap-x-1 text-lg font-bold py-3 text-secondary hover:translate-y-1 hover:text-primary transition ease-in-out duration-300' 
@@ -114,8 +108,8 @@ export default function Layout() {
                 </Button>
               </MenuHandler>
               <MenuList className="bg-light font-Roboto font-bold text-lg text-secondary px-0 py-1 mx-auto">
-                <MenuItem onClick={() => i18n.changeLanguage('ca') } className={`px-5 py-1 my-1  hover:text-secondary/50 transition ease-in-out duration-300 ${ i18n.language === 'ca' ? 'bg-gradient-to-r from-light via-primary/75 to-light' : '' }`}>Cat</MenuItem>
-                <MenuItem onClick={() => i18n.changeLanguage('es') } className={`px-5 py-1 my-1  hover:text-secondary/50 transition ease-in-out duration-300 ${ i18n.language === 'es' ? 'bg-gradient-to-r from-light via-primary/75 to-light' : '' }`}>Esp</MenuItem>
+                <MenuItem onClick={() => i18n.changeLanguage('ca') } className={`px-5 py-1 my-1  hover:text-secondary/50 transition ease-in-out duration-300 ${ i18n.language === 'ca' ? 'bg-gradient-to-r from-primary via-primary/75 to-primary' : '' }`}>Cat</MenuItem>
+                <MenuItem onClick={() => i18n.changeLanguage('es') } className={`px-5 py-1 my-1  hover:text-secondary/50 transition ease-in-out duration-300 ${ i18n.language === 'es' ? 'bg-gradient-to-r from-primary via-primary/75 to-primary' : '' }`}>Esp</MenuItem>
                 {/* <MenuItem onClick={() => i18n.changeLanguage('en') }>Eng</MenuItem> */}
               </MenuList>
             </Menu>
