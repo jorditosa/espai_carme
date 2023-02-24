@@ -1,41 +1,25 @@
 import { useState, useEffect } from 'react';
+import { useProductsContext } from '../context/ProductsContext'
 import { Link } from 'react-router-dom';
 import { Breadcrumbs } from "@material-tailwind/react";
-import Spinner from '../components/Spinner';
 import Footer from '../components/Footer'
 import { useTranslation } from 'react-i18next'
 import renderAlergen from '../common/renderAlergens';
 import Llegenda from '../components/Llegenda';
+import Spinner from '../components/Spinner';
 
 function Carta() {
 
+  const { products , setProducts } = useProductsContext()
+
+  console.log(products)
+
   const [t, i18n] = useTranslation("global");
 
-  const [productesCarta, setProductesCarta] = useState([]);
-  const [ loading, setLoading ] = useState(true)
-
-  useEffect(() => {
-    getProducts();
-  }, [i18n.language])
-
-  const getProducts = () => {
-    try{
-      fetch(`${import.meta.env.VITE_API_URL}/cartas?locale=${i18n.language}`, { method: 'GET' })
-      .then(res => {
-      if ( res.ok) return res.json()
-      if ( res.status === 401) window.location.reload()  
-      })
-      .then((data) => {
-        setLoading(false);
-        setProductesCarta(data.data)});
-    } catch(error) {
-      window.location.reload()
-    } 
-  }
 
   const renderProducte = (categoria) => { 
     return (
-      productesCarta.filter(producte => producte.attributes.categoria === categoria).map( (item, id) => (
+      products.filter(producte => producte.attributes.categoria === categoria).map( (item, id) => (
                   <div className='flex justify-between items-center border-b-2 border-dark/10 py-1' key={id}>
                     <div className='flex flex-col lg:flex-row items-start justify-start w-5/6'>
                       <p className='inline mr-4 text-sm md:text-md lg:text-lg'>
@@ -82,69 +66,69 @@ function Carta() {
               <h3 className='text-xl font-bold py-5 italic uppercase'>
               {t("carta.section-1")}
               </h3>
-              { loading ? <Spinner /> : renderProducte('foie_tartufo') } 
+              { products.length !== 0 ? renderProducte('foie_tartufo') : <Spinner /> } 
           </div>            
 
           <div className='pt-6 px-5 w-full md:max-w-[900px] mx-auto' id='entrants'>
             <h3 className='text-xl font-bold py-5 italic uppercase'>
             {t("carta.section-2")}
             </h3>
-              { loading ? <Spinner /> : renderProducte('entrants') }  
+            { products.length !== 0 ? renderProducte('entrants') : <Spinner /> }   
           </div>
 
           <div className='pt-6 px-5 w-full md:max-w-[900px] mx-auto' id='amanides'>
             <h3 className='text-xl font-bold py-5 italic uppercase'>
             {t("carta.section-3")}
             </h3>
-            { loading ? <Spinner /> : renderProducte('amanides') } 
+            { products.length !== 0 ? renderProducte('amanides') : <Spinner /> }  
           </div>
 
           <div className='pt-6 px-5 w-full md:max-w-[900px] mx-auto' id='provolones'>
             <h3 className='text-xl font-bold py-5 italic uppercase'>
             {t("carta.section-4")}
             </h3>
-            { loading ? <Spinner /> : renderProducte('provolones') } 
+            { products.length !== 0 ? renderProducte('provolones') : <Spinner /> }  
           </div>
 
           <div className='pt-6 px-5 w-full md:max-w-[900px] mx-auto' id='risottos'>
             <h3 className='text-xl font-bold py-5 italic uppercase'>
             {t("carta.section-5")}
             </h3>
-            { loading ? <Spinner /> : renderProducte('risottos') } 
+            { products.length !== 0 ? renderProducte('risottos') : <Spinner /> }  
           </div>
 
           <div className='pt-6 px-5 w-full md:max-w-[900px] mx-auto' id='pastes'>
             <h3 className='text-xl font-bold py-5 italic uppercase'>
             {t("carta.section-6")}
             </h3>
-            { loading ? <Spinner /> : renderProducte('pastes') } 
+            { products.length !== 0 ? renderProducte('pastes') : <Spinner /> }  
           </div>
 
           <div className='pt-6 px-5 w-full md:max-w-[900px] mx-auto' id='peix'>
             <h3 className='text-xl font-bold py-5 italic uppercase'>
             {t("carta.section-7")}
             </h3>
-            { loading ? <Spinner /> : renderProducte('peix') } 
+            { products.length !== 0 ? renderProducte('peix') : <Spinner /> }  
           </div>
 
           <div className='pt-6 px-5 w-full md:max-w-[900px] mx-auto' id='carn'>
             <h3 className='text-xl font-bold py-5 italic uppercase'>
             {t("carta.section-8")}
             </h3>
-            { loading ? <Spinner /> : renderProducte('carn') } 
+            { products.length !== 0 ? renderProducte('carn') : <Spinner /> }  
           </div>
 
           <div className='pt-6 px-5 w-full md:max-w-[900px] mx-auto' id='pizzes'>
             <h3 className='text-xl font-bold py-5 italic uppercase'>
             {t("carta.section-9")} </h3>
-            { loading ? <Spinner /> : renderProducte('pizzes') } 
+            { products.length !== 0 ? renderProducte('pizzes') : <Spinner /> }  
           </div>
 
           <div className='pt-6 px-5 w-full md:max-w-[900px] mx-auto' id='postres'>
             <h3 className='text-xl font-bold py-5 italic uppercase'>
             {t("carta.section-10")}
             </h3>
-            { loading ? <Spinner /> : renderProducte('postres') } 
+            { products.length !== 0 ? renderProducte('postres') : <Spinner /> } 
           </div>
 
           <Llegenda />
