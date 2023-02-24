@@ -32,7 +32,7 @@ function Vins() {
       </div>
 
       <div className='w-full py-2 lg:py-60 grid grid-cols-1 md:grid-cols-2 items-center'>
-          <img src={ArnauVi} alt="imatge vi negre Cuso" className='w-full shadow-md shadow-light'
+          <img src={ArnauVi} alt="imatge vi negre Cuso" className='w-full shadow-md shadow-light rounded-br-[200px]'
              />
           <div className='px-10 w-full'>
             <SubHeading>{t("celler.title")}</SubHeading>
