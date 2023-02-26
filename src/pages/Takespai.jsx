@@ -22,23 +22,24 @@ function Takespai() {
   }, ['/takespai']);
 
   return (
-    <div className="w-full h-full px-4 pt-24 to-light text-dark text-md md:text-lg flex flex-col justify-center items-center gap-y-4">
-      <img src={LogoTakespai} alt="logo Takespai" width={"220px"} />
+    <div className="w-full h-screen px-4 pt-12 bg-gradient-to-r from-primary to-light text-dark text-md md:text-lg flex flex-col justify-center items-center gap-y-4">
+      <img src={LogoTakespai} alt="logo Takespai" width={"200px"} />
       <SubHeading>{t("takespai.title")} 
-        <SpinnerPizza />
       </SubHeading>
+      <div className="flex items-center justify-center">
+          <BsTelephone style={{ display: "inline"}} size={35} />
+          <a className="inline pl-4 my-4 text-4xl text-light font-black hover:text-light/50 bg-clip-text text-transparent bg-gradient-to-b from-dark to-dark/75" href='tel:938933308'> 
+            93 893 33 08
+          </a>
+      </div>
+      <SpinnerPizza />
       
       <div className="w-full max-w-[500px] mx-auto">
         <p className="text-sm px-10 md:px-1">
         {t("takespai.description")}
         </p>
-        <div className="flex items-center justify-center">
-          <BsTelephone style={{ display: "inline"}} size={35} />
-          <a className="inline pl-4 my-4 text-3xl text-light text-center font-black hover:text-light/50 bg-clip-text text-transparent bg-gradient-to-b from-dark to-dark/75" href='tel:938933308'> 
-            93 893 33 08
-          </a>
-        </div>
-        <button className="w-full cursor-pointer my-2 text-light bg-dark hover:text-dark hover:bg-primary rounded-lg py-2 font-bold text-md lg:text-xl transition-all ease-in-out duration-200"
+     
+        <button className="block w-1/2 mx-auto cursor-pointer my-3 border-dark border text-dark hover:text-dark hover:bg-light rounded-full py-2 font-bold text-sm transition-all ease-in-out duration-200"
                 onClick={() => navigate('/')}>
                 {t("takespai.button")}
         </button>

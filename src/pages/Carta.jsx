@@ -12,10 +12,7 @@ function Carta() {
 
   const { products , setProducts } = useProductsContext()
 
-  console.log(products)
-
   const [t, i18n] = useTranslation("global");
-
 
   const renderProducte = (categoria) => { 
     return (
