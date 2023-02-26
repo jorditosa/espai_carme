@@ -41,7 +41,7 @@ function Productes() {
             {t("productes.description-2")}
             </p>
         </div>
-        <div className="w-full h-screen flex flex-col lg:flex-row text-center">
+        <div className="w-full h-screen flex flex-col lg:flex-row text-center overflow-hidden">
             <div className="h-full panel text-light" style={{backgroundImage: `url(${Mozarella})`, backgroundRepeat: 'no-repeat', backgroundSize: 'cover', backgroundPosition: 'center'}}>
                     <div className="h-full w-full flex flex-col justify-start pt-2 lg:pt-48 items-center bg-gradient-to-b from-dark/50 to-dark/25">
                         <SubHeading>{t("productes.slide-mozzarella-title")}</SubHeading>

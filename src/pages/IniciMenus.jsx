@@ -26,7 +26,7 @@ function IniciMenus() {
   return (
     <section id="cartes" className="text-center lg:text-start text-secondary">
 
-    <div className="w-full h-screen flex flex-col md:flex-row">
+    <div className="w-full h-screen flex flex-col md:flex-row overflow-hidden">
         <div className="h-full panel" style={{backgroundImage: `url(${ImgMenuEspai})`, backgroundRepeat: 'no-repeat', backgroundSize: 'cover', backgroundPosition: 'center'}}>
             <Link
             to={'/menu-espai'}>
