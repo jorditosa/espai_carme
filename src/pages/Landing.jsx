@@ -35,12 +35,12 @@ function Landing() {
     }, [])
 
   return (
-    <section id="cartes" className="bg-light text-start pt-10">
+    <section id="cartes" className="bg-light text-start pt-6">
 
         {
             welcome ? <Welcome /> : (
             <div className="w-full h-screen flex flex-col md:flex-row">
-                <div className="h-full panel  hover:bg-primary" style={{backgroundImage: `url(${ImgCarta})`, backgroundRepeat: 'no-repeat', backgroundSize: 'cover', backgroundPosition: 'center'}}>
+                <div className="h-full panel" style={{backgroundImage: `url(${ImgCarta})`, backgroundRepeat: 'no-repeat', backgroundSize: 'cover', backgroundPosition: 'center'}}>
                     <Link
                     to={'/carta'}>
                         <div className="h-full w-full text-light flex justify-center items-center ">

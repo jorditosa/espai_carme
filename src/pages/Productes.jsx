@@ -6,6 +6,7 @@ import Foie from '../assets/foie-gras.webp'
 import Parmigiano from '../assets/parmigiano.webp'
 import { Link } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
+import Swal from 'sweetalert2'
 
 function Productes() {
 
@@ -43,35 +44,47 @@ function Productes() {
         </div>
         <div className="w-full h-screen flex flex-col lg:flex-row text-center overflow-hidden">
             <div className="h-full panel text-light" style={{backgroundImage: `url(${Mozarella})`, backgroundRepeat: 'no-repeat', backgroundSize: 'cover', backgroundPosition: 'center'}}>
-                    <div className="h-full w-full flex flex-col justify-start pt-2 lg:pt-48 items-center bg-gradient-to-b from-dark/50 to-dark/25">
-                        <SubHeading>{t("productes.slide-mozzarella-title")}</SubHeading>
-                        <p className="text-light font-bold text-md md:text-lg mx-5">
-                        {t("productes.slide-mozzarella-description")}
-                        </p>
+                    <div className="h-full w-full flex flex-col justify-center items-center bg-gradient-to-b from-dark/50 to-dark/25">
+                        <SubHeading>
+                            <button
+                            onClick={() => Swal.fire(`${t("productes.slide-mozzarella-description")}`)}
+                            >
+                            {t("productes.slide-mozzarella-title")}
+                            </button>
+                        </SubHeading>
                     </div>
             </div>
             <div className="h-full panel text-light" style={{backgroundImage: `url(${Tofona})`, backgroundRepeat: 'no-repeat', backgroundSize: 'cover', backgroundPosition: 'center'}}>
-                    <div className="h-full w-full flex justify-start pt-2 lg:pt-48 flex-col items-center bg-gradient-to-b from-dark/50 to-dark/25">
-                        <SubHeading>{t("productes.slide-tofona-title")}</SubHeading>
-                        <p className="text-light font-bold text-md md:text-lg mx-5">
-                        {t("productes.slide-tofona-description")}
-                        </p>
+                    <div className="h-full w-full flex justify-center flex-col items-center bg-gradient-to-b from-dark/50 to-dark/25">
+                    <SubHeading>
+                            <button
+                            onClick={() => Swal.fire(`${t("productes.slide-tofona-description")}`)}
+                            >
+                            {t("productes.slide-tofona-title")}
+                            </button>
+                    </SubHeading>
                     </div>
             </div>
             <div className="h-full panel text-light" style={{backgroundImage: `url(${Foie})`, backgroundRepeat: 'no-repeat', backgroundSize: 'cover', backgroundPosition: 'center'}}>
-                    <div className="h-full w-full flex justify-start pt-2 lg:pt-48 flex-col items-center bg-gradient-to-b from-dark/50 to-dark/25">
-                        <SubHeading>{t("productes.slide-foie-title")}</SubHeading>
-                        <p className="text-light font-bold text-md md:text-lg mx-5">
-                        {t("productes.slide-foie-description")}
-                        </p>
+                    <div className="h-full w-full flex justify-center flex-col items-center bg-gradient-to-b from-dark/50 to-dark/25">
+                    <SubHeading>
+                            <button
+                            onClick={() => Swal.fire(`${t("productes.slide-foie-description")}`)}
+                            >
+                            {t("productes.slide-foie-title")}
+                            </button>
+                    </SubHeading>
                     </div>
             </div>
             <div className="h-full panel text-light" style={{backgroundImage: `url(${Parmigiano})`, backgroundRepeat: 'no-repeat', backgroundSize: 'cover', backgroundPosition: 'center'}}>
-                    <div className="h-full w-full flex justify-start pt-2 lg:pt-48 flex-col items-center bg-gradient-to-b from-dark/50 to-dark/25">
-                        <SubHeading>{t("productes.slide-parmigiano-title")}</SubHeading>
-                        <p className="text-light font-bold text-md md:text-lg mx-5">
-                        {t("productes.slide-parmigiano-description")}
-                        </p>
+                    <div className="h-full w-full flex justify-center flex-col items-center bg-gradient-to-b from-dark/50 to-dark/25">
+                    <SubHeading>
+                            <button
+                            onClick={() => Swal.fire(`${t("productes.slide-parmigiano-description")}`)}
+                            >
+                            {t("productes.slide-parmigiano-title")}
+                            </button>
+                    </SubHeading>
                     </div>
             </div>
         </div>

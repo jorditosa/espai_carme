@@ -26,9 +26,6 @@ const ProductsProvider = ({children}) => {
         getProducts();
       }, [i18n.language])
 
-      console.log(products)
-
-
     return (
         <ProductsContext.Provider value={{ products , setProducts}}>
             {children}

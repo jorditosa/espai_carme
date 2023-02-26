@@ -40,7 +40,7 @@ function Vins() {
             {t("celler.text")}
             </p>
             <Link to={'/carta-vins'}>
-              <button type="submit" className="w-72 cursor-pointer text-light bg-secondary hover:text-dark hover:bg-primary rounded-full py-2 px-4 font-bold text-md lg:text-xl my-12 md:mt-12 transition-all ease-in-out duration-200">
+              <button type="submit" className="w-full md:w-64 cursor-pointer text-dark bg-light border border-dark hover:text-dark hover:bg-white rounded-full py-2 px-4 text-md lg:text-xl my-12 md:mt-12 transition ease-in-out duration-300">
               {t("celler.button")}
               </button>
             </Link>

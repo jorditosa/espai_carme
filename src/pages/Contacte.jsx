@@ -19,7 +19,7 @@ function Contacte() {
             Swal.fire({
                 icon: 'error',
                 title: 'Oops...',
-                text: 'Totes les dades són obligatories',
+                text: `${t("footer.alert")}`,
               })
             return
         }

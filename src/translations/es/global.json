@@ -5,8 +5,7 @@
         "celler": "La Bodega"
     },
     "takespai": {
-        "title": "En construcción",
-        "description": "Pronto podréis disfrutar de vuestros pedidos online. tanto para take away cómo a domicilio. De momento, podéis seguir realizando los pedidos cómo siempre llamando al teléfono en pantalla.",
+        "title": "Sabemos que tienes hambre, pero bien pronto abriremos un servicio de pedidos online a domicilio y take away. De momento llámanos como siempre ;)",
         "button": "Volver al Inicio"
     },
     "about": {
@@ -117,7 +116,8 @@
         "time-sunday": "Domingo",
         "follow-us": "Síguenos",
         "politica": "Política de privacidad",
-        "copyrights": "Todos los derechos reservados"
+        "copyrights": "Todos los derechos reservados",
+        "alert": "Todos los datos son obligatorios"
     },
     "error": {
         "title": "Uups! Se ha producido un error",

@@ -8,7 +8,7 @@ const Heading = styled.h2`
 
 function SubHeading({children}) {
   return (
-    <Heading className='py-3 font-bold text-3xl md:text-5xl font-Roboto leading-normal drop-shadow-xl}'>
+    <Heading className='py-3 font-bold text-3xl md:text-5xl font-Roboto leading-normal drop-shadow-xl} hover:text-primary transition duration-500 ease-out'>
         {children}
     </Heading>
   )
